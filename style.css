@@ -17,6 +17,14 @@
     margin-bottom: 0;
 }
 
+/* Example prompt in the script accordion */
+
+.dynph-example-prompt textarea {
+    font-family: var(--font, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
 /* Prompt autocomplete dropdown */
 
 #dynph-autocomplete {

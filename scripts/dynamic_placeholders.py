@@ -18,7 +18,7 @@ from lib_dynamic_placeholders.settings import (
     on_ui_settings,
     persist_extra_placeholders_dir,
 )
-from lib_dynamic_placeholders.ui import field_help, section_description
+from lib_dynamic_placeholders.ui import example_prompt_box, field_help, section_description
 
 logger = logging.getLogger("dynamic_placeholders")
 
@@ -65,6 +65,13 @@ class Script(scripts.Script):
                 "Type <code>__</code> to autocomplete available names. "
                 "Each name maps to a newline-separated list file in the placeholders folder "
                 "(Settings → Dynamic Placeholders), and optionally an extra folder below."
+            )
+            example_prompt_box()
+            field_help(
+                "Select all and paste into the prompt box, then generate. "
+                "Each <code>__token__</code> is replaced from its list file; "
+                "<code>__hair__</code> and <code>__clothes__</code> expand into nested lists. "
+                "Swap <code>__artstyle__</code> for <code>__photostyle__</code> for a photo look."
             )
             enabled = gr.Checkbox(
                 label="Enable",
