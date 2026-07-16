@@ -69,6 +69,7 @@ Composition is built in: `__hair__` expands into length / color / style; `__clot
 | `__photostyle__` | Photorealistic photography looks (cinematic, film stock, optics, …) |
 | `__view__` | Viewpoint, facing & composition (dutch angle, profile, …) |
 | `__focus__` | Character crop / body focus (upper body, full body, …) |
+| `__pose__` | Body stance & gesture (standing, sitting, anime/game tropes, …) |
 
 Composable groups use nested paths:
 
@@ -82,6 +83,8 @@ Composable groups use nested paths:
 | `__clothes/fullbody__` | `placeholders/clothes/fullbody.txt` |
 
 `clothes.txt` keeps **separates** (torso + pants) and **full-body** outfits on different lines so layers never stack. Head and torso are themselves nested groups (`hat` / `glasses` / `piercings`, `shirt` / `jacket`).
+
+`__view__` covers angle and composition; `__focus__` covers how much of the figure is in frame; `__pose__` covers how the body is held — keep them separate so they do not fight.
 
 You can use child tokens directly (`__hair/color__`, `__clothes/shoes__`) or only the parent and let composition do the work.
 

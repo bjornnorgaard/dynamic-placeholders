@@ -1,0 +1,99 @@
+# Body pose & stance — use as __pose__ in prompts
+# How the character holds their body: stance, gesture, sit/kneel/lie, or simple locomotion
+# (e.g. "__pose__", "character __pose__", "in a __pose__", "__pose__ pose")
+# Stance and gesture only — not sports, hobbies, or complex activities
+# (running and jumping count as locomotion; football / cooking / etc. do not)
+# Heavy on anime, manga, and video-game silhouette tropes
+# One exemplar per visual family; near-duplicates pruned so each line changes the silhouette
+# Style: short, no leading a/an/the — lead with the pose cue
+
+# --- Standing & upright stances ---
+standing upright
+standing with arms crossed
+standing with hands on hips
+standing with hands in pockets
+standing with one hand behind the head
+contrapposto weight on one leg
+power stance feet apart fists clenched
+at-attention military stance
+T-pose arms outstretched sideways
+
+# --- Signature hand gestures ---
+making a peace sign
+double peace signs beside the face
+pointing at the viewer
+pointing dramatically at the sky
+thumbs-up gesture
+finger guns aimed forward
+saluting with one hand
+heart hands over the chest
+finger-heart gesture
+fox-hand gesture beside the cheek
+blowing a kiss
+facepalm with one hand
+adjusting glasses with one finger
+
+# --- Sitting ---
+sitting on a chair
+sitting with legs crossed
+sitting cross-legged on the floor
+sitting in seiza on the heels
+sitting with knees hugged to the chest
+sitting sideways with legs tucked (wariza)
+sitting backwards on a chair
+sitting on a windowsill legs dangling
+slumped in a chair chin in hand
+face-planted asleep on a desk
+
+# --- Kneeling, crouching & low ---
+kneeling on both knees
+kneeling on one knee
+formal bow from the waist
+deep kowtow forehead to the floor
+low combat crouch
+squatting with elbows on knees
+crawling on all fours
+
+# --- Lying & floor ---
+lying on the back staring up
+lying on the side propped on one elbow
+lying prone on the stomach
+curled in a fetal position
+collapsed exhausted on the floor
+sprawled starfish on the floor
+legs kicked up while lying on the stomach
+
+# --- Locomotion & air ---
+walking mid-stride
+running at full sprint
+jumping with arms raised
+mid-air jump fist pumped
+floating weightlessly
+
+# --- Combat & game-ready ---
+fighting stance fists raised
+boxing guard hands up
+sword-ready stance blade forward
+archery draw aiming forward
+spellcasting pose one palm forward
+superhero landing one knee and fist down
+dramatic coat-flare stance arm out
+magical-girl pose arms overhead
+jojo-style dramatic pose
+
+# --- Lean, rest & support ---
+leaning against a wall arms folded
+leaning forward hands on knees
+leaning on a railing looking out
+elbows on a table chin in palms
+stretching arms overhead
+
+# --- Anime & game comedy / mood tropes ---
+victory pose both arms raised
+defeated on knees head bowed
+embarrassed squat looking away
+cat-paw hands raised cute pose
+zombie arms outstretched stiffly
+handstand upside down
+hanging upside down by the legs
+balancing on one foot arms out
