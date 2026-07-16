@@ -58,6 +58,23 @@ class LibraryTests(unittest.TestCase):
         self.assertIn("a quiet rainy street at dusk", values)
         self.assertTrue(all(" " in v for v in values))
 
+    def test_lookup_missing_vs_empty(self):
+        (self.root / "blank.txt").write_text("# comment only\n\n", encoding="utf-8")
+        missing = self.library.lookup("nope")
+        self.assertEqual(missing.status, "missing")
+        self.assertEqual(missing.values, [])
+        self.assertIsNone(missing.path)
+
+        empty = self.library.lookup("blank")
+        self.assertEqual(empty.status, "empty")
+        self.assertEqual(empty.values, [])
+        self.assertEqual(empty.path, self.root / "blank.txt")
+
+        ok = self.library.lookup("pose")
+        self.assertEqual(ok.status, "ok")
+        self.assertTrue(ok.ok)
+        self.assertEqual(ok.values, ["jumping", "sitting", "standing"])
+
 
 class ResolverTests(unittest.TestCase):
     def setUp(self) -> None:
@@ -99,6 +116,61 @@ class ResolverTests(unittest.TestCase):
         resolver = PlaceholderResolver(self.library, leave_unresolved=False)
         result = resolver.expand("hello __missing__ world", seed=1)
         self.assertEqual(result, "hello  world")
+
+    def test_missing_placeholder_emits_visible_warning(self):
+        from io import StringIO
+        from unittest.mock import patch
+
+        buf = StringIO()
+        with patch("sys.stdout", buf), self.assertLogs(
+            "lib_dynamic_placeholders.console", level="WARNING"
+        ) as logs:
+            self.resolver.expand("hello __missing__", seed=1)
+        printed = buf.getvalue()
+        self.assertIn("placeholder not resolved", printed)
+        self.assertIn("__missing__", printed)
+        self.assertIn("no matching list file found", printed)
+        self.assertIn("missing.txt", printed)
+        self.assertTrue(
+            any("placeholder not resolved" in r.getMessage() for r in logs.records)
+        )
+
+    def test_empty_placeholder_file_emits_distinct_warning(self):
+        from io import StringIO
+        from unittest.mock import patch
+
+        (self.root / "blank.txt").write_text("# only comments\n\n", encoding="utf-8")
+        buf = StringIO()
+        with patch("sys.stdout", buf):
+            self.resolver.expand("hello __blank__", seed=1)
+        printed = buf.getvalue()
+        self.assertIn("list file has no usable values", printed)
+        self.assertIn("blank.txt", printed)
+
+    def test_missing_placeholder_warning_is_deduped(self):
+        from io import StringIO
+        from unittest.mock import patch
+
+        buf = StringIO()
+        with patch("sys.stdout", buf):
+            self.resolver.expand("__missing__ and again __missing__", seed=1)
+            self.resolver.expand("still __missing__", seed=2)
+        printed = buf.getvalue()
+        self.assertEqual(printed.count("placeholder not resolved"), 1)
+
+    def test_missing_directory_warning(self):
+        from io import StringIO
+        from unittest.mock import patch
+
+        missing_root = self.root / "does-not-exist"
+        resolver = PlaceholderResolver(PlaceholderLibrary(missing_root))
+        buf = StringIO()
+        with patch("sys.stdout", buf):
+            resolver.warn_missing_directories()
+            resolver.warn_missing_directories()  # deduped
+        printed = buf.getvalue()
+        self.assertEqual(printed.count("placeholders directory not found"), 1)
+        self.assertIn(str(missing_root), printed)
 
     def test_nested_expansion(self):
         result = self.resolver.expand("look __a__", seed=0)

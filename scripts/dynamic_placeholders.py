@@ -156,6 +156,7 @@ class Script(scripts.Script):
         else:
             effective_extra = saved_path
         resolver = make_resolver_from_settings(effective_extra)
+        resolver.warn_missing_directories()
         original_prompt = _effective_prompt(getattr(p, "all_prompts", None), p.prompt)
         original_negative = _effective_prompt(
             getattr(p, "all_negative_prompts", None),

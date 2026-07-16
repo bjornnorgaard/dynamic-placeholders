@@ -5,6 +5,11 @@ import random
 import re
 from pathlib import Path
 
+from .console import (
+    emit_warning,
+    format_missing_directory_warning,
+    format_missing_placeholder_warning,
+)
 from .library import PLACEHOLDER_NAME_RE, PlaceholderLibrary, normalize_placeholder_name
 from .paths import get_placeholders_dir
 
@@ -44,9 +49,39 @@ class PlaceholderResolver:
         self.max_depth = max(1, int(max_depth))
         self.leave_unresolved = leave_unresolved
         self._pattern = build_placeholder_pattern(wrap)
+        # Deduplicate console warnings within one generation / resolver lifetime.
+        self._warned_names: set[str] = set()
+        self._warned_dirs: set[Path] = set()
+        self._warned_depth = False
+        self._warned_cycles: set[str] = set()
 
     def wrap_name(self, name: str) -> str:
         return f"{self.wrap}{name}{self.wrap}"
+
+    def warn_missing_directories(self) -> None:
+        """Emit a visible warning for each configured root that is not a directory."""
+        for root in self.library.roots:
+            key = root.resolve() if root.exists() else root
+            if key in self._warned_dirs:
+                continue
+            if root.is_dir():
+                continue
+            self._warned_dirs.add(key)
+            emit_warning(format_missing_directory_warning(root))
+
+    def _warn_unresolved(self, name: str, *, status: str, path: Path | None) -> None:
+        if name in self._warned_names:
+            return
+        self._warned_names.add(name)
+        emit_warning(
+            format_missing_placeholder_warning(
+                token=self.wrap_name(name),
+                name=name,
+                roots=list(self.library.roots),
+                path=path,
+                reason=status,
+            )
+        )
 
     def expand(
         self,
@@ -78,32 +113,51 @@ class PlaceholderResolver:
         stack: tuple[str, ...],
     ) -> str:
         if depth >= self.max_depth:
-            logger.warning(
-                "Dynamic Placeholders: max nesting depth (%s) reached; leaving remaining tokens",
-                self.max_depth,
-            )
+            if not self._warned_depth:
+                self._warned_depth = True
+                emit_warning(
+                    "\n".join(
+                        [
+                            "-" * 72,
+                            "[Dynamic Placeholders] WARNING: max nesting depth reached",
+                            f"  Depth:  {self.max_depth}",
+                            "  Tip:    Check for deeply nested or circular list files; "
+                            "remaining tokens were left unchanged.",
+                            "-" * 72,
+                        ]
+                    )
+                )
             return text
 
         def replace(match: re.Match[str]) -> str:
             name = normalize_placeholder_name(match.group(1))
             if name in stack:
-                logger.warning(
-                    "Dynamic Placeholders: circular reference involving %s",
-                    self.wrap_name(name),
-                )
+                if name not in self._warned_cycles:
+                    self._warned_cycles.add(name)
+                    emit_warning(
+                        "\n".join(
+                            [
+                                "-" * 72,
+                                "[Dynamic Placeholders] WARNING: circular placeholder reference",
+                                f"  Token:  {self.wrap_name(name)}",
+                                f"  Chain:  {' → '.join(self.wrap_name(n) for n in stack + (name,))}",
+                                "  Tip:    Break the cycle in your list files.",
+                                "-" * 72,
+                            ]
+                        )
+                    )
                 return match.group(0)
 
-            values = self.library.get_values(name)
-            if not values:
-                looked = ", ".join(str(root) for root in self.library.roots)
-                logger.warning(
-                    "Dynamic Placeholders: no values found for %s (looked under %s)",
-                    self.wrap_name(name),
-                    looked,
+            result = self.library.lookup(name)
+            if not result.ok:
+                self._warn_unresolved(
+                    name,
+                    status=result.status,
+                    path=result.path,
                 )
                 return match.group(0) if self.leave_unresolved else ""
 
-            chosen = rng.choice(values)
+            chosen = rng.choice(result.values)
             return self._expand_recursive(
                 chosen,
                 rng,

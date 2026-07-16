@@ -3,7 +3,9 @@ from __future__ import annotations
 import logging
 import re
 from collections.abc import Sequence
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Literal
 
 logger = logging.getLogger(__name__)
 
@@ -15,6 +17,22 @@ PLACEHOLDER_NAME_RE = re.compile(
 
 # Supported list file extensions (matched case-insensitively).
 TEXT_EXTENSIONS = (".txt", ".text", ".list")
+
+LookupStatus = Literal["ok", "missing", "empty", "unreadable"]
+
+
+@dataclass(frozen=True)
+class PlaceholderLookup:
+    """Result of resolving a placeholder name to list-file values."""
+
+    name: str
+    values: list[str]
+    status: LookupStatus = "ok"
+    path: Path | None = None
+
+    @property
+    def ok(self) -> bool:
+        return self.status == "ok" and bool(self.values)
 
 
 def is_skippable_line(line: str) -> bool:
@@ -113,33 +131,67 @@ class PlaceholderLibrary:
                     return candidate
         return None
 
+    def lookup(self, name: str) -> PlaceholderLookup:
+        """
+        Resolve a placeholder name to values, with an explicit status.
+
+        Distinguishes missing files from empty/comment-only files so callers
+        can surface actionable setup warnings.
+        """
+        name = normalize_placeholder_name(name)
+        path = self.resolve_file(name)
+        if path is None:
+            return PlaceholderLookup(name=name, values=[], status="missing")
+
+        try:
+            mtime = path.stat().st_mtime
+        except OSError:
+            logger.warning("Unable to stat placeholder file: %s", path)
+            return PlaceholderLookup(
+                name=name,
+                values=[],
+                status="unreadable",
+                path=path,
+            )
+
+        cached = self._cache.get(name)
+        if cached is not None and cached[0] == mtime:
+            values = cached[1]
+            if not values:
+                return PlaceholderLookup(
+                    name=name,
+                    values=[],
+                    status="empty",
+                    path=path,
+                )
+            return PlaceholderLookup(name=name, values=values, status="ok", path=path)
+
+        try:
+            text = path.read_text(encoding=self.encoding, errors="replace")
+        except OSError:
+            logger.exception("Failed to read placeholder file: %s", path)
+            return PlaceholderLookup(
+                name=name,
+                values=[],
+                status="unreadable",
+                path=path,
+            )
+
+        values = [line.strip() for line in text.splitlines() if not is_skippable_line(line)]
+        self._cache[name] = (mtime, values)
+        if not values:
+            return PlaceholderLookup(
+                name=name,
+                values=[],
+                status="empty",
+                path=path,
+            )
+        return PlaceholderLookup(name=name, values=values, status="ok", path=path)
+
     def get_values(self, name: str) -> list[str]:
         """
         Return non-empty, non-comment lines from the matching list file.
 
         Results are cached and invalidated when the file mtime changes.
         """
-        name = normalize_placeholder_name(name)
-        path = self.resolve_file(name)
-        if path is None:
-            return []
-
-        try:
-            mtime = path.stat().st_mtime
-        except OSError:
-            logger.warning("Unable to stat placeholder file: %s", path)
-            return []
-
-        cached = self._cache.get(name)
-        if cached is not None and cached[0] == mtime:
-            return cached[1]
-
-        try:
-            text = path.read_text(encoding=self.encoding, errors="replace")
-        except OSError:
-            logger.exception("Failed to read placeholder file: %s", path)
-            return []
-
-        values = [line.strip() for line in text.splitlines() if not is_skippable_line(line)]
-        self._cache[name] = (mtime, values)
-        return values
+        return self.lookup(name).values
