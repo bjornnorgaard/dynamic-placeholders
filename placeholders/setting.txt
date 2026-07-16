@@ -1,0 +1,99 @@
+# Setting / environment — use as __setting__ in prompts
+# Phrases meant for location or backdrop slots (e.g. "in a __setting__", "set in __setting__",
+# "a __setting__ background", "standing in __setting__")
+# Environments and places only — no poses, professions, clothing, or actions
+# Ordered by biome / place type; near-duplicates pruned so each line feels like a different place
+
+# --- Outer space & cosmic ---
+outer space among stars and nebulae
+deep space with distant galaxies
+the surface of a barren moon under a black sky
+an alien planet with twin suns and strange rock formations
+a space station corridor with portholes looking out at Earth
+the rings of a gas giant seen from a nearby moon
+an asteroid field drifting through starlight
+a comet tail cutting across the void
+
+# --- Sky & above the clouds ---
+among soft white clouds in a bright sky
+above a sea of clouds at golden hour
+a stormy sky filled with dark thunderheads
+the aurora borealis over a frozen landscape
+a rainbow after rain against clearing skies
+
+# --- Forests & woodland ---
+a dense forest with mossy trees and dappled light
+an ancient redwood grove with towering trunks
+a misty pine forest at dawn
+an autumn forest with fallen leaves and warm light
+a dark fairy-tale woods with twisted branches
+a bamboo grove with filtered green light
+a tropical rainforest with hanging vines and dense canopy
+
+# --- Meadows, fields & open land ---
+an open meadow of wildflowers under a clear sky
+rolling green hills under a wide sky
+a golden wheat field in late summer
+a lavender field stretching to the horizon
+a misty moor with low heather and gray skies
+
+# --- Mountains & high places ---
+a snowy mountain peak above the clouds
+a rocky alpine cliff face with sparse pines
+a high mountain pass with stone cairns
+a volcanic crater with smoking vents
+a sheer canyon with layered red rock walls
+
+# --- Deserts & arid ---
+a vast sandy desert with wind-sculpted dunes
+a rocky desert canyon under harsh sunlight
+a dry salt flat shimmering with heat haze
+an oasis with palm trees around a still pool
+a badlands landscape of eroded earth pillars
+
+# --- Water & coast ---
+a rocky shoreline with crashing waves
+a quiet sandy beach at low tide
+an underwater coral reef with shafts of light
+a foggy harbor with wooden docks and still water
+a waterfall plunging into a misty pool
+a frozen lake under a pale winter sky
+a mangrove swamp with tangled roots in dark water
+a river gorge with whitewater between stone walls
+
+# --- Underground & caves ---
+an underground cavern with glowing crystals
+a deep cave lit by shafts of surface light
+narrow mine tunnels with wooden supports
+a subterranean lake in a vast dark chamber
+lava tubes with glowing cracks in the rock
+a catacomb of carved stone corridors
+a bunker deep beneath the earth
+
+# --- Urban & built ---
+a rainy city street at night with neon reflections
+a quiet cobblestone alley lined with old brick
+a rooftop overlooking a dense skyline at dusk
+a abandoned industrial warehouse with broken windows
+a subway platform lit by flickering fluorescent lights
+a grand library hall with tall shelves and soft lamps
+a cathedral nave with stained glass and stone pillars
+a crowded marketplace under colorful awnings
+a futuristic megacity of glass towers and skybridges
+ruins of an ancient stone city overgrown with vines
+
+# --- Interiors & enclosed ---
+a cozy cabin interior with a crackling fireplace
+a candlelit stone cellar with arched ceilings
+a greenhouse filled with tropical plants and humidity
+an attic cluttered with dust and old trunks
+a ballroom with chandeliers and polished floors
+a laboratory with glassware and cool blue light
+
+# --- Fantasy & surreal ---
+a floating island drifting above the clouds
+a crystal palace of translucent spires
+an enchanted garden that glows softly at night
+a dreamlike landscape of impossible geometry
+a mirror lake reflecting a second inverted world
+a throne room carved from living wood and light
