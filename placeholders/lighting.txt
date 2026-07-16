@@ -1,8 +1,0 @@
-# Nested example: lighting moods that can include further placeholders.
-
-soft morning light through curtains
-dramatic rim lighting from the left
-warm candlelight
-__lighting/color__ studio softboxes
-overcast daylight from a large window
-neon glow reflecting on wet pavement
