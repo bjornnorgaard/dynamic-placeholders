@@ -101,7 +101,7 @@ Default root:
 extensions/dynamic-placeholders/placeholders/
 ```
 
-Override under **Settings → Dynamic Placeholders → Placeholders directory**, or add an extra folder (see below). Both paths are persisted in WebUI settings across restarts.
+Override under **Settings → Dynamic Placeholders → Placeholders directory**, or add an extra folder in the script accordion and click **Save directory**. The extra path is stored in the extension’s `user_settings.json` (and synced to WebUI settings when possible) so it survives restarts.
 
 ## UI options
 
@@ -109,7 +109,7 @@ Override under **Settings → Dynamic Placeholders → Placeholders directory**,
 |---|---|
 | Enable | Master switch for the current generation |
 | Link seed to placeholder choices | Same seed → same replacements (reproducible) |
-| Additional placeholders directory | Optional second folder searched after the default/settings directory (default wins on name conflicts). Persisted across restarts. |
+| Additional placeholders directory | Optional second folder searched after the default/settings directory (default wins on name conflicts). Use **Save directory** to keep it across restarts. |
 
 ## Settings
 

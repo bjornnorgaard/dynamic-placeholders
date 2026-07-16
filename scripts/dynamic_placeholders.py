@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import html
 import logging
 
 import gradio as gr
@@ -100,15 +101,41 @@ class Script(scripts.Script):
                     placeholder="/path/to/your/placeholders",
                     elem_id="dynph_extra_dir",
                 )
+                with gr.Row(elem_id="dynph_extra_dir_actions"):
+                    save_extra_dir = gr.Button(
+                        "Save directory",
+                        elem_id="dynph_extra_dir_save",
+                        variant="secondary",
+                    )
+                    save_extra_status = gr.HTML(
+                        value="",
+                        elem_id="dynph_extra_dir_status",
+                    )
                 field_help(
                     "Optional folder outside the extension install path. "
                     "List files there are used alongside the default/settings directory "
-                    "(default wins on name conflicts). Saved across restarts."
+                    "(default wins on name conflicts). "
+                    "Click <strong>Save directory</strong> so the path is kept after restart."
                 )
-            extra_placeholders_dir.change(
-                fn=persist_extra_placeholders_dir,
+
+            def _save_extra_dir(path: str):
+                saved = persist_extra_placeholders_dir(path)
+                if saved:
+                    msg = (
+                        f'<p class="dynph-ui-desc">Saved — will be restored after restart: '
+                        f"<code>{html.escape(saved)}</code></p>"
+                    )
+                    return saved, msg
+                msg = (
+                    '<p class="dynph-ui-desc">Cleared saved directory '
+                    "(empty path stored).</p>"
+                )
+                return "", msg
+
+            save_extra_dir.click(
+                fn=_save_extra_dir,
                 inputs=[extra_placeholders_dir],
-                outputs=[extra_placeholders_dir],
+                outputs=[extra_placeholders_dir, save_extra_status],
             )
         return [enabled, same_seed_link, extra_placeholders_dir]
 
@@ -118,9 +145,17 @@ class Script(scripts.Script):
 
         fix_seed(p)
 
-        # Keep Settings in sync even if the textbox change event did not fire.
-        persist_extra_placeholders_dir(extra_placeholders_dir)
-        resolver = make_resolver_from_settings(extra_placeholders_dir)
+        # Prefer the textbox when non-empty. Do not persist empty from here —
+        # after restart ui-config often blanks the field and would wipe the save.
+        # Clearing requires the Save directory button (or Settings).
+        ui_path = (extra_placeholders_dir or "").strip()
+        saved_path = get_extra_placeholders_dir()
+        if ui_path:
+            persist_extra_placeholders_dir(ui_path)
+            effective_extra = ui_path
+        else:
+            effective_extra = saved_path
+        resolver = make_resolver_from_settings(effective_extra)
         original_prompt = _effective_prompt(getattr(p, "all_prompts", None), p.prompt)
         original_negative = _effective_prompt(
             getattr(p, "all_negative_prompts", None),
@@ -205,6 +240,10 @@ def _on_app_started(demo, app):
     async def dynph_completions():
         wrap, names = list_completion_names()
         return JSONResponse({"wrap": wrap, "names": names})
+
+    @app.get("/dynph/v1/extra-dir")
+    async def dynph_extra_dir():
+        return JSONResponse({"path": get_extra_placeholders_dir()})
 
 
 script_callbacks.on_ui_settings(on_ui_settings)
