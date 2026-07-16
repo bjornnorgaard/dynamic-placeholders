@@ -1,0 +1,54 @@
+# Fantasy races — use as __race__ in prompts
+# Phrases meant to stand in for the subject (e.g. "portrait of __race__", "__race__ with a __expression__",
+# "__race__ __profession__", "__race__, cinematic lighting")
+# Drawn from Dungeons & Dragons and general fantasy; one entry per visual family only —
+# if two races would likely render interchangeable faces or silhouettes, keep the sharper one
+# Style: short, to the point, no leading a/an/the — lead with the race noun, then signature looks
+
+# --- Classic humanoids ---
+human with ordinary proportions and no fantastical features
+elf with pointed ears, slender build, and ethereal features
+drow with obsidian skin, white hair, and glowing red eyes
+dwarf with short stocky build, thick braided beard, and broad nose
+halfling with small stature, round face, and curly hair
+gnome with tiny stature, large nose, and bright curious eyes
+orc with green-gray skin, protruding tusks, and heavy brow
+goblin with small wiry frame, long pointed nose, and sharp teeth
+tiefling with curved horns, pointed tail, and reddish infernal skin
+aasimar with luminous eyes, faint golden freckles, and soft celestial glow
+
+# --- Draconic & reptilian ---
+dragonborn with scaled hide, draconic snout, and horned crest
+lizardfolk with alligator snout, mottled scales, and cold reptilian eyes
+kobold with small scaly body, dog-like snout, and frilled crest
+yuan-ti with serpentine scales, slit pupils, and forked tongue
+
+# --- Giant-kin & large folk ---
+goliath with towering frame, gray lithic skin, and dark tribal tattoos
+firbolg with large gentle frame, cow-like nose, and floppy ears
+troll with hulking warty green skin, long arms, and underbite fangs
+minotaur with bull head, massive horns, and thick furred neck
+centaur with human torso fused to a powerful equine body
+
+# --- Beastfolk & animal hybrids ---
+tabaxi with feline face, patterned fur, and retractable claws
+leonin with lion mane, muzzle, and powerful digitigrade legs
+aarakocra with feathered wings, avian beak, and taloned feet
+tortle with heavy turtle shell, beak-like mouth, and leathery skin
+loxodon with elephant trunk, broad ears, and wrinkled gray hide
+harengon with long rabbit ears, digitigrade legs, and soft fur
+satyr with goat horns, furred haunches, and cloven hooves
+
+# --- Fey, celestial & fiend ---
+fairy with translucent insect wings, tiny stature, and glowing skin
+dryad with bark-textured skin, leaf-woven hair, and moss accents
+angel with feathered white wings, radiant halo, and luminous skin
+demon with bat wings, curved horns, and crimson infernal flesh
+vampire with deathly pale skin, fangs, and blood-red eyes
+werewolf with lupine muzzle, digitigrade stance, and bristling fur
+
+# --- Constructs, aberrations & oddities ---
+warforged with living armor plating, glowing runes, and jointed metal limbs
+thri-kreen with chitinous insect body, mandibles, and four arms
+plasmoid with translucent amorphous body and floating internal nuclei
+merfolk with scaled skin, webbed ears, and gill slits along the neck
