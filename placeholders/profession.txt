@@ -3,115 +3,116 @@
 # No locations, scenes, or actions — keep pose, setting, and activity free for other tokens.
 # Each entry should read as a clearly different silhouette; near-duplicates are omitted on purpose.
 # Phrases meant to stand in for the subject (e.g. "portrait of __profession__", "__profession__, cinematic lighting")
+# Style: short, to the point, no leading a/an/the — lead with the profession noun
 
 # --- Medical & healthcare ---
-a nurse in blue hospital scrubs with a stethoscope around the neck and a clipped ID badge
-a doctor in a white coat over scrubs with a pen light in the breast pocket and a name badge
-a surgeon in surgical greens with a scrub cap, face mask pulled down, and shoe covers
-a paramedic in a reflective-stripe uniform with a shoulder radio and heavy-duty boots
-a dentist in a white coat with latex gloves and a head-mounted examination light
-a veterinarian in scrubs with a stethoscope and animal-hair-dusted sleeves
+nurse in blue hospital scrubs with stethoscope and ID badge
+doctor in white coat over scrubs with pen light and name badge
+surgeon in surgical greens with scrub cap, face mask pulled down, and shoe covers
+paramedic in reflective-stripe uniform with shoulder radio and heavy boots
+dentist in white coat with latex gloves and head-mounted exam light
+veterinarian in scrubs with stethoscope and animal-hair-dusted sleeves
 
 # --- Education & research ---
-a teacher in a tweed blazer with elbow patches, a lanyard ID, and chalk-dusted cuffs
-a professor in academic robes with a colored hood and mortarboard tassel
-a scientist in a lab coat over neat clothes with safety goggles around the neck
-an archaeologist in a khaki field shirt, wide-brim hat, and dusty boots
+teacher in tweed blazer with elbow patches, lanyard ID, and chalk-dusted cuffs
+professor in academic robes with colored hood and mortarboard tassel
+scientist in lab coat with safety goggles around the neck
+archaeologist in khaki field shirt, wide-brim hat, and dusty boots
 
 # --- Creative & arts ---
-a painter in paint-splattered overalls with a smock and pigment-stained hands
-a photographer in a multi-pocket vest with hanging camera straps and scuffed boots
-a fashion designer in a sharp black ensemble with measuring tape draped around the neck
-a ballerina in a leotard, tutu, tights, and ballet slippers with hair in a tight bun
-a sculptor in a dusty apron with clay under the fingernails
-a tattoo artist in black clothes with ink-stained forearms and nitrile gloves
+painter in paint-splattered overalls with smock and pigment-stained hands
+photographer in multi-pocket vest with hanging camera straps and scuffed boots
+fashion designer in sharp black ensemble with measuring tape around the neck
+ballerina in leotard, tutu, tights, and ballet slippers with hair in a tight bun
+sculptor in dusty apron with clay under the fingernails
+tattoo artist in black clothes with ink-stained forearms and nitrile gloves
 
 # --- Tech & site work ---
-a software engineer in a hoodie and jeans with an RFID badge lanyard and laptop-bag strap marks
-a construction worker in a hard hat, high-vis vest, and steel-toe boots
+software engineer in hoodie and jeans with RFID badge lanyard
+construction worker in hard hat, high-vis vest, and steel-toe boots
 
 # --- Trades & skilled labor ---
-a mechanic in grease-stained coveralls with a heavy tool belt and calloused, oil-marked hands
-an electrician in a work shirt with insulated-tool pouches and rubber-soled boots
-a welder in a leather apron and gauntlets with a welding helmet pushed up
-a carpenter in a flannel shirt and tool belt with a hammer loop and sawdust on the sleeves
-a mason in dusty work clothes with mortar-caked boots and knee pads
-a tailor in a waistcoat with measuring tape around the neck and a pin cushion on the wrist
-a jeweler with a loupe headset, fine-work apron, and precise clean hands
-a locksmith in a work vest with key rings and pick-set pouches
-a glassblower in a heat-resistant apron with singed cuffs and safety glasses
+mechanic in grease-stained coveralls with tool belt and oil-marked hands
+electrician in work shirt with insulated-tool pouches and rubber-soled boots
+welder in leather apron and gauntlets with welding helmet pushed up
+carpenter in flannel shirt and tool belt with hammer loop and sawdust on sleeves
+mason in dusty work clothes with mortar-caked boots and knee pads
+tailor in waistcoat with measuring tape around the neck and pin cushion on wrist
+jeweler with loupe headset, fine-work apron, and precise clean hands
+locksmith in work vest with key rings and pick-set pouches
+glassblower in heat-resistant apron with singed cuffs and safety glasses
 
 # --- Service & hospitality ---
-a barista in a black apron over a button-up with coffee-stained cuffs
-a bartender in a black vest with rolled sleeves and a bar towel over one shoulder
-a waiter in a white shirt, black apron, and polished black shoes
-a flight attendant in a tailored uniform with a scarf, wings pin, and neat updo
-a hairdresser in a black smock with scissors in a belt holster and dye-stained fingertips
-a makeup artist in black clothes with a brush belt and pigment-smudged wrists
-a florist in an apron with green-stained fingers and shears in the pocket
-a maid in a classic uniform with an apron and neat lace collar
-a butler in a black tailcoat with white gloves and immaculate dress shoes
+barista in black apron over button-up with coffee-stained cuffs
+bartender in black vest with rolled sleeves and bar towel over one shoulder
+waiter in white shirt, black apron, and polished black shoes
+flight attendant in tailored uniform with scarf, wings pin, and neat updo
+hairdresser in black smock with scissors in belt holster and dye-stained fingertips
+makeup artist in black clothes with brush belt and pigment-smudged wrists
+florist in apron with green-stained fingers and shears in pocket
+maid in classic uniform with apron and neat lace collar
+butler in black tailcoat with white gloves and immaculate dress shoes
 
 # --- Business ---
-a business executive in an impeccable three-piece suit with cufflinks and a luxury watch
-a salesperson in a company polo with an embroidered logo and lanyard ID
+business executive in impeccable three-piece suit with cufflinks and luxury watch
+salesperson in company polo with embroidered logo and lanyard ID
 
 # --- Public service & emergency ---
-a soldier in olive combat fatigues with dog tags, scuffed combat boots, and a unit patch
-an officer in a dress military uniform with medals, polished shoes, and peaked cap
-a firefighter in turnout gear with reflective stripes, a helmet, and a soot-smudged face
-a police officer in a duty uniform with a badge, radio, and duty belt
-a sailor in navy dress blues with a white cover and polished shoes
-a pilot in a uniform with epaulets, a wings pin, and a peaked cap
-an astronaut in a pressure suit with a mission patch and neck ring
-a judge in black robes with a white jabot collar
-a park ranger in a khaki uniform with a campaign hat and badge
-a lifeguard in red shorts with a whistle around the neck and sun-weathered skin
+soldier in olive combat fatigues with dog tags, scuffed boots, and unit patch
+officer in dress military uniform with medals, polished shoes, and peaked cap
+firefighter in turnout gear with reflective stripes, helmet, and soot-smudged face
+police officer in duty uniform with badge, radio, and duty belt
+sailor in navy dress blues with white cover and polished shoes
+pilot in uniform with epaulets, wings pin, and peaked cap
+astronaut in pressure suit with mission patch and neck ring
+judge in black robes with white jabot collar
+park ranger in khaki uniform with campaign hat and badge
+lifeguard in red shorts with whistle around the neck and sun-weathered skin
 
 # --- Food & outdoors ---
-a chef in a white double-breasted coat with a toque and flour-dusted sleeves
-a baker in a flour-dusted apron and white tee with powdery forearms
-a butcher in a striped apron with a steel and knife holster and blood-flecked cuffs
-a sommelier in a black apron with a tastevin around the neck and a neat waistcoat
-a fisherman in an oilskin jacket and cable-knit sweater with salt-crusted boots
-a farmer in a flannel shirt with mud-caked boots and sun-weathered hands
-a gardener in a dirt-stained apron and sun hat with soil under the fingernails
-a zookeeper in a khaki uniform with a key ring and animal-feed dust on the sleeves
-a horse trainer in riding boots and breeches with worn leather gloves
+chef in white double-breasted coat with toque and flour-dusted sleeves
+baker in flour-dusted apron and white tee with powdery forearms
+butcher in striped apron with steel and knife holster and blood-flecked cuffs
+sommelier in black apron with tastevin around the neck and neat waistcoat
+fisherman in oilskin jacket and cable-knit sweater with salt-crusted boots
+farmer in flannel shirt with mud-caked boots and sun-weathered hands
+gardener in dirt-stained apron and sun hat with soil under the fingernails
+zookeeper in khaki uniform with key ring and animal-feed dust on sleeves
+horse trainer in riding boots and breeches with worn leather gloves
 
 # --- Media & entertainment ---
-a detective in a rumpled trench coat with a badge on a neck chain and tired eyes
-a private investigator in a leather jacket with a camera strap and notepad pocket
-a news anchor in a tailored blazer with a mic pack and earpiece wire
-a radio DJ with headphones around the neck and casual on-air layers
-a stunt performer in a padded undersuit with harness straps and scuffed boots
-a magician in a tuxedo with a cape, top hat, and white gloves
-a clown in a colorful costume with painted face, red nose, and oversized shoes
+detective in rumpled trench coat with badge on neck chain and tired eyes
+private investigator in leather jacket with camera strap and notepad pocket
+news anchor in tailored blazer with mic pack and earpiece wire
+radio DJ with headphones around the neck and casual on-air layers
+stunt performer in padded undersuit with harness straps and scuffed boots
+magician in tuxedo with cape, top hat, and white gloves
+clown in colorful costume with painted face, red nose, and oversized shoes
 
 # --- Sports & fitness ---
-a personal trainer in a fitted tank and athletic shorts with a coaching lanyard
-a yoga instructor in fitted leggings and a draped wrap top with bare feet
-a boxer in hand wraps and high-waist shorts with a mouthguard case on a chain
-a martial artist in a gi with a colored belt and bare feet
-a soccer player in a team kit with shin guards and cleats
-a basketball player in a jersey and shorts with high-top sneakers
-a surfer in a wetsuit with salt-crusted hair and board-wax on the hands
-a ski instructor in a ski jacket with goggles on the helmet and ski boots
-a referee in a striped jersey with a whistle and badge
+personal trainer in fitted tank and athletic shorts with coaching lanyard
+yoga instructor in fitted leggings and draped wrap top with bare feet
+boxer in hand wraps and high-waist shorts with mouthguard case on a chain
+martial artist in gi with colored belt and bare feet
+soccer player in team kit with shin guards and cleats
+basketball player in jersey and shorts with high-top sneakers
+surfer in wetsuit with salt-crusted hair and board-wax on the hands
+ski instructor in ski jacket with goggles on helmet and ski boots
+referee in striped jersey with whistle and badge
 
 # --- Transport ---
-a truck driver in flannel and jeans with a CB radio clip and road-worn boots
-a delivery courier in a branded jacket and cargo pants with battered sneakers
-a postal worker in a postal-blue shirt with a badge and mail-bag strap marks
+truck driver in flannel and jeans with CB radio clip and road-worn boots
+delivery courier in branded jacket and cargo pants with battered sneakers
+postal worker in postal-blue shirt with badge and mail-bag strap marks
 
 # --- Specialty & characterful ---
-a monk in simple robes with a rope belt and worn sandals
-a nun in a habit with a veil and modest rosary
-a priest in a black cassock with a clerical collar
-a rabbi in a black suit with a tallit and kippah
-an imam in a thobe with a kufi cap
-a fortune teller in layered shawls with heavy jewelry and a headscarf
-a street performer in patched colorful clothes with face paint accents
-an inventor with goggles on the forehead, a tool-stained apron, and eccentric layered clothes
-a tour guide in a branded vest with a lanyard badge and comfortable walking shoes
-a bodyguard in a dark suit with an earpiece wire and discreet holster bulge
+monk in simple robes with rope belt and worn sandals
+nun in habit with veil and modest rosary
+priest in black cassock with clerical collar
+rabbi in black suit with tallit and kippah
+imam in thobe with kufi cap
+fortune teller in layered shawls with heavy jewelry and headscarf
+street performer in patched colorful clothes with face paint accents
+inventor with goggles on forehead, tool-stained apron, and eccentric layered clothes
+tour guide in branded vest with lanyard badge and comfortable walking shoes
+bodyguard in dark suit with earpiece wire and discreet holster bulge
