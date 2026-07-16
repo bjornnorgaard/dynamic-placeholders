@@ -7,8 +7,6 @@ import gradio as gr
 from modules import script_callbacks, scripts
 from modules.processing import fix_seed
 
-from lib_dynamic_placeholders.library import PlaceholderLibrary
-from lib_dynamic_placeholders.paths import get_placeholders_dir
 from lib_dynamic_placeholders.resolver import expand_prompt_list, make_resolver_from_settings
 from lib_dynamic_placeholders.settings import on_ui_settings
 
@@ -43,37 +41,6 @@ def _expand_hr_prompts(
     )
 
 
-def sort_placeholder_lists() -> str:
-    """Alphabetically sort every placeholder list file under the configured directory."""
-    root = get_placeholders_dir()
-    library = PlaceholderLibrary(root)
-    changed, total = library.sort_all_files()
-    logger.info(
-        "Sorted placeholder lists under %s: %s changed / %s total",
-        root,
-        changed,
-        total,
-    )
-    if total == 0:
-        return (
-            "<p style='margin:0.4em 0 0;opacity:0.8'>"
-            f"No placeholder list files found in <code>{root}</code>."
-            "</p>"
-        )
-    if changed == 0:
-        return (
-            "<p style='margin:0.4em 0 0;opacity:0.8'>"
-            f"All {total} placeholder list(s) were already alphabetically sorted."
-            "</p>"
-        )
-    return (
-        "<p style='margin:0.4em 0 0;opacity:0.8'>"
-        f"Sorted {changed} of {total} placeholder list(s) alphabetically. "
-        "Leading <code>#</code> comments were kept; seed → choice mapping may change."
-        "</p>"
-    )
-
-
 class Script(scripts.Script):
     def title(self):
         return "Dynamic Placeholders"
@@ -105,18 +72,6 @@ class Script(scripts.Script):
                 "When enabled, the same seed reproduces the same replacements."
                 "</p>"
             )
-            sort_btn = gr.Button(
-                "Sort placeholder lists A–Z",
-                elem_id="dynph_sort_lists",
-            )
-            sort_status = gr.HTML(value="", elem_id="dynph_sort_status")
-            gr.HTML(
-                "<p style='margin:0.2em 0 0;opacity:0.8'>"
-                "Rewrites every list file so values are alphabetical (case-insensitive). "
-                "Header comments stay at the top."
-                "</p>"
-            )
-            sort_btn.click(fn=sort_placeholder_lists, inputs=[], outputs=[sort_status])
         return [enabled, same_seed_link]
 
     def process(self, p, enabled: bool, same_seed_link: bool):

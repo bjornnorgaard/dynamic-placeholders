@@ -58,40 +58,6 @@ class LibraryTests(unittest.TestCase):
         self.assertIn("a quiet rainy street at dusk", values)
         self.assertTrue(all(" " in v for v in values))
 
-    def test_sort_file_alphabetically(self):
-        path = self.root / "pose.txt"
-        path.write_text(
-            "# poses\n# keep me\n\nstanding\nJumping\nsitting\n",
-            encoding="utf-8",
-        )
-        self.assertTrue(self.library.sort_file("pose"))
-        rewritten = path.read_text(encoding="utf-8")
-        self.assertEqual(
-            rewritten,
-            "# poses\n# keep me\n\nJumping\nsitting\nstanding\n",
-        )
-        self.assertEqual(
-            self.library.get_values("pose"),
-            ["Jumping", "sitting", "standing"],
-        )
-        # Already sorted — no rewrite.
-        self.assertFalse(self.library.sort_file("pose"))
-
-    def test_sort_all_files(self):
-        (self.root / "zeta.txt").write_text("b\na\n", encoding="utf-8")
-        (self.root / "alpha.txt").write_text("z\ny\n", encoding="utf-8")
-        changed, total = self.library.sort_all_files()
-        self.assertEqual(total, 5)  # furniture/sofa, pose, scene, alpha, zeta
-        self.assertGreaterEqual(changed, 2)
-        self.assertEqual(
-            (self.root / "alpha.txt").read_text(encoding="utf-8"),
-            "y\nz\n",
-        )
-        self.assertEqual(
-            (self.root / "zeta.txt").read_text(encoding="utf-8"),
-            "a\nb\n",
-        )
-
 
 class ResolverTests(unittest.TestCase):
     def setUp(self) -> None:
