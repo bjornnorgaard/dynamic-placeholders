@@ -13,7 +13,11 @@ from lib_dynamic_placeholders.autocomplete import (
     list_completion_names,
 )
 from lib_dynamic_placeholders.resolver import expand_prompt_list, make_resolver_from_settings
-from lib_dynamic_placeholders.settings import on_ui_settings
+from lib_dynamic_placeholders.settings import (
+    get_extra_placeholders_dir,
+    on_ui_settings,
+    persist_extra_placeholders_dir,
+)
 from lib_dynamic_placeholders.ui import field_help, section_description
 
 logger = logging.getLogger("dynamic_placeholders")
@@ -76,14 +80,19 @@ class Script(scripts.Script):
             field_help("When enabled, the same seed reproduces the same replacements.")
             extra_placeholders_dir = gr.Textbox(
                 label="Additional placeholders directory",
-                value="",
+                value=get_extra_placeholders_dir(),
                 placeholder="/path/to/your/placeholders",
                 elem_id="dynph_extra_dir",
             )
             field_help(
                 "Optional folder outside the extension install path. "
                 "List files there are used alongside the default/settings directory "
-                "(default wins on name conflicts)."
+                "(default wins on name conflicts). Saved across restarts."
+            )
+            extra_placeholders_dir.change(
+                fn=persist_extra_placeholders_dir,
+                inputs=[extra_placeholders_dir],
+                outputs=[extra_placeholders_dir],
             )
         return [enabled, same_seed_link, extra_placeholders_dir]
 
@@ -93,6 +102,8 @@ class Script(scripts.Script):
 
         fix_seed(p)
 
+        # Keep Settings in sync even if the textbox change event did not fire.
+        persist_extra_placeholders_dir(extra_placeholders_dir)
         resolver = make_resolver_from_settings(extra_placeholders_dir)
         original_prompt = _effective_prompt(getattr(p, "all_prompts", None), p.prompt)
         original_negative = _effective_prompt(

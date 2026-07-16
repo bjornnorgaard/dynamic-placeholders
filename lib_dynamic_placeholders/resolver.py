@@ -166,12 +166,14 @@ def make_resolver_from_settings(
 
     ``extra_placeholders_dir`` is an optional second folder (typically from the
     script UI) searched after the configured/default placeholders directory.
-    Use it for portable lists kept outside the extension install path.
+    When omitted (``None``), the persisted Settings value
+    ``dynph_extra_placeholders_dir`` is used. Pass ``""`` to skip the extra root.
     """
     wrap = DEFAULT_WRAP
     max_depth = DEFAULT_MAX_DEPTH
     leave_unresolved = True
     root: Path = get_placeholders_dir()
+    settings_extra: str | None = None
 
     try:
         from modules.shared import opts
@@ -182,8 +184,12 @@ def make_resolver_from_settings(
         configured = getattr(opts, "dynph_placeholders_dir", None)
         if configured and str(configured).strip():
             root = Path(str(configured).strip()).expanduser()
+        settings_extra = getattr(opts, "dynph_extra_placeholders_dir", None)
     except Exception:
         pass
+
+    if extra_placeholders_dir is None:
+        extra_placeholders_dir = settings_extra
 
     roots: list[Path] = [root]
     extra = _optional_dir(extra_placeholders_dir)

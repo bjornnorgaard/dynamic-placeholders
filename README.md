@@ -105,7 +105,7 @@ Default root:
 extensions/dynamic-placeholders/placeholders/
 ```
 
-Override under **Settings → Dynamic Placeholders → Placeholders directory**, or point an extra folder at generation time (see below).
+Override under **Settings → Dynamic Placeholders → Placeholders directory**, or add an extra folder (see below). Both paths are persisted in WebUI settings across restarts.
 
 ## UI options
 
@@ -113,7 +113,7 @@ Override under **Settings → Dynamic Placeholders → Placeholders directory**,
 |---|---|
 | Enable | Master switch for the current generation |
 | Link seed to placeholder choices | Same seed → same replacements (reproducible) |
-| Additional placeholders directory | Optional second folder searched after the default/settings directory (default wins on name conflicts) |
+| Additional placeholders directory | Optional second folder searched after the default/settings directory (default wins on name conflicts). Persisted across restarts. |
 
 ## Settings
 
@@ -122,6 +122,7 @@ Override under **Settings → Dynamic Placeholders → Placeholders directory**,
 | Setting | Default | Meaning |
 |---|---|---|
 | Placeholders directory | extension `placeholders/` | Where list files live |
+| Additional placeholders directory | _(empty)_ | Optional second folder (same as the script accordion field) |
 | Placeholder wrap string | `__` | Characters around the name |
 | Maximum nested replacement depth | `8` | Cap for recursive expansion |
 | Leave unknown placeholders unchanged | on | Missing files keep `__name__` in the prompt |
