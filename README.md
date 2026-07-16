@@ -29,7 +29,7 @@ upper body from the waist up, three-quarter view, watercolor painting of a orc w
 1. Copy or clone this folder into your Forge Neo `extensions/` directory:
 
    ```
-   .../Stable Diffusion WebUI Forge - Neo/extensions/dynamic-placeholders/
+   .../Stable Diffusion WebUI Forge - Neo/extensions/sd-dynamic-placeholders/
    ```
 
 2. Restart the WebUI (Stability Matrix → restart package, or rerun `webui.sh`).
@@ -111,7 +111,7 @@ Rules:
 Default root:
 
 ```
-extensions/dynamic-placeholders/placeholders/
+extensions/sd-dynamic-placeholders/placeholders/
 ```
 
 Override under **Settings → Dynamic Placeholders → Placeholders directory**, or add an extra folder in the script accordion and click **Save directory**. The extra path is stored in the extension’s `user_settings.json` (and synced to WebUI settings when possible) so it survives restarts.
@@ -164,7 +164,7 @@ python -m unittest discover -s tests -v
 ## Layout
 
 ```
-dynamic-placeholders/
+sd-dynamic-placeholders/
 ├── README.md
 ├── docs/
 │   └── SYNTAX.md
