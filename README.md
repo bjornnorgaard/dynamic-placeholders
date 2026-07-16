@@ -53,6 +53,8 @@ No extra Python packages are required.
 
 3. Edit the shipped lists under `placeholders/`, or add new `.txt` files. Changes are picked up on the next generation (mtime-based cache — no restart).
 
+4. In the prompt box, type `__` to autocomplete placeholder names (arrow keys / Enter or Tab to insert `__name__`).
+
 Composition is built in: `__hair__` expands into length / color / style; `__clothes__` expands into separates or full-body outfits without stacking conflicting layers. Full syntax: [docs/SYNTAX.md](docs/SYNTAX.md).
 
 ## What ships in `placeholders/`
@@ -66,6 +68,9 @@ Composition is built in: `__hair__` expands into length / color / style; `__clot
 | `__setting__` | Environment / backdrop |
 | `__time__` | Time of day / lighting cue |
 | `__city__` | Visually distinct city / place names |
+| `__country__` | National / cultural subject looks (demonym + signature dress) |
+| `__artstyle__` | Non-photorealistic mediums (anime, painting, comic, craft, …) |
+| `__photostyle__` | Photorealistic photography looks (cinematic, film stock, optics, …) |
 
 Composable groups use nested paths:
 
@@ -131,6 +136,13 @@ Each `__token__` is resolved independently (two `__expression__` tokens can beco
 
 You do **not** need Forge-specific APIs for prompt rewriting.
 
+## Autocomplete
+
+Typing `__` in a prompt (or negative / HR prompt) opens a list of available placeholder names. Choose one to insert a closed token such as `__hair__` or `__clothes/torso/shirt__`.
+
+- Built-in: works without other extensions. Uses the wrap string and placeholders directory from Settings.
+- [Tag Autocomplete](https://github.com/DominikDoom/a1111-sd-webui-tagcomplete): if that extension is installed with wildcard search enabled, it owns `__` completion instead. This extension keeps a `wildcards/` symlink to `placeholders/` so Tag Autocomplete can discover the same lists.
+
 ## Coexistence with sd-dynamic-prompts
 
 Both extensions understand `__name__`-style tokens. If both are enabled they can interfere. Prefer one of:
@@ -156,15 +168,21 @@ dynamic-placeholders/
 ├── README.md
 ├── docs/
 │   └── SYNTAX.md
+├── javascript/
+│   └── dynamic_placeholders_autocomplete.js
 ├── lib_dynamic_placeholders/
+│   ├── autocomplete.py # __ prefix matching + TAC wildcards link
 │   ├── library.py      # file discovery + caching
 │   ├── paths.py        # directory resolution
 │   ├── resolver.py     # __token__ expansion
 │   └── settings.py     # WebUI settings page
 ├── placeholders/       # shipped + your list files
+├── wildcards/          # symlink → placeholders (Tag Autocomplete)
 ├── scripts/
 │   └── dynamic_placeholders.py
+├── style.css
 └── tests/
+    ├── test_autocomplete.py
     └── test_resolver.py
 ```
 

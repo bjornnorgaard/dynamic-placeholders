@@ -3,10 +3,15 @@ from __future__ import annotations
 import logging
 
 import gradio as gr
+from fastapi.responses import JSONResponse
 
 from modules import script_callbacks, scripts
 from modules.processing import fix_seed
 
+from lib_dynamic_placeholders.autocomplete import (
+    ensure_wildcards_link_for_tagcomplete,
+    list_completion_names,
+)
 from lib_dynamic_placeholders.resolver import expand_prompt_list, make_resolver_from_settings
 from lib_dynamic_placeholders.settings import on_ui_settings
 
@@ -58,6 +63,7 @@ class Script(scripts.Script):
             gr.HTML(
                 "<p style='margin:0.4em 0 0'>"
                 "Use <code>__name__</code> in prompts. "
+                "Type <code>__</code> to autocomplete available names. "
                 "Each name maps to a newline-separated list file in the placeholders folder "
                 "(Settings → Dynamic Placeholders), and optionally an extra folder below."
                 "</p>"
@@ -170,4 +176,15 @@ class Script(scripts.Script):
         logger.info("Dynamic Placeholders expanded prompt: %s", sample)
 
 
+def _on_app_started(demo, app):
+    """Register autocomplete API and expose lists to Tag Autocomplete."""
+    ensure_wildcards_link_for_tagcomplete()
+
+    @app.get("/dynph/v1/completions")
+    async def dynph_completions():
+        wrap, names = list_completion_names()
+        return JSONResponse({"wrap": wrap, "names": names})
+
+
 script_callbacks.on_ui_settings(on_ui_settings)
+script_callbacks.on_app_started(_on_app_started)
