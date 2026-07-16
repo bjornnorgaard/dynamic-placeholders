@@ -71,6 +71,7 @@ Composition is built in: `__hair__` expands into length / color / style; `__clot
 | `__country__` | National / cultural subject looks (demonym + signature dress) |
 | `__artstyle__` | Non-photorealistic mediums (anime, painting, comic, craft, …) |
 | `__photostyle__` | Photorealistic photography looks (cinematic, film stock, optics, …) |
+| `__view__` | Viewpoint, framing & composition (dutch angle, cowboy framing, …) |
 
 Composable groups use nested paths:
 
