@@ -84,6 +84,16 @@ class PathsTests(unittest.TestCase):
         with self._patch_base():
             self.assertEqual(paths.resolve_placeholders_dir(None), default)
 
+    def test_stale_detection_uses_resolved_extension_parents(self):
+        """Symlinked extensions/ roots should still count as the same parent."""
+        linked_extensions = Path(self.tmp.name) / "extensions-link"
+        linked_extensions.symlink_to(self.extensions)
+        old = linked_extensions / "dynamic-placeholders" / "placeholders"
+        default = self.current / "placeholders"
+        with self._patch_base():
+            self.assertTrue(paths.is_stale_extension_placeholders_dir(old, default))
+            self.assertEqual(paths.resolve_placeholders_dir(old), default)
+
 
 if __name__ == "__main__":
     unittest.main()

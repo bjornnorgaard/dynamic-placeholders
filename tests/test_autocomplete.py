@@ -78,17 +78,40 @@ class WildcardsLinkTests(unittest.TestCase):
             ), mock.patch(
                 "lib_dynamic_placeholders.autocomplete.get_placeholders_dir",
                 return_value=placeholders,
-            ), mock.patch(
-                "lib_dynamic_placeholders.autocomplete.get_default_placeholders_dir",
-                return_value=placeholders,
             ):
                 link = ensure_wildcards_link_for_tagcomplete()
                 self.assertIsNotNone(link)
                 self.assertTrue(link.is_symlink())
                 self.assertEqual(link.resolve(), placeholders.resolve())
+                self.assertEqual(link.readlink(), Path("placeholders"))
                 # Idempotent
                 again = ensure_wildcards_link_for_tagcomplete()
                 self.assertEqual(again.resolve(), placeholders.resolve())
+
+    def test_replaces_stale_symlink_after_extension_rename(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            extensions = Path(tmp) / "extensions"
+            old = extensions / "dynamic-placeholders" / "placeholders"
+            old.mkdir(parents=True)
+            current = extensions / "sd-dynamic-placeholders"
+            placeholders = current / "placeholders"
+            placeholders.mkdir(parents=True)
+            (placeholders / "pose.txt").write_text("standing\n", encoding="utf-8")
+
+            link = current / "wildcards"
+            link.symlink_to(old, target_is_directory=True)
+
+            with mock.patch(
+                "lib_dynamic_placeholders.autocomplete.get_extension_base_path",
+                return_value=current,
+            ), mock.patch(
+                "lib_dynamic_placeholders.autocomplete.get_placeholders_dir",
+                return_value=placeholders,
+            ):
+                refreshed = ensure_wildcards_link_for_tagcomplete()
+                self.assertIsNotNone(refreshed)
+                self.assertEqual(refreshed.resolve(), placeholders.resolve())
+                self.assertEqual(refreshed.readlink(), Path("placeholders"))
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 
 from .library import PLACEHOLDER_NAME_RE
-from .paths import get_default_placeholders_dir, get_extension_base_path, get_placeholders_dir
+from .paths import get_extension_base_path, get_placeholders_dir
 from .resolver import DEFAULT_WRAP, make_resolver_from_settings
 
 logger = logging.getLogger(__name__)
@@ -98,6 +98,8 @@ def ensure_wildcards_link_for_tagcomplete() -> Path | None:
     """
     base = get_extension_base_path()
     link = base / "wildcards"
+    # Always the resolved primary placeholders dir (stale renamed-install
+    # settings are rewritten by get_placeholders_dir).
     target = get_placeholders_dir()
 
     try:
@@ -106,14 +108,12 @@ def ensure_wildcards_link_for_tagcomplete() -> Path | None:
         logger.exception("Failed to ensure placeholders directory %s", target)
         return None
 
-    default_dir = get_default_placeholders_dir()
+    # Prefer a relative link when the target lives under this extension root
+    # (typical case: wildcards → placeholders). Absolute only for custom dirs.
     try:
-        same_as_default = target.resolve() == default_dir.resolve()
-    except OSError:
-        same_as_default = target == default_dir
-
-    # Prefer a relative link when pointing at the shipped placeholders folder.
-    link_target: str | Path = Path("placeholders") if same_as_default else target
+        link_target: str | Path = target.resolve().relative_to(base.resolve())
+    except (OSError, ValueError):
+        link_target = target
 
     if link.is_symlink():
         try:
@@ -123,8 +123,12 @@ def ensure_wildcards_link_for_tagcomplete() -> Path | None:
                 return link
             link.unlink()
         except OSError:
-            logger.exception("Failed to refresh wildcards symlink at %s", link)
-            return link if link.exists() else None
+            # Broken or unreadable link (e.g. after a folder rename) — replace it.
+            try:
+                link.unlink()
+            except OSError:
+                logger.exception("Failed to refresh wildcards symlink at %s", link)
+                return link if link.exists() else None
     elif link.exists():
         # Real directory — do not destroy user content.
         if link.is_dir():

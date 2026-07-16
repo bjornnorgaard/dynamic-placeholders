@@ -47,7 +47,12 @@ def is_stale_extension_placeholders_dir(configured: Path, default: Path | None =
 
     current_base = get_extension_base_path()
     parent = configured.parent
-    if parent.parent != current_base.parent:
+    # Compare resolved parents so symlink install roots still match.
+    try:
+        same_extensions_root = parent.parent.resolve() == current_base.parent.resolve()
+    except OSError:
+        same_extensions_root = parent.parent == current_base.parent
+    if not same_extensions_root:
         return False
     if _paths_equal(parent, current_base):
         return False
