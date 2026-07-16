@@ -6,8 +6,4 @@ short
 shoulder-length
 medium length
 long
-mid-back length
-waist-length
-hip-length
 very long
-floor-length
