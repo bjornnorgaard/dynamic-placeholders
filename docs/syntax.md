@@ -1,6 +1,6 @@
 # Dynamic Placeholders syntax
 
-Related docs: [PLACEHOLDERS.md](PLACEHOLDERS.md) (shipped tokens) · [SETTINGS.md](SETTINGS.md) (UI & options) · [EXAMPLES.md](EXAMPLES.md) (ready-to-paste prompts)
+Related docs: [placeholders.md](placeholders.md) (shipped tokens) · [settings.md](settings.md) (UI & options) · [examples.md](examples.md) (ready-to-paste prompts)
 
 ## Tokens
 
@@ -155,7 +155,7 @@ placeholders/
 
 Prompt `portrait, __lighting__` might become `portrait, cool blue studio softboxes`.
 
-For fuller ready-to-paste prompts (focused demos and kitchen-sink showcases), see [EXAMPLES.md](EXAMPLES.md).
+For fuller ready-to-paste prompts (focused demos and kitchen-sink showcases), see [examples.md](examples.md).
 
 ## Tips
 
@@ -163,4 +163,4 @@ For fuller ready-to-paste prompts (focused demos and kitchen-sink showcases), se
 - Keep one concept per file, then compose them in higher-level files (e.g. `hair.txt`).
 - Use `#` comments at the top of a file to document intended usage.
 - After editing list files, generate again — no WebUI restart is required (cache keys on file mtime).
-- Placeholders also expand in negative / Hires prompts when those settings are on — see [SETTINGS.md](SETTINGS.md).
+- Placeholders also expand in negative / Hires prompts when those settings are on — see [settings.md](settings.md).

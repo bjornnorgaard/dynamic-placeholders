@@ -59,8 +59,8 @@ _USAGE_GUIDE_HTML = """
   <p class="dynph-usage-guide-footnote">
     This is a short overview only. Full docs live in the extension repository:
     <code>README.md</code> plus <code>docs/</code>
-    (<code>SYNTAX.md</code>, <code>PLACEHOLDERS.md</code>, <code>SETTINGS.md</code>,
-    <code>EXAMPLES.md</code>).
+    (<code>syntax.md</code>, <code>placeholders.md</code>, <code>settings.md</code>,
+    <code>examples.md</code>).
   </p>
 </div>
 """

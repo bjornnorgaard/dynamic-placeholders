@@ -45,16 +45,16 @@ No extra Python packages are required.
 
 4. In the prompt box, type `__` to autocomplete placeholder names (arrow keys / Enter or Tab to insert `__name__`).
 
-Composition is built in: `__hair__` expands into length / color / style; `__clothes__` into separates or full-body outfits; `__face__` into structure plus features; `__room__` into type with optional size / mood / place. Details: [docs/SYNTAX.md](docs/SYNTAX.md).
+Composition is built in: `__hair__` expands into length / color / style; `__clothes__` into separates or full-body outfits; `__face__` into structure plus features; `__room__` into type with optional size / mood / place. Details: [docs/syntax.md](docs/syntax.md).
 
 ## Documentation
 
 | Doc | Contents |
 |---|---|
-| [docs/SYNTAX.md](docs/SYNTAX.md) | Token syntax, list file format, expansion & composition rules |
-| [docs/PLACEHOLDERS.md](docs/PLACEHOLDERS.md) | Shipped tokens, nested paths, how composition groups fit together |
-| [docs/SETTINGS.md](docs/SETTINGS.md) | Accordion controls, Settings page, directories, autocomplete |
-| [docs/EXAMPLES.md](docs/EXAMPLES.md) | Ready-to-paste prompts (focused demos and kitchen-sink showcases) |
+| [docs/syntax.md](docs/syntax.md) | Token syntax, list file format, expansion & composition rules |
+| [docs/placeholders.md](docs/placeholders.md) | Shipped tokens, nested paths, how composition groups fit together |
+| [docs/settings.md](docs/settings.md) | Accordion controls, Settings page, directories, autocomplete |
+| [docs/examples.md](docs/examples.md) | Ready-to-paste prompts (focused demos and kitchen-sink showcases) |
 
 For authors editing shipped lists: [AGENTS.md](AGENTS.md) (visual distinctiveness rules).
 

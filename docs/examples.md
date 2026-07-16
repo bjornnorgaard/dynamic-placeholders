@@ -2,7 +2,7 @@
 
 Copy these into txt2img with **Dynamic Placeholders → Enable** checked. Each generation picks new lines; turn on **Link seed to placeholder choices** if you want the same seed to reproduce the same expansions.
 
-Token reference: [PLACEHOLDERS.md](PLACEHOLDERS.md). Syntax rules: [SYNTAX.md](SYNTAX.md).
+Token reference: [placeholders.md](placeholders.md). Syntax rules: [syntax.md](syntax.md).
 
 ---
 

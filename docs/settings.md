@@ -61,10 +61,10 @@ sd-dynamic-placeholders/
 ├── README.md
 ├── AGENTS.md                 # list-authoring rules (distinctiveness)
 ├── docs/
-│   ├── SYNTAX.md
-│   ├── PLACEHOLDERS.md
-│   ├── SETTINGS.md
-│   └── EXAMPLES.md
+│   ├── syntax.md
+│   ├── placeholders.md
+│   ├── settings.md
+│   └── examples.md
 ├── javascript/
 │   ├── dynamic_placeholders_autocomplete.js
 │   └── dynamic_placeholders_extra_dir.js

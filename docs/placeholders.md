@@ -72,4 +72,4 @@ Child lists under `placeholders/clothes/`:
 - Supported extensions: `.txt`, `.text`, `.list`
 - A list entry may itself contain placeholders; they expand recursively
 
-Full rules: [SYNTAX.md](SYNTAX.md). Authoring guidance for distinctiveness: [../AGENTS.md](../AGENTS.md).
+Full rules: [syntax.md](syntax.md). Authoring guidance for distinctiveness: [../AGENTS.md](../AGENTS.md).
