@@ -7,13 +7,13 @@ A [Stable Diffusion WebUI Forge - Neo](https://github.com/Haoming02/sd-webui-for
 Write lists under `placeholders/`, then use `__name__` in a prompt. At generation time each token is replaced with a random line from the matching file. Nested tokens inside those lines expand recursively, so one high-level placeholder can compose hair, clothes, setting, and more from smaller lists.
 
 ```
-portrait of __profession__ with a __expression__, __hair__, __clothes__, in a __setting__ at __time__, __city__
+__focus__, __view__, __artstyle__ of a __race__ __profession__, __country__, with a __expression__, __face__, __hair__, __clothes__, in a __setting__ in __city__ at __time__
 ```
 
 Example expansion:
 
 ```
-portrait of firefighter in turnout gear with reflective stripes, helmet, and soot-smudged face with a sly smirk, long auburn high ponytail hair, wearing knit beanie, wire-rim glasses, flannel shirt under a denim jacket, blue jeans, and sneakers, in a pine forest misty at dawn at golden hour, Tokyo with neon streets, dense towers, and Shinto shrine courtyards
+upper body from the waist up, three-quarter view, watercolor painting of a orc with green-gray skin, protruding tusks, and heavy brow firefighter in turnout gear with reflective stripes, helmet, and soot-smudged face, Japanese in kimono with obi sash and wooden geta, with a sly smirk, oval face with soft jawline and high cheekbones with large green almond-shaped eyes, straight nose, full pink lips, and pointed ears, long auburn high ponytail hair, wearing knit beanie, wire-rim glasses, flannel shirt under a denim jacket, blue jeans, and sneakers, in a pine forest misty at dawn in Tokyo with neon streets, dense towers, and Shinto shrine courtyards at golden hour
 ```
 
 ## Features
@@ -21,7 +21,7 @@ portrait of firefighter in turnout gear with reflective stripes, helmet, and soo
 - A dedicated `placeholders/` folder for list files
 - One random line per token — no combinatorial explosion
 - List lines are first-class **phrases and sentences**, not only single words
-- Nested composition so parent lists (`__hair__`, `__clothes__`) pull in child lists automatically
+- Nested composition so parent lists (`__hair__`, `__clothes__`, `__face__`) pull in child lists automatically
 - Shipped lists tuned for **visual distinctiveness** in image models (fewer near-duplicates, sharper silhouettes)
 
 ## Install
@@ -41,7 +41,7 @@ No extra Python packages are required.
 ## Quick start
 
 1. Open the **Dynamic Placeholders** accordion and leave **Enable** checked.
-2. Use a prompt like:
+2. Copy the **Example prompt** from the accordion, or use a shorter prompt like:
 
    ```
    portrait of __profession__ with __hair__, __clothes__, in a __setting__
@@ -51,7 +51,7 @@ No extra Python packages are required.
 
 4. In the prompt box, type `__` to autocomplete placeholder names (arrow keys / Enter or Tab to insert `__name__`).
 
-Composition is built in: `__hair__` expands into length / color / style; `__clothes__` expands into separates or full-body outfits without stacking conflicting layers. Full syntax: [docs/SYNTAX.md](docs/SYNTAX.md).
+Composition is built in: `__hair__` expands into length / color / style; `__clothes__` into separates or full-body outfits; `__face__` into structure plus eyes / nose / lips / ears. Full syntax: [docs/SYNTAX.md](docs/SYNTAX.md).
 
 ## What ships in `placeholders/`
 
@@ -59,6 +59,9 @@ Composition is built in: `__hair__` expands into length / color / style; `__clot
 |---|---|
 | `__profession__` | Subject look (silhouette + distinctive gear / traits) |
 | `__expression__` | Facial expression / mood |
+| `__race__` | Fantasy / D&D-style subject races (silhouette + signature traits) |
+| `__animal__` | Real and mythical creatures (single-word names) |
+| `__face__` | Composable face → structure, eyes, nose, lips, ears |
 | `__hair__` | Composable hair → `hair/length`, `hair/color`, `hair/style` |
 | `__clothes__` | Composable attire → head, torso, pants, fullbody, shoes, etc. |
 | `__setting__` | Environment / backdrop |
@@ -77,6 +80,10 @@ Composable groups use nested paths:
 |---|---|
 | `__hair__` | `placeholders/hair.txt` |
 | `__hair/color__` | `placeholders/hair/color.txt` |
+| `__face__` | `placeholders/face.txt` |
+| `__face/structure__` | `placeholders/face/structure.txt` |
+| `__eyes__` | `placeholders/eyes.txt` |
+| `__eyes/color__` | `placeholders/eyes/color.txt` |
 | `__clothes__` | `placeholders/clothes.txt` |
 | `__clothes/torso__` | `placeholders/clothes/torso.txt` |
 | `__clothes/torso/shirt__` | `placeholders/clothes/torso/shirt.txt` |
@@ -84,9 +91,11 @@ Composable groups use nested paths:
 
 `clothes.txt` keeps **separates** (torso + pants) and **full-body** outfits on different lines so layers never stack. Head and torso are themselves nested groups (`hat` / `glasses` / `piercings`, `shirt` / `jacket`).
 
+`face.txt` mixes structure with optional feature groups (`__eyes__`, `__nose__`, `__lips__`, `__ears__`) so prompts stay light when you omit layers. Each feature group nests size / shape / color / adjective lists the same way hair does.
+
 `__view__` covers angle and composition; `__focus__` covers how much of the figure is in frame; `__pose__` covers how the body is held — keep them separate so they do not fight.
 
-You can use child tokens directly (`__hair/color__`, `__clothes/shoes__`) or only the parent and let composition do the work.
+You can use child tokens directly (`__hair/color__`, `__eyes/shape__`, `__clothes/shoes__`) or only the parent and let composition do the work.
 
 ## Placeholder files
 
@@ -113,6 +122,7 @@ Override under **Settings → Dynamic Placeholders → Placeholders directory**,
 |---|---|
 | Enable | Master switch for the current generation |
 | Link seed to placeholder choices | Same seed → same replacements (reproducible) |
+| Example prompt | Copy-paste demo using the shipped top-level lists (swap `__artstyle__` for `__photostyle__` for photography) |
 | Additional placeholders directory | Optional second folder searched after the default/settings directory (default wins on name conflicts). Use **Save directory** to keep it across restarts. |
 
 ## Settings
@@ -134,7 +144,7 @@ Override under **Settings → Dynamic Placeholders → Placeholders directory**,
 
 On Forge Neo this extension registers an `AlwaysVisible` script and rewrites `p.all_prompts` (and optional negative / HR prompts) inside `Script.process()`, after `setup_prompts()` and before sampling.
 
-Each `__token__` is resolved independently (two `__expression__` tokens can become two different faces). With seed linking enabled, sampling is driven by the image seed so reruns match. The unresolved template stays in the UI / PNG info when that setting is on.
+Each `__token__` is resolved independently (two `__expression__` tokens can become two different faces). With seed linking enabled, sampling is driven by the image seed so reruns match. The unresolved template stays in the UI / PNG info when that setting is on. Missing list files or an empty placeholders directory produce clear console warnings.
 
 ## Autocomplete
 
@@ -159,13 +169,16 @@ dynamic-placeholders/
 ├── docs/
 │   └── SYNTAX.md
 ├── javascript/
-│   └── dynamic_placeholders_autocomplete.js
+│   ├── dynamic_placeholders_autocomplete.js
+│   └── dynamic_placeholders_extra_dir.js
 ├── lib_dynamic_placeholders/
 │   ├── autocomplete.py # __ prefix matching + TAC wildcards link
+│   ├── console.py      # missing-list / empty-dir warnings
 │   ├── library.py      # file discovery + caching
 │   ├── paths.py        # directory resolution
 │   ├── resolver.py     # __token__ expansion
-│   └── settings.py     # WebUI settings page
+│   ├── settings.py     # WebUI settings page
+│   └── ui.py           # accordion helpers + example prompt
 ├── placeholders/       # shipped + your list files
 ├── wildcards/          # symlink → placeholders (Tag Autocomplete)
 ├── scripts/
