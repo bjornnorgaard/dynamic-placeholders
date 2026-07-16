@@ -1,0 +1,10 @@
+# Eye size options — referenced from eyes.txt via __eyes/size__
+# Ordered small → large. Includes a medium baseline for ordinary eyes.
+# Size-only phrasing so it composes cleanly with color/shape.
+
+beady
+small
+medium
+large
+doe-eyed
+oversized

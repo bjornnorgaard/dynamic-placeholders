@@ -1,0 +1,9 @@
+# Face structure group: overall shape, jaw, and cheeks as nested lists.
+# Variants omit optional layers so not every look forces all three.
+
+__face/structure/shape__ face
+__face/structure/shape__ face with __face/structure/jaw__
+__face/structure/shape__ face, __face/structure/jaw__, __face/structure/cheeks__
+__face/structure/jaw__
+__face/structure/shape__ face with __face/structure/cheeks__
+__face/structure/jaw__ and __face/structure/cheeks__

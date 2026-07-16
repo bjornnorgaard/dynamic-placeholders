@@ -1,0 +1,10 @@
+# Lip surface finish — referenced via __lips/adjective/finish__
+# Everyday finishes first; stylized after
+
+matte
+glossy
+satin
+dewy
+metallic
+stained
+overlined

@@ -1,0 +1,15 @@
+# Iris / surface finish — referenced via __eyes/adjective/finish__
+# Everyday surfaces first; fantasy materials after
+# One look per surface family — sparkle near-synonyms omitted
+
+clear
+bright
+matte
+watery
+piercing
+glassy
+crystalline
+liquid mercury
+mirror-like
+galaxy iris
+porcelain-doll

@@ -1,0 +1,13 @@
+# Eye shape options — referenced from eyes.txt via __eyes/shape__
+# Structural silhouettes only (not size, color, or specialty effects)
+# Everyday shapes first; stylized silhouettes after — one look per family
+
+almond-shaped
+round
+hooded
+monolid
+upturned
+downturned
+fox-eye
+wide-set
+close-set

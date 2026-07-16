@@ -1,0 +1,14 @@
+# Everyday eye adjectives — referenced via __eyes/adjective/natural__
+# Soft, shy, and ordinary cues (not glow, pupil shapes, or fantasy finish)
+# Near-synonyms pruned; each line should shift expression of the eyes clearly
+
+clear
+bright
+soft
+gentle
+warm
+kind
+calm
+shy
+downcast
+demure

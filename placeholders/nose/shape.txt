@@ -1,0 +1,14 @@
+# Nose shape options — referenced via __nose/shape__
+# Everyday profiles first; strongly silhouetted shapes after
+# One look per profile family
+
+straight
+button
+upturned
+aquiline
+roman
+bulbous
+flat
+snub
+hooked
+crooked

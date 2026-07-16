@@ -1,0 +1,9 @@
+# Composable nose: size, shape, and optional adjectives.
+# Many lines omit adjectives so ordinary noses stay common.
+
+__nose/shape__ nose
+__nose/size__ __nose/shape__ nose
+__nose/size__ nose
+__nose/size__ __nose/shape__ nose, __nose/adjective__
+__nose/shape__ nose with __nose/adjective__
+__nose/size__ nose, __nose/adjective__

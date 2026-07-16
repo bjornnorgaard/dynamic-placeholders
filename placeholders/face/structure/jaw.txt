@@ -1,0 +1,14 @@
+# Jaw / chin structure — referenced via __face/structure/jaw__
+# Everyday jaws first; strongly silhouetted options after
+# Near-synonyms pruned; each line should shift lower-face outline clearly
+
+soft jawline
+defined jawline
+strong square jaw
+narrow jaw
+wide jaw
+pointed chin
+cleft chin
+rounded chin
+lantern jaw
+recessed chin

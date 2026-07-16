@@ -1,0 +1,11 @@
+# Lip shape options — referenced via __lips/shape__
+# Everyday silhouettes first; stylized bows and widths after
+
+softly shaped
+cupid's-bow
+wide
+narrow
+heart-shaped
+downturned
+upturned
+asymmetrical

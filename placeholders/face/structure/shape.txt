@@ -1,0 +1,13 @@
+# Overall face shape — referenced via __face/structure/shape__
+# Classic silhouettes the model knows; one look per outline family
+# Everyday shapes first
+
+oval
+round
+heart-shaped
+square
+diamond
+long
+triangular
+softly rounded
+angular

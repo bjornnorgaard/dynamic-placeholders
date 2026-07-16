@@ -1,0 +1,16 @@
+# Lip color options — referenced via __lips/color__
+# Everyday naturals first; deeper / stylized shades after
+
+natural pink
+rose
+coral
+nude
+peach
+deep rose
+berry
+deep red
+wine
+brown
+dark brown
+pale
+black

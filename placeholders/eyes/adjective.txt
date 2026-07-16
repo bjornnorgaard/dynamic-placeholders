@@ -1,0 +1,10 @@
+# Eye adjectives group: everyday natural looks plus specialty glow / pupil / finish.
+# Natural kept as its own path so soft, shy, and ordinary eyes stay in the mix.
+
+__eyes/adjective/natural__
+__eyes/adjective/glow__
+__eyes/adjective/pupil__
+__eyes/adjective/finish__
+__eyes/adjective/glow__, __eyes/adjective/finish__
+__eyes/adjective/pupil__, __eyes/adjective/finish__
+__eyes/adjective/glow__, __eyes/adjective/pupil__

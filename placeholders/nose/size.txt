@@ -1,0 +1,8 @@
+# Nose size options — referenced via __nose/size__
+# Ordered small → large. Includes medium for ordinary noses.
+
+delicate
+small
+medium
+large
+broad

@@ -1,0 +1,6 @@
+# Ear adjectives: everyday natural looks plus distinctive detail.
+# Natural kept as its own path so ordinary ears stay in the mix.
+
+__ears/adjective/natural__
+__ears/adjective/detail__
+__ears/adjective/natural__, __ears/adjective/detail__

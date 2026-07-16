@@ -1,0 +1,6 @@
+# Lip adjectives: everyday natural looks plus surface finish.
+# Natural kept as its own path so ordinary lips stay in the mix.
+
+__lips/adjective/natural__
+__lips/adjective/finish__
+__lips/adjective/natural__, __lips/adjective/finish__

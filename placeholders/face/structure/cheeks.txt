@@ -1,0 +1,11 @@
+# Cheek structure — referenced via __face/structure/cheeks__
+# Everyday fullness first; sculpted / gaunt options after
+
+full cheeks
+soft cheeks
+high cheekbones
+wide cheekbones
+hollow cheeks
+apple cheeks
+gaunt cheeks
+sculpted cheekbones

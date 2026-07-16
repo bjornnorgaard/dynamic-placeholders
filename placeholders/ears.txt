@@ -1,0 +1,9 @@
+# Composable ears: size, shape, and optional adjectives.
+# Many lines omit adjectives so ordinary ears stay common.
+
+__ears/shape__ ears
+__ears/size__ __ears/shape__ ears
+__ears/size__ ears
+__ears/size__ __ears/shape__ ears, __ears/adjective__
+__ears/shape__ ears with __ears/adjective__
+__ears/size__ ears, __ears/adjective__

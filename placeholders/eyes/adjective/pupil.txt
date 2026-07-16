@@ -1,0 +1,9 @@
+# Pupil shape / state — referenced via __eyes/adjective/pupil__
+# Round / normal pupils kept for ordinary eyes; fantasy silhouettes after
+
+round pupils
+dilated pupils
+cat-slit pupils
+goat pupils
+star pupils
+heart-shaped pupils

@@ -1,0 +1,10 @@
+# Eye glow / luminosity — referenced via __eyes/adjective/glow__
+# Soft everyday catchlight first; strong / fantasy light after
+# Near-synonyms pruned; keep one cue per lighting family
+
+catchlight
+softly luminous
+glowing
+bioluminescent
+fiery
+ember-lit iris

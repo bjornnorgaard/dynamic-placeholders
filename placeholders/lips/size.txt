@@ -1,0 +1,8 @@
+# Lip size options — referenced via __lips/size__
+# Ordered thin → full. Includes medium for ordinary lips.
+
+thin
+medium
+full
+plump
+bee-stung

@@ -1,0 +1,11 @@
+# Ear shape options — referenced via __ears/shape__
+# Everyday human shapes first; fantasy / damaged silhouettes after
+
+rounded
+attached-lobe
+detached-lobe
+pointed
+elf
+leaf-shaped
+cauliflower
+notched

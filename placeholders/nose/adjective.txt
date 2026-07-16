@@ -1,0 +1,6 @@
+# Nose adjectives: everyday natural looks plus distinctive detail.
+# Natural kept as its own path so ordinary noses stay in the mix.
+
+__nose/adjective/natural__
+__nose/adjective/detail__
+__nose/adjective/natural__, __nose/adjective/detail__

@@ -1,0 +1,10 @@
+# Everyday lip adjectives — referenced via __lips/adjective/natural__
+# Soft / ordinary cues; near-synonyms pruned
+
+soft
+smooth
+chapped
+pouty
+parted
+pressed
+smiling
