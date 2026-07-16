@@ -110,7 +110,7 @@ Override under **Settings → Dynamic Placeholders → Placeholders directory**,
 
 | Control | Effect |
 |---|---|
-| Enable Dynamic Placeholders | Master switch for the current generation |
+| Enable | Master switch for the current generation |
 | Link seed to placeholder choices | Same seed → same replacements (reproducible) |
 | Additional placeholders directory | Optional second folder searched after the default/settings directory (default wins on name conflicts) |
 
@@ -125,8 +125,8 @@ Override under **Settings → Dynamic Placeholders → Placeholders directory**,
 | Maximum nested replacement depth | `8` | Cap for recursive expansion |
 | Leave unknown placeholders unchanged | on | Missing files keep `__name__` in the prompt |
 | Save original template in generation parameters | on | Writes template into PNG info |
-| Also expand placeholders in negative prompts | on | |
-| Also expand placeholders in Hires. fix prompts | on | |
+| Also expand placeholders in negative prompts | on | Same expansion as the positive prompt |
+| Also expand placeholders in Hires. fix prompts | on | Expands placeholders in HR prompts |
 
 ## How it works
 

@@ -14,6 +14,7 @@ from lib_dynamic_placeholders.autocomplete import (
 )
 from lib_dynamic_placeholders.resolver import expand_prompt_list, make_resolver_from_settings
 from lib_dynamic_placeholders.settings import on_ui_settings
+from lib_dynamic_placeholders.ui import field_help, section_description
 
 logger = logging.getLogger("dynamic_placeholders")
 
@@ -55,41 +56,34 @@ class Script(scripts.Script):
 
     def ui(self, is_img2img):
         with gr.Accordion("Dynamic Placeholders", open=False):
-            enabled = gr.Checkbox(
-                label="Enable Dynamic Placeholders",
-                value=True,
-                elem_id="dynph_enabled",
-            )
-            gr.HTML(
-                "<p style='margin:0.4em 0 0'>"
+            section_description(
                 "Use <code>__name__</code> in prompts. "
                 "Type <code>__</code> to autocomplete available names. "
                 "Each name maps to a newline-separated list file in the placeholders folder "
                 "(Settings → Dynamic Placeholders), and optionally an extra folder below."
-                "</p>"
             )
+            enabled = gr.Checkbox(
+                label="Enable",
+                value=True,
+                elem_id="dynph_enabled",
+            )
+            field_help("When off, prompts are left unchanged.")
             same_seed_link = gr.Checkbox(
                 label="Link seed to placeholder choices",
                 value=True,
                 elem_id="dynph_link_seed",
             )
-            gr.HTML(
-                "<p style='margin:0.2em 0 0;opacity:0.8'>"
-                "When enabled, the same seed reproduces the same replacements."
-                "</p>"
-            )
+            field_help("When enabled, the same seed reproduces the same replacements.")
             extra_placeholders_dir = gr.Textbox(
                 label="Additional placeholders directory",
                 value="",
                 placeholder="/path/to/your/placeholders",
                 elem_id="dynph_extra_dir",
             )
-            gr.HTML(
-                "<p style='margin:0.2em 0 0;opacity:0.8'>"
+            field_help(
                 "Optional folder outside the extension install path. "
                 "List files there are used alongside the default/settings directory "
                 "(default wins on name conflicts)."
-                "</p>"
             )
         return [enabled, same_seed_link, extra_placeholders_dir]
 

@@ -66,7 +66,8 @@ def on_ui_settings() -> None:
             True,
             "Also expand placeholders in negative prompts",
             section=SECTION,
-        ),
+        )
+        .info("Applies the same __name__ expansion used on the positive prompt."),
     )
 
     shared.opts.add_option(
@@ -75,5 +76,6 @@ def on_ui_settings() -> None:
             True,
             "Also expand placeholders in Hires. fix prompts",
             section=SECTION,
-        ),
+        )
+        .info("Expands placeholders in HR prompts when Hires. fix is enabled."),
     )
