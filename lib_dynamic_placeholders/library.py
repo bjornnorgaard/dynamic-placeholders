@@ -105,3 +105,69 @@ class PlaceholderLibrary:
         values = [line.strip() for line in text.splitlines() if not is_skippable_line(line)]
         self._cache[name] = (mtime, values)
         return values
+
+    def sort_file(self, name: str) -> bool:
+        """
+        Alphabetically sort value lines in a placeholder file.
+
+        Leading ``#`` comment lines are kept at the top (in original order).
+        Blank lines and mid-file comments are dropped. Returns True when the
+        file contents changed.
+        """
+        name = normalize_placeholder_name(name)
+        path = self.resolve_file(name)
+        if path is None:
+            return False
+
+        try:
+            text = path.read_text(encoding=self.encoding, errors="replace")
+        except OSError:
+            logger.exception("Failed to read placeholder file for sorting: %s", path)
+            return False
+
+        comments: list[str] = []
+        values: list[str] = []
+        in_header = True
+        for raw in text.splitlines():
+            stripped = raw.strip()
+            if in_header and stripped.startswith("#"):
+                comments.append(stripped)
+                continue
+            in_header = False
+            if is_skippable_line(stripped):
+                continue
+            values.append(stripped)
+
+        sorted_values = sorted(values, key=str.casefold)
+        parts: list[str] = []
+        if comments:
+            parts.extend(comments)
+            parts.append("")
+        parts.extend(sorted_values)
+        new_text = "\n".join(parts)
+        if new_text:
+            new_text += "\n"
+
+        # Normalize comparison so a missing trailing newline alone isn't a rewrite.
+        if text.replace("\r\n", "\n") == new_text:
+            return False
+
+        try:
+            path.write_text(new_text, encoding=self.encoding, newline="\n")
+        except OSError:
+            logger.exception("Failed to write sorted placeholder file: %s", path)
+            return False
+
+        self._cache.pop(name, None)
+        return True
+
+    def sort_all_files(self) -> tuple[int, int]:
+        """
+        Sort every discovered placeholder list alphabetically.
+
+        Returns ``(changed_count, total_count)``.
+        """
+        names = self.list_placeholders()
+        changed = sum(1 for name in names if self.sort_file(name))
+        self.clear_cache()
+        return changed, len(names)
