@@ -21,7 +21,7 @@ upper body from the waist up, three-quarter view, watercolor painting of a orc w
 - A dedicated `placeholders/` folder for list files
 - One random line per token — no combinatorial explosion
 - List lines are first-class **phrases and sentences**, not only single words
-- Nested composition so parent lists (`__hair__`, `__clothes__`, `__face__`) pull in child lists automatically
+- Nested composition so parent lists (`__hair__`, `__clothes__`, `__face__`, `__room__`) pull in child lists automatically
 - Shipped lists tuned for **visual distinctiveness** in image models (fewer near-duplicates, sharper silhouettes)
 
 ## Install
@@ -40,8 +40,8 @@ No extra Python packages are required.
 
 ## Quick start
 
-1. Open the **Dynamic Placeholders** accordion and leave **Enable** checked.
-2. Copy the **Example prompt** from the accordion, or use a shorter prompt like:
+1. Open the **Dynamic Placeholders** accordion and leave **Enable** checked. The collapsed **How to use** section is a short in-UI overview.
+2. Use a prompt with tokens, for example:
 
    ```
    portrait of __profession__ with __hair__, __clothes__, in a __setting__
@@ -51,7 +51,7 @@ No extra Python packages are required.
 
 4. In the prompt box, type `__` to autocomplete placeholder names (arrow keys / Enter or Tab to insert `__name__`).
 
-Composition is built in: `__hair__` expands into length / color / style; `__clothes__` into separates or full-body outfits; `__face__` into structure plus eyes / nose / lips / ears. Full syntax: [docs/SYNTAX.md](docs/SYNTAX.md).
+Composition is built in: `__hair__` expands into length / color / style; `__clothes__` into separates or full-body outfits; `__face__` into structure plus eyes / nose / lips / ears; `__room__` into type with optional size / mood / place. Full syntax: [docs/SYNTAX.md](docs/SYNTAX.md).
 
 ## What ships in `placeholders/`
 
@@ -64,7 +64,8 @@ Composition is built in: `__hair__` expands into length / color / style; `__clot
 | `__face__` | Composable face → structure, eyes, nose, lips, ears |
 | `__hair__` | Composable hair → `hair/length`, `hair/color`, `hair/style` |
 | `__clothes__` | Composable attire → head, torso, pants, fullbody, shoes, etc. |
-| `__setting__` | Environment / backdrop |
+| `__setting__` | Outdoor / environment backdrop |
+| `__room__` | Composable interior → type, size, mood, place |
 | `__time__` | Time of day / lighting cue |
 | `__city__` | Visually distinct city / place names |
 | `__country__` | National / cultural subject looks (demonym + signature dress) |
@@ -88,14 +89,18 @@ Composable groups use nested paths:
 | `__clothes/torso__` | `placeholders/clothes/torso.txt` |
 | `__clothes/torso/shirt__` | `placeholders/clothes/torso/shirt.txt` |
 | `__clothes/fullbody__` | `placeholders/clothes/fullbody.txt` |
+| `__room__` | `placeholders/room.txt` |
+| `__room/type__` | `placeholders/room/type.txt` |
 
 `clothes.txt` keeps **separates** (torso + pants) and **full-body** outfits on different lines so layers never stack. Head and torso are themselves nested groups (`hat` / `glasses` / `piercings`, `shirt` / `jacket`).
 
 `face.txt` mixes structure with optional feature groups (`__eyes__`, `__nose__`, `__lips__`, `__ears__`) so prompts stay light when you omit layers. Each feature group nests size / shape / color / adjective lists the same way hair does.
 
+`room.txt` composes indoor locations from `type` with optional `size`, `mood`, and `place` (dwelling context). Use `__room__` for interiors and `__setting__` for outdoor / environment backdrops.
+
 `__view__` covers angle and composition; `__focus__` covers how much of the figure is in frame; `__pose__` covers how the body is held — keep them separate so they do not fight.
 
-You can use child tokens directly (`__hair/color__`, `__eyes/shape__`, `__clothes/shoes__`) or only the parent and let composition do the work.
+You can use child tokens directly (`__hair/color__`, `__eyes/shape__`, `__clothes/shoes__`, `__room/mood__`) or only the parent and let composition do the work.
 
 ## Placeholder files
 
@@ -122,8 +127,8 @@ Override under **Settings → Dynamic Placeholders → Placeholders directory**,
 |---|---|
 | Enable | Master switch for the current generation |
 | Link seed to placeholder choices | Same seed → same replacements (reproducible) |
-| Example prompt | Copy-paste demo using the shipped top-level lists (swap `__artstyle__` for `__photostyle__` for photography) |
 | Additional placeholders directory | Optional second folder searched after the default/settings directory (default wins on name conflicts). Use **Save directory** to keep it across restarts. |
+| How to use | Collapsed quick-start overview (syntax, list files, composition, settings) |
 
 ## Settings
 
@@ -177,8 +182,8 @@ sd-dynamic-placeholders/
 │   ├── library.py      # file discovery + caching
 │   ├── paths.py        # directory resolution
 │   ├── resolver.py     # __token__ expansion
-│   ├── settings.py     # WebUI settings page
-│   └── ui.py           # accordion helpers + example prompt
+│   ├── settings.py     # WebUI settings + user_settings.json
+│   └── ui.py           # accordion helpers + How to use guide
 ├── placeholders/       # shipped + your list files
 ├── wildcards/          # symlink → placeholders (Tag Autocomplete)
 ├── scripts/
@@ -186,6 +191,7 @@ sd-dynamic-placeholders/
 ├── style.css
 └── tests/
     ├── test_autocomplete.py
+    ├── test_paths.py
     └── test_resolver.py
 ```
 
