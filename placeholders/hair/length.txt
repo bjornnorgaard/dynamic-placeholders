@@ -1,0 +1,10 @@
+# Hair length options — referenced from hair.txt via __hair/length__
+
+short
+medium-length
+long
+shoulder-length
+waist-length
+buzz-cut
+chin-length
+very long

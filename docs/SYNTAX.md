@@ -55,10 +55,64 @@ sitting cross-legged on the floor
 
 1. Every `__token__` in the prompt is replaced independently (two `__pose__` tokens can become two different poses).
 2. The chosen line is inserted as-is.
-3. If that line contains further placeholders, they are expanded recursively (default max depth: 8).
+3. **Composition:** if that line contains further `__placeholders__`, they are expanded recursively (default max depth: 8). A single parent file can pull in many child lists this way.
 4. Circular references (A → B → A) stop and leave the cycling token unresolved.
 5. Unknown tokens are left unchanged by default (or removed if that setting is off).
 6. With **Link seed to placeholder choices** enabled, sampling is driven by the image seed so reruns are reproducible.
+
+## Composition (nested placeholders)
+
+Placeholders are fully composable. Put `__child__` tokens inside a parent list file; when the parent is expanded, each nested token is resolved from its own file.
+
+### Hair composition example
+
+`placeholders/hair.txt`:
+
+```
+__hair/length__ __hair/color__ __hair/style__ hair
+__hair/color__ __hair/style__, __hair/length__
+messy __hair/length__ __hair/color__ hair in a __hair/style__
+```
+
+`placeholders/hair/length.txt`:
+
+```
+short
+long
+shoulder-length
+```
+
+`placeholders/hair/color.txt`:
+
+```
+blonde
+brunette
+auburn
+```
+
+`placeholders/hair/style.txt`:
+
+```
+ponytail
+loose waves
+messy bun
+```
+
+Prompt:
+
+```
+portrait of a woman with __hair__
+```
+
+Possible results:
+
+```
+portrait of a woman with long auburn ponytail hair
+portrait of a woman with brunette loose waves, short
+portrait of a woman with messy shoulder-length blonde hair in a messy bun
+```
+
+You can nest as deep as you need (outfit → top → color, and so on). Depth is capped by **Maximum nested replacement depth** in Settings.
 
 ## Examples
 
@@ -91,7 +145,7 @@ Prompt:
 cinematic photo of __scene__, 35mm
 ```
 
-**Nested placeholders**
+**Nested path placeholders**
 
 `placeholders/lighting.txt`:
 
@@ -129,7 +183,7 @@ __bad_quality__, blurry, watermark
 
 ## Tips
 
-- Prefer descriptive filenames (`pose`, `camera_angle`, `wardrobe`) over cryptic abbreviations.
-- Keep one concept per file so prompts stay readable.
+- Prefer descriptive filenames (`pose`, `hair/color`, `wardrobe`) over cryptic abbreviations.
+- Keep one concept per file, then compose them in higher-level files (e.g. `hair.txt`).
 - Use `#` comments at the top of a file to document intended usage.
 - After editing list files, generate again — no WebUI restart is required (cache keys on file mtime).

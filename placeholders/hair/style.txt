@@ -1,0 +1,11 @@
+# Hair style options — referenced from hair.txt via __hair/style__
+
+ponytail
+loose waves
+tight curls
+straight bob
+braided crown
+messy bun
+slicked back
+side part
+pixie cut

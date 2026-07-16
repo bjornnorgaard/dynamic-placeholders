@@ -1,0 +1,6 @@
+# Composable hair: expand this once to pull in several nested placeholders.
+# Each nested token is resolved from its own list file under hair/.
+
+__hair/length__ __hair/color__ __hair/style__ hair
+__hair/color__ __hair/style__, __hair/length__
+messy __hair/length__ __hair/color__ hair in a __hair/style__

@@ -1,0 +1,11 @@
+# Hair color options — referenced from hair.txt via __hair/color__
+
+blonde
+brunette
+black
+auburn
+silver
+pastel pink
+dark brown
+platinum blonde
+redhead

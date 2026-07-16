@@ -39,14 +39,17 @@ No extra Python packages are required.
    a man __pose__ on a __furniture__
    ```
 
-3. Sample lists ship in `placeholders/pose.txt` and `placeholders/furniture.txt`. Edit those files or add new ones — changes are picked up on the next generation (mtime-based cache).
+3. Sample lists ship in `placeholders/` (`pose`, `furniture`, composable `hair` → `hair/*`, etc.). Edit those files or add new ones — changes are picked up on the next generation (mtime-based cache).
 
+Composition works out of the box: put `__hair/length__ __hair/color__ __hair/style__` inside `hair.txt`, then use `__hair__` in the prompt and all nested tokens expand recursively. See [docs/SYNTAX.md](docs/SYNTAX.md).
 ## Placeholder files
 
 | Prompt token | File |
 |---|---|
 | `__pose__` | `placeholders/pose.txt` |
 | `__furniture__` | `placeholders/furniture.txt` |
+| `__hair__` | `placeholders/hair.txt` |
+| `__hair/color__` | `placeholders/hair/color.txt` |
 | `__lighting/color__` | `placeholders/lighting/color.txt` |
 | `__scene__` | `placeholders/scene.txt` |
 

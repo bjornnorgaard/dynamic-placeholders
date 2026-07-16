@@ -104,6 +104,48 @@ class ResolverTests(unittest.TestCase):
         result = self.resolver.expand("look __a__", seed=0)
         self.assertEqual(result, "look prefix nested-value")
 
+    def test_composable_hair_expands_all_nested_tokens(self):
+        """A parent list line can compose multiple child placeholders."""
+        (self.root / "hair.txt").write_text(
+            "__hair/length__ __hair/color__ __hair/style__ hair\n",
+            encoding="utf-8",
+        )
+        hair_dir = self.root / "hair"
+        hair_dir.mkdir()
+        (hair_dir / "length.txt").write_text("short\nlong\n", encoding="utf-8")
+        (hair_dir / "color.txt").write_text("blonde\nbrunette\n", encoding="utf-8")
+        (hair_dir / "style.txt").write_text("ponytail\nloose waves\n", encoding="utf-8")
+
+        result = self.resolver.expand("portrait of a woman with __hair__", seed=0)
+
+        self.assertNotIn("__hair__", result)
+        self.assertNotIn("__hair/length__", result)
+        self.assertNotIn("__hair/color__", result)
+        self.assertNotIn("__hair/style__", result)
+        self.assertTrue(result.startswith("portrait of a woman with "))
+        self.assertTrue(result.endswith(" hair"))
+
+        # All three child lists contributed a concrete value.
+        length = next(v for v in ("short", "long") if f" {v} " in f" {result} ")
+        color = next(v for v in ("blonde", "brunette") if v in result)
+        style = next(v for v in ("ponytail", "loose waves") if v in result)
+        self.assertIn(length, result)
+        self.assertIn(color, result)
+        self.assertIn(style, result)
+
+    def test_underscore_names_are_valid_placeholders(self):
+        (self.root / "hair_color.txt").write_text("auburn\n", encoding="utf-8")
+        result = self.resolver.expand("__hair_color__", seed=0)
+        self.assertEqual(result, "auburn")
+
+    def test_multi_level_composition(self):
+        """Parent → child → grandchild all expand in one pass chain."""
+        (self.root / "outfit.txt").write_text("wearing __top__\n", encoding="utf-8")
+        (self.root / "top.txt").write_text("a __color__ blouse\n", encoding="utf-8")
+        (self.root / "color.txt").write_text("crimson\n", encoding="utf-8")
+        result = self.resolver.expand("__outfit__", seed=0)
+        self.assertEqual(result, "wearing a crimson blouse")
+
     def test_circular_does_not_hang(self):
         result = self.resolver.expand("__loop_a__", seed=0)
         # Cycle is left unresolved rather than spinning forever.
@@ -121,6 +163,10 @@ class ResolverTests(unittest.TestCase):
         samples = EXTENSION_ROOT / "placeholders"
         self.assertTrue((samples / "pose.txt").is_file())
         self.assertTrue((samples / "furniture.txt").is_file())
+        self.assertTrue((samples / "hair.txt").is_file())
+        self.assertTrue((samples / "hair" / "length.txt").is_file())
+        self.assertTrue((samples / "hair" / "color.txt").is_file())
+        self.assertTrue((samples / "hair" / "style.txt").is_file())
         lib = PlaceholderLibrary(samples)
         pose = lib.get_values("pose")
         furniture = lib.get_values("furniture")
@@ -135,6 +181,23 @@ class ResolverTests(unittest.TestCase):
         self.assertNotIn("__pose__", expanded)
         self.assertNotIn("__furniture__", expanded)
 
+        # Bundled composable hair fully resolves nested tokens.
+        haired = PlaceholderResolver(lib).expand(
+            "a woman with __hair__",
+            seed=3,
+        )
+        self.assertNotIn("__", haired)
+        self.assertTrue(haired.startswith("a woman with "))
+
+    def test_bundled_hair_composition_variants(self):
+        samples = EXTENSION_ROOT / "placeholders"
+        resolver = PlaceholderResolver(PlaceholderLibrary(samples))
+        for seed in range(12):
+            result = resolver.expand("__hair__", seed=seed)
+            self.assertNotIn("__hair/length__", result)
+            self.assertNotIn("__hair/color__", result)
+            self.assertNotIn("__hair/style__", result)
+            self.assertNotIn("__hair__", result)
 
 class PatternEdgeCaseTests(unittest.TestCase):
     def test_custom_wrap(self):
