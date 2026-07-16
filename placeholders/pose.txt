@@ -1,0 +1,14 @@
+# Pose / body action placeholders — one entry per line.
+# Lines starting with # are ignored. Empty lines are ignored.
+# Entries can be short words or longer phrases.
+
+jumping
+sitting
+standing
+lying on side
+kneeling
+leaning against a wall
+crouching low to the ground
+walking forward mid-stride
+reaching upward with both hands
+sitting cross-legged on the floor

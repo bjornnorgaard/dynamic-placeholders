@@ -1,0 +1,8 @@
+# Longer scene fragments — Dynamic Placeholders is built for multi-word lines.
+
+a quiet rainy street at dusk, reflections on wet asphalt
+an overgrown greenhouse filled with tropical plants
+a sunlit attic studio with dust motes in the air
+a crowded night market lit by paper lanterns
+a windswept cliff overlooking a grey ocean
+a cozy library with floor-to-ceiling bookshelves
