@@ -131,14 +131,20 @@ def persist_extra_placeholders_dir(path: str | None) -> str:
 
 
 def on_ui_settings() -> None:
+    # Empty = extension-local placeholders/. Do not bake an absolute install
+    # path into the OptionInfo default — that survives folder renames in
+    # config.json and causes the old extensions/<name>/ tree to be recreated.
     shared.opts.add_option(
         "dynph_placeholders_dir",
         shared.OptionInfo(
-            str(get_default_placeholders_dir()),
+            "",
             "Placeholders directory",
             section=SECTION,
         )
-        .info("Folder of newline-separated list files. Filename (without extension) = placeholder name."),
+        .info(
+            "Folder of newline-separated list files. Filename (without extension) "
+            f"= placeholder name. Leave empty for {get_default_placeholders_dir()}."
+        ),
     )
 
     extra_dir_opt = shared.OptionInfo(

@@ -226,6 +226,7 @@ def make_resolver_from_settings(
     wrap = DEFAULT_WRAP
     max_depth = DEFAULT_MAX_DEPTH
     leave_unresolved = True
+    # Goes through path resolution (empty setting + stale renamed-install paths).
     root: Path = get_placeholders_dir()
     settings_extra: str | None = None
 
@@ -235,9 +236,6 @@ def make_resolver_from_settings(
         wrap = getattr(opts, "dynph_wrap", DEFAULT_WRAP) or DEFAULT_WRAP
         max_depth = int(getattr(opts, "dynph_max_depth", DEFAULT_MAX_DEPTH))
         leave_unresolved = bool(getattr(opts, "dynph_leave_unresolved", True))
-        configured = getattr(opts, "dynph_placeholders_dir", None)
-        if configured and str(configured).strip():
-            root = Path(str(configured).strip()).expanduser()
         settings_extra = getattr(opts, "dynph_extra_placeholders_dir", None)
     except Exception:
         pass
