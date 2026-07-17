@@ -28,6 +28,7 @@ You can use a parent alone (`__hair__`) and let composition pull in children, or
 | `__focus__` | Character crop / body focus (upper body, full body, …) |
 | `__pose__` | Body stance & gesture (standing, sitting, anime/game tropes, …) |
 | `__situation__` | Activity / event (everyday errands through extreme set pieces) |
+| `__game__` | Pop-culture breakthrough games (franchise look + signature cues) |
 
 ## Composition groups
 

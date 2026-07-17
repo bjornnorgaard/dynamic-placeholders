@@ -32,6 +32,14 @@ portrait of a __profession__ with __expression__, __makeup__, __hair__, __clothe
 __artstyle__ of a __race__ warrior, __country__, with __expression__, __face__, __hair__, __clothes__, __pose__
 ```
 
+### Scene — game aesthetic
+
+`__game__` is a pop-culture franchise look; use it for style / world cues, not as a subject job.
+
+```
+__artstyle__ scene inspired by __game__, __view__, in a __setting__ at __time__
+```
+
 ### Outdoor scene
 
 Environment-first: setting, city, and time drive the backdrop.

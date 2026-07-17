@@ -1,0 +1,51 @@
+# Games — use as __game__ in prompts
+# Phrases meant for franchise / aesthetic slots (e.g. "inspired by __game__", "in the style of __game__",
+# "from __game__", "__game__ aesthetic", "scene from __game__")
+# Pop-culture breakthrough titles only — video games first, a few board / tabletop icons
+# One exemplar per visual family; near-duplicates pruned so each line changes palette, silhouette, or world look
+# Style: short, no leading a/an/the — lead with the title, then its signature look
+
+# --- Arcade & early icons ---
+Pac-Man with yellow maze ghosts and pellet trails
+Tetris with falling colorful tetromino blocks
+Space Invaders with pixel alien rows over a CRT bunker
+
+# --- Platform & mascot ---
+Super Mario Bros with Mushroom Kingdom pipes and power-up mushrooms
+Sonic the Hedgehog with green loop-de-loop hills and blue motion blur
+The Legend of Zelda with green-tunic hero, Hyrule fields, and glowing TriForce
+
+# --- Fighting & action ---
+Street Fighter with colorful fighters and hadouken energy blasts
+Doom with space-marine shotgun and hellfire demons
+Halo with green armored Master Chief and purple alien rings
+Metal Gear Solid with stealth cardboard box and radar blips
+God of War with ash-skinned warrior, Leviathan axe, and Norse runes
+
+# --- Open world & sandbox ---
+Grand Theft Auto with sun-bleached crime city and wanted stars
+Red Dead Redemption with dusty western plains and outlaw silhouettes
+Minecraft with blocky voxel landscapes and pixel creepers
+Fortnite with colorful builds, storm circle, and gliding landing
+The Sims with suburban dollhouse rooms and diamond plumbob
+
+# --- RPG & adventure ---
+Final Fantasy with crystals, airships, and dramatic JRPG cast poses
+Pokémon with pocket monsters, Poké Balls, and trainer battles
+The Elder Scrolls Skyrim with dragons over snowy Nordic mountains
+The Witcher with monster-hunter medallion and Slavic dark fantasy woods
+Elden Ring with tarnished knight, Erdtree glow, and crumbling ruins
+World of Warcraft with orc and alliance banners over Azeroth battlegrounds
+Assassin's Creed with hooded parkour assassin and historical city rooftops
+
+# --- Story, sci-fi & horror ---
+Portal with orange-blue portals in sterile Aperture labs
+BioShock with art-deco underwater Rapture and glowing ADAM syringes
+The Last of Us with overgrown post-apocalypse ruins and fungal infected
+Resident Evil with mansion horror, zombies, and biohazard warning marks
+Animal Crossing with pastel island villagers and leaf-motif furniture
+
+# --- Board & tabletop ---
+Chess with black-and-white checkered board and carved royal pieces
+Monopoly with colorful property deeds, hotels, and metal tokens
+Dungeons & Dragons with polyhedral dice, character sheets, and dungeon map
