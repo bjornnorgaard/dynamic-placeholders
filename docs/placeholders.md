@@ -10,6 +10,7 @@ You can use a parent alone (`__hair__`) and let composition pull in children, or
 |---|---|
 | `__profession__` | Subject look (silhouette + distinctive gear / traits) |
 | `__expression__` | Facial expression / mood |
+| `__makeup__` | Full-face cosmetic looks (natural through theatrical / fantasy) |
 | `__race__` | Fantasy / D&D-style subject races (silhouette + signature traits) |
 | `__animal__` | Real and mythical creatures (single-word names) |
 | `__face__` | Composable face → structure, eyes, nose, lips, ears |

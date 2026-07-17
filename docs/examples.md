@@ -16,6 +16,14 @@ Simple character sheet. Parents do the nesting work.
 portrait of a __profession__ with __expression__, __hair__, __clothes__
 ```
 
+### Portrait — with makeup
+
+`__makeup__` is a full-face cosmetic look; keep it separate from `__lips__` / `__expression__`.
+
+```
+portrait of a __profession__ with __expression__, __makeup__, __hair__, __clothes__
+```
+
 ### Fantasy race + cultural look
 
 `__race__` and `__country__` both add silhouette cues; useful for stylized fantasy.
@@ -100,10 +108,10 @@ These pack as many shipped top-level tokens as practical into one line. Expect l
 
 ### Character sheet — art style (most subject tokens)
 
-Covers crop, camera, medium, race, job, culture, expression, face stack, hair, clothes, pose, outdoor place, city, and time.
+Covers crop, camera, medium, race, job, culture, expression, makeup, face stack, hair, clothes, pose, outdoor place, city, and time.
 
 ```
-__focus__, __view__, __pose__, __artstyle__ of a __race__ __profession__, __country__, with a __expression__, __face__, __hair__, __clothes__, in a __setting__ in __city__ at __time__
+__focus__, __view__, __pose__, __artstyle__ of a __race__ __profession__, __country__, with a __expression__, __makeup__, __face__, __hair__, __clothes__, in a __setting__ in __city__ at __time__
 ```
 
 ### Character sheet — photo style + indoor room
@@ -111,7 +119,7 @@ __focus__, __view__, __pose__, __artstyle__ of a __race__ __profession__, __coun
 Same idea with `__photostyle__` and `__room__` instead of art medium / outdoor setting.
 
 ```
-__focus__, __view__, __pose__, __photostyle__ of a __profession__, __country__, with a __expression__, __face__, __hair__, __clothes__, in a __room__ in __city__ at __time__
+__focus__, __view__, __pose__, __photostyle__ of a __profession__, __country__, with a __expression__, __makeup__, __face__, __hair__, __clothes__, in a __room__ in __city__ at __time__
 ```
 
 ### Full cast of top-level tokens (including animal)
@@ -119,7 +127,7 @@ __focus__, __view__, __pose__, __photostyle__ of a __profession__, __country__, 
 Uses every shipped top-level token except the competing style pair — here `__artstyle__` is chosen; swap to `__photostyle__` for camera looks. `__setting__` and `__room__` both appear so you can see outdoor + interior cues in one template (trim one if the scene feels crowded).
 
 ```
-__focus__, __view__, __pose__, __artstyle__ of a __race__ __profession__, __country__, with a __expression__, __face__, __hair__, __clothes__, next to a __animal__, outdoors in a __setting__, indoors hint of a __room__, near __city__ at __time__
+__focus__, __view__, __pose__, __artstyle__ of a __race__ __profession__, __country__, with a __expression__, __makeup__, __face__, __hair__, __clothes__, next to a __animal__, outdoors in a __setting__, indoors hint of a __room__, near __city__ at __time__
 ```
 
 ### Maximal nesting — parents only
@@ -127,7 +135,7 @@ __focus__, __view__, __pose__, __artstyle__ of a __race__ __profession__, __coun
 One line of parents; the resolver walks into hair / face / clothes / room children automatically.
 
 ```
-__photostyle__ __focus__ __view__: __pose__ __race__ __profession__ (__country__), __expression__, __face__, __hair__, __clothes__, location __room__ / __setting__, __city__, __time__
+__photostyle__ __focus__ __view__: __pose__ __race__ __profession__ (__country__), __expression__, __makeup__, __face__, __hair__, __clothes__, location __room__ / __setting__, __city__, __time__
 ```
 
 ### Maximal nesting — mix parents and children
@@ -135,7 +143,7 @@ __photostyle__ __focus__ __view__: __pose__ __race__ __profession__ (__country__
 Shows direct child tokens alongside parents (child wins for that slot; parent still expands its other layers).
 
 ```
-__artstyle__, __focus__, __view__, __pose__ of a __race__ with __expression__, __face/structure__ with __eyes__, __nose__, __lips__, __ears__, __hair/length__ __hair/color__ __hair/style__ hair, wearing __clothes/head__ and __clothes/fullbody__ with __clothes/shoes__, in a __room/size__ __room/mood__ __room/type__ in a __room/place__, or outdoors in a __setting__ in __city__ at __time__
+__artstyle__, __focus__, __view__, __pose__ of a __race__ with __expression__, __makeup__, __face/structure__ with __eyes__, __nose__, __lips__, __ears__, __hair/length__ __hair/color__ __hair/style__ hair, wearing __clothes/head__ and __clothes/fullbody__ with __clothes/shoes__, in a __room/size__ __room/mood__ __room/type__ in a __room/place__, or outdoors in a __setting__ in __city__ at __time__
 ```
 
 ---

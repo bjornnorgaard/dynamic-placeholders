@@ -7,7 +7,7 @@ A [Stable Diffusion WebUI Forge - Neo](https://github.com/Haoming02/sd-webui-for
 Write lists under `placeholders/`, then use `__name__` in a prompt. At generation time each token is replaced with a random line from the matching file. Nested tokens inside those lines expand recursively, so one high-level placeholder can compose hair, clothes, setting, and more from smaller lists.
 
 ```
-__focus__, __view__, __artstyle__ of a __race__ __profession__, __country__, with a __expression__, __face__, __hair__, __clothes__, in a __setting__ in __city__ at __time__
+__focus__, __view__, __artstyle__ of a __race__ __profession__, __country__, with a __expression__, __makeup__, __face__, __hair__, __clothes__, in a __setting__ in __city__ at __time__
 ```
 
 ## Features

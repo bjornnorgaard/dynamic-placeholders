@@ -1,0 +1,41 @@
+# Makeup looks — use as __makeup__ in prompts
+# Phrases meant to sit after "with" or "wearing" (e.g. "with __makeup__", "wearing __makeup__")
+# Full-face cosmetic styles only — not bare lip color (use __lips__) or expression blush
+# One exemplar per visual family; near-duplicates pruned so each line changes palette, contrast, or silhouette
+# Style: short (~5 words), no leading a/an/the — lead with the look noun
+
+# --- Bare & natural ---
+bare face, no makeup
+freckled soft peach blush
+
+# --- Soft & everyday polished ---
+soft glam nude lips
+sun-kissed bronze makeup
+matte full-coverage rose lips
+
+# --- Classic & glamorous ---
+classic Hollywood red lips
+smoky eye nude lips
+sharp cat-eye liner
+cut-crease sculpted lids
+
+# --- Color & editorial ---
+pastel lilac soft-girl makeup
+bold blue monochrome makeup
+doll-face pink blush lashes
+glass-skin dewy gradient lips
+
+# --- Dark & alternative ---
+goth pale black lips
+vampire chalk-pale blood-red lips
+
+# --- High glam & theatrical ---
+glitter disco metallic lids
+drag glam exaggerated contour
+stage makeup high-contrast features
+
+# --- Cultural & fantasy ---
+geisha white face, red lips
+cyberpunk neon metallic lids
+fairy iridescent glitter freckles
+clown white face, red nose
