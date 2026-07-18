@@ -1,0 +1,16 @@
+# Heroine movie — __character/heroine/movie__
+# Picks one franchise list
+
+__character/heroine/movie/dc__
+__character/heroine/movie/marvel__
+__character/heroine/movie/alien__
+__character/heroine/movie/terminator__
+__character/heroine/movie/mad_max__
+__character/heroine/movie/star_wars__
+__character/heroine/movie/hunger_games__
+__character/heroine/movie/harry_potter__
+__character/heroine/movie/lotr__
+__character/heroine/movie/matrix__
+__character/heroine/movie/ghost_in_the_shell__
+__character/heroine/movie/alita__
+__character/heroine/movie/buffy__

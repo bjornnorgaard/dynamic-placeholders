@@ -1,0 +1,5 @@
+# Castle scullery — __location/castle/scullery__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+castle kitchen with roasting spit, hanging herbs, and stone ovens

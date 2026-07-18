@@ -1,0 +1,4 @@
+# Hero — zelda (__character/hero/game/zelda__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Link in green tunic, pointed cap, and Master Sword

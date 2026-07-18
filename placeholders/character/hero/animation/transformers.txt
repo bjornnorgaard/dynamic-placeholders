@@ -1,0 +1,4 @@
+# Hero — transformers (__character/hero/animation/transformers__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Optimus Prime towering Autobot truck-robot with blue-and-red armor

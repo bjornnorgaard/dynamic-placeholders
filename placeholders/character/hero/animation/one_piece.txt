@@ -1,0 +1,4 @@
+# Hero — one piece (__character/hero/animation/one_piece__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Monkey D. Luffy in straw hat, red vest, and stretchy grin

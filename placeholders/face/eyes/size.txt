@@ -1,0 +1,7 @@
+# Eye size — referenced via __face/eyes/size__ (short: __eyes/size__)
+# Composes shared __size__ plus eye-only cues
+
+__size__
+beady
+doe-eyed
+oversized

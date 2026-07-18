@@ -1,0 +1,11 @@
+# Scenic backgrounds under location/ — __location/background__ (short: __background__)
+# One vista type per expansion so categories never stack
+# Pin a child when you want a family fixed (__location/background/cityscape__, …)
+
+__location/background/cityscape__
+__location/background/landscape__
+__location/background/seascape__
+__location/background/skyscape__
+__location/background/spacescape__
+__location/background/underwater__
+__location/background/ruins__

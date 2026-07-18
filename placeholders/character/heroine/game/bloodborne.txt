@@ -1,0 +1,4 @@
+# Heroine — bloodborne (__character/heroine/game/bloodborne__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Lady Maria of Bloodborne in hunter coat with bloodied rapier and tricorne

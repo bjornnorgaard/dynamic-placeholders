@@ -1,0 +1,4 @@
+# Heroine — alita (__character/heroine/movie/alita__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Alita Battle Angel with large eyes, cybernetic body, and Damascus blade

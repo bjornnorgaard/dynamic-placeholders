@@ -1,0 +1,4 @@
+# Heroine — one piece (__character/heroine/animation/one_piece__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Nami of One Piece with orange hair, bikini top, and Clima-Tact staff

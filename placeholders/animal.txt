@@ -1,6 +1,6 @@
 # Animals — use as __animal__ in prompts
 # Phrases meant to stand in for the creature (e.g. "a __animal__", "portrait of a __animal__",
-# "__animal__ in a __setting__", "__animal__, cinematic lighting")
+# "__animal__ in a __outdoor__", "__animal__, cinematic lighting")
 # Real and mythical creatures; one entry per visual family only —
 # if two animals would likely render interchangeable silhouettes, keep the sharper one
 # Style: single word only — just the animal name, no descriptors

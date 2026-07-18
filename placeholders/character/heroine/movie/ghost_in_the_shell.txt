@@ -1,0 +1,4 @@
+# Heroine — ghost in the shell (__character/heroine/movie/ghost_in_the_shell__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Major Motoko Kusanagi in tactical bodysuit with cybernetic eyes

@@ -1,0 +1,4 @@
+# Heroine — marvel (__character/heroine/comics/marvel__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Scarlet Witch Wanda Maximoff of Marvel in red hex crown with chaotic magic aura

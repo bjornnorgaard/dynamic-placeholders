@@ -1,0 +1,6 @@
+# Heroine — witcher (__character/heroine/game/witcher__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Ciri from The Witcher with ashen hair, witcher swords, and scarred cheek
+Yennefer of The Witcher with raven-black hair, violet eyes, and black gown
+Triss Merigold of The Witcher with auburn hair, blue sorceress dress, and fire magic

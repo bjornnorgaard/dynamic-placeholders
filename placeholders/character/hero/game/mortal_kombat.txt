@@ -1,0 +1,4 @@
+# Hero — mortal kombat (__character/hero/game/mortal_kombat__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Scorpion in yellow ninja garb with spear rope and skull mask

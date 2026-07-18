@@ -1,0 +1,8 @@
+# Heros — __character/hero__ (short: __hero__)
+# Known protagonists; picks one media family then franchise
+# One exemplar per visual family only
+
+__character/hero/game__
+__character/hero/movie__
+__character/hero/comics__
+__character/hero/animation__

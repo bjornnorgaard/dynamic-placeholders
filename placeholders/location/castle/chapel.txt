@@ -1,0 +1,5 @@
+# Castle chapel — __location/castle/chapel__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+castle chapel with stained glass, pews, and altar candles

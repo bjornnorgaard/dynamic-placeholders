@@ -1,0 +1,4 @@
+# Hero — masters of the universe (__character/hero/animation/masters_of_the_universe__)
+# One exemplar per visual family; short, no leading a/an/the
+
+He-Man bare-chested with fur loincloth and Power Sword

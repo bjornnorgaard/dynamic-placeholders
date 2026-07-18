@@ -1,0 +1,4 @@
+# Hero — halo (__character/hero/game/halo__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Master Chief in green MJOLNIR armor with gold visor

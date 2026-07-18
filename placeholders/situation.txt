@@ -1,7 +1,7 @@
 # Situation / activity — use as __situation__ in prompts
 # What is happening: everyday errands through extreme set pieces
 # (e.g. "__situation__", "caught __situation__", "scene of someone __situation__")
-# Activities and events only — not body poses (__pose__), places (__setting__/__location__),
+# Activities and events only — not body poses (__pose__), places (__outdoor__/__location__),
 # or professions (__profession__)
 # One exemplar per visual family; near-duplicates pruned so each line changes the scene action
 # Style: short, to the point, no leading a/an/the — lead with the activity

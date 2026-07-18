@@ -1,0 +1,7 @@
+# House bathroom — __location/house/bathroom__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+tiled bathroom with steamed mirror and clawfoot tub
+compact powder room with pedestal sink and wallpaper
+spa bathroom with freestanding tub and frosted glass

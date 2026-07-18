@@ -1,0 +1,10 @@
+# Heroine — mass effect (__character/heroine/game/mass_effect__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Commander Shepard of Mass Effect in black-and-red N7 armor with short hair
+Liara T'Soni of Mass Effect with blue asari skin, head tentacles, and biotic glow
+Tali'Zorah of Mass Effect in purple quarian envirosuit with glowing visor mask
+Miranda Lawson of Mass Effect in white catsuit with black hair and side-parted bangs
+Ashley Williams of Mass Effect in Alliance armor with dark hair and assault rifle
+Jack of Mass Effect with shaved head, biotic tattoos, and convict defiance
+EDI of Mass Effect with white synthetic body, blue circuits, and android poise

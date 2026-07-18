@@ -1,0 +1,9 @@
+# Movie / animation set pieces — __location/scene/scifi__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+spaceship bridge with holographic consoles and viewport stars
+cryo bay with frosted glass pods in a cold blue glow
+alien marketplace with floating stalls and strange goods
+mecha hangar with giant robots on maintenance scaffolds
+orbital elevator platform looking down on a curved Earth

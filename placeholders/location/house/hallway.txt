@@ -1,0 +1,6 @@
+# House hallway — __location/house/hallway__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+narrow hallway with family photos and runner rug
+foyer with coat rack, console table, and front door light

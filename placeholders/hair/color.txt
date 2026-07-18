@@ -1,8 +1,8 @@
-# Hair color options — referenced from hair.txt via __hair/color__
-# Ordered: deep naturals → browns → reds → blondes → grey/white → fashion & fantasy
-# Near-synonyms pruned; each line should shift palette clearly in an image model
+# Hair color — referenced via __hair/color__
+# Composes shared __color__ plus hair-only fashion / natural blends
+# Near-synonyms pruned; each line should shift palette clearly
 
-black
+__color__
 dark brown
 chestnut brown
 light brown
@@ -15,15 +15,11 @@ blonde
 platinum blonde
 rose gold
 burgundy
-silver
 salt-and-pepper
-white
 pastel pink
 hot pink
 lavender
-vivid violet
 electric blue
-teal
 mint green
 ombre
 two-tone black and pink

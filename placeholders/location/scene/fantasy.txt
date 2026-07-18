@@ -1,0 +1,11 @@
+# Movie / animation set pieces — __location/scene/fantasy__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+castle courtyard with banners, cobblestones, and stone walls
+dragon's lair cave piled with gold and bones
+wizard's tower chamber with floating books and star charts
+pirate ship deck with mast, ropes, and black flags
+medieval village square with market stalls and a well
+fairy-tale cottage with thatched roof and crooked chimney
+underground dwarven forge with glowing anvils and molten metal

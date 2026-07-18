@@ -1,0 +1,15 @@
+# House interiors — __location/house__ (short: __house__)
+# Picks one room so interiors never stack
+
+__location/house/kitchen__
+__location/house/bedroom__
+__location/house/bathroom__
+__location/house/living_room__
+__location/house/dining_room__
+__location/house/hallway__
+__location/house/attic__
+__location/house/cellar__
+__location/house/laundry_room__
+__location/house/pantry__
+__location/house/study__
+__location/house/workshop__

@@ -1,0 +1,5 @@
+# Ear size — referenced via __face/ears/size__ (short: __ears/size__)
+# Composes shared __size__ plus ear-only cues
+
+__size__
+prominent

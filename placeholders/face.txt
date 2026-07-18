@@ -1,24 +1,25 @@
-# Composable face: structure (shape / jaw / cheeks) plus feature groups.
+# Composable face: structure (shape / jaw / cheeks) plus feature groups under face/.
 # Eyes, nose, lips, and ears are optional layers — omit some for lighter prompts.
+# Short tokens (__eyes__, __lips__, …) also resolve via short-path when unique.
 # Structure is included on most lines so overall silhouette stays distinct.
 # One phrasing per unique feature set — synonym wrappers pruned.
 
 # --- Full face: structure + all features ---
-__face/structure__ with __eyes__, __nose__, __lips__, and __ears__
-__face/structure__, __eyes__, __nose__, __lips__, __ears__
+__face/structure__ with __face/eyes__, __face/nose__, __face/lips__, and __face/ears__
+__face/structure__, __face/eyes__, __face/nose__, __face/lips__, __face/ears__
 
 # --- Structure + core features (no ears) ---
-__face/structure__ with __eyes__, __nose__, and __lips__
-__face/structure__, __eyes__, __nose__, __lips__
+__face/structure__ with __face/eyes__, __face/nose__, and __face/lips__
+__face/structure__, __face/eyes__, __face/nose__, __face/lips__
 
 # --- Features without structure ---
-__eyes__, __nose__, __lips__, and __ears__
-__eyes__, __nose__, and __lips__
+__face/eyes__, __face/nose__, __face/lips__, and __face/ears__
+__face/eyes__, __face/nose__, and __face/lips__
 
 # --- Structure + eyes focus ---
-__face/structure__ with __eyes__ and __lips__
-__face/structure__ with __eyes__
+__face/structure__ with __face/eyes__ and __face/lips__
+__face/structure__ with __face/eyes__
 
 # --- Structure alone or with one feature ---
 __face/structure__
-__face/structure__ with __nose__ and __lips__
+__face/structure__ with __face/nose__ and __face/lips__

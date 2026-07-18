@@ -1,0 +1,4 @@
+# Heroine — sailor moon (__character/heroine/animation/sailor_moon__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Sailor Moon in sailor fuku with odango buns and crescent wand

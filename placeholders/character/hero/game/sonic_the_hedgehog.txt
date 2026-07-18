@@ -1,0 +1,4 @@
+# Hero — sonic the hedgehog (__character/hero/game/sonic_the_hedgehog__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Sonic the Hedgehog blue with red shoes and quills

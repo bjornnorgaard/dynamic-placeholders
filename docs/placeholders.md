@@ -1,127 +1,97 @@
-# Shipped placeholders
+# Shipped placeholders (overview)
 
-Token name = path under `placeholders/` without the extension (`city.txt` → `__city__`). Nested folders use `/` in the token (`hair/color.txt` → `__hair/color__`).
+Token name = path under `placeholders/` without the extension (`pose.txt` → `__pose__`). Nested folders use `/` (`face/eyes/color.txt` → `__face/eyes/color__`).
 
-You can use a parent alone (`__hair__`) and let composition pull in children, or pin a child token directly (`__hair/color__`).
+Browse `placeholders/` for the full set. This page maps **families** and how they fit together — not every leaf file.
 
-## Top-level tokens
+## Short-path resolution
+
+Exact paths always win. If a token has no exact file, the library looks for a **unique** file whose relative name equals the token or ends with `/{token}`:
+
+| Token | Can resolve to |
+|---|---|
+| `__eyes__` | `face/eyes.txt` |
+| `__ballroom__` | `location/castle/ballroom.txt` |
+| `__castle/ballroom__` | `location/castle/ballroom.txt` |
+| `__heroine__` | `character/heroine.txt` |
+
+Ambiguous short names (two kitchens, two libraries) stay unresolved — use a fuller path. Prefer unique leaf names for rooms and features you pin often.
+
+## Shared primitives
 
 | Token | Role |
 |---|---|
-| `__profession__` | Subject look (silhouette + distinctive gear / traits) |
-| `__hero__` | Male protagonists from games, movies, comics, animation |
-| `__heroine__` | Female protagonists from games, movies, comics, animation |
-| `__expression__` | Facial expression / mood |
-| `__makeup__` | Full-face cosmetic looks (natural through theatrical / fantasy) |
-| `__skin__` | Skin tone / complexion (pale through dark, tan, sunburn, etc.) |
-| `__race__` | Fantasy / D&D-style subject races (silhouette + signature traits) |
-| `__animal__` | Real and mythical creatures (single-word names) |
-| `__monster__` | Horror / pop-culture monsters (film, books, games) |
-| `__face__` | Composable face → structure, eyes, nose, lips, ears |
-| `__hair__` | Composable hair → `hair/length`, `hair/color`, `hair/style` |
-| `__clothes__` | Composable attire → head, torso, pants, fullbody, shoes, etc. |
-| `__armor__` | Protective gear types (plate, mail, leather, power armor, …) |
-| `__weapon__` | Weapon types (blades, polearms, bows, firearms, energy, …) |
-| `__vehicle__` | Composable conveyances → car, truck, boat, plane, train, … |
-| `__background__` | Composable scenic vistas → cityscape, landscape, spacescape, … |
-| `__setting__` | Outdoor / environment place the subject is in |
-| `__location__` | Stereotypical movie / animation scene places |
-| `__room__` | Composable interior → type, size, mood, place |
-| `__time__` | Time of day / lighting cue |
-| `__weather__` | Atmospheric conditions (clear, rain, snow, fog, storms, …) |
-| `__city__` | Visually distinct city / place names |
-| `__country__` | National / cultural subject looks (demonym + signature dress) |
-| `__artstyle__` | Non-photorealistic mediums (anime, painting, comic, craft, …) |
-| `__artist__` | Named animators / cartoonists / illustrators (creator look + signature cues) |
-| `__photostyle__` | Photorealistic photography looks (cinematic, film stock, optics, …) |
-| `__view__` | Viewpoint, facing & composition (dutch angle, profile, …) |
-| `__focus__` | Character crop / body focus (upper body, full body, …) |
-| `__pose__` | Body stance & gesture (standing, sitting, anime/game tropes, …) |
-| `__situation__` | Activity / event (everyday errands through extreme set pieces) |
-| `__game__` | Pop-culture breakthrough games (franchise look + signature cues) |
+| `__color__` | Reusable base palette; domain lists compose this plus local-only shades |
+| `__size__` | Generic scale (tiny → huge); features add cues like beady / doe-eyed |
+| `__length__` | Generic length (cropped → very long); used by hair and similar |
 
-## Composition groups
+## Namespace map
 
-| Token | File |
+### Subject
+
+| Family | Root | Notes |
+|---|---|---|
+| Character | `__character__` | Umbrella → `__hero__` / `__heroine__` → media → franchise |
+| Profession / race | `__profession__`, `__race__` | Subject look |
+| Body | `__body__` | Frame + optional parts (`legs`, `stomach`, `chest`, `arms`, …) |
+| Creature | `__animal__`, `__monster__` | Beasts vs horror icons |
+| Culture | `__country__` | Demonym + signature dress (under `location/country`) |
+
+### Appearance
+
+| Family | Root | Notes |
+|---|---|---|
+| Face | `__face__` | Structure + `face/eyes`, `nose`, `lips`, `ears` |
+| Hair | `__hair__` | `__length__` + `hair/color` + `hair/style` |
+| Skin / makeup / expression | `__skin__`, `__makeup__`, `__expression__` | Keep makeup separate from bare lip color |
+
+### Attire & gear
+
+| Family | Root | Notes |
+|---|---|---|
+| Clothes | `__clothes__` | Zones: head, torso, legs, feet, fullbody, swimwear, … |
+| Armor / weapon | `__armor__`, `__weapon__` | Battle kit vs everyday clothes |
+| Vehicle | `__vehicle__` | One conveyance type per expand |
+
+### Place
+
+| Family | Root | Notes |
+|---|---|---|
+| Location | `__location__` | Umbrella — picks **one** family per expand |
+| Outdoor | `__outdoor__` | Biomes / environments |
+| Scene | `__scene__` | Movie / animation set pieces by category |
+| Background | `__background__` | Scenic vistas behind the subject |
+| Dwellings | `__house__`, `__castle__`, `__mansion__`, `__cabin__` | Rooms nested under each dwelling |
+| City | `__city__` | Named places with signature looks |
+
+Prefer one place family per prompt so outdoor, scene, background, and rooms do not fight.
+
+### Shot & style
+
+| Family | Tokens |
 |---|---|
-| `__hair__` | `placeholders/hair.txt` |
-| `__hair/color__` | `placeholders/hair/color.txt` |
-| `__face__` | `placeholders/face.txt` |
-| `__face/structure__` | `placeholders/face/structure.txt` |
-| `__eyes__` | `placeholders/eyes.txt` |
-| `__eyes/color__` | `placeholders/eyes/color.txt` |
-| `__clothes__` | `placeholders/clothes.txt` |
-| `__clothes/torso__` | `placeholders/clothes/torso.txt` |
-| `__clothes/torso/shirt__` | `placeholders/clothes/torso/shirt.txt` |
-| `__clothes/fullbody__` | `placeholders/clothes/fullbody.txt` |
-| `__clothes/swimwear__` | `placeholders/clothes/swimwear.txt` |
-| `__room__` | `placeholders/room.txt` |
-| `__room/type__` | `placeholders/room/type.txt` |
-| `__vehicle__` | `placeholders/vehicle.txt` |
-| `__vehicle/car__` | `placeholders/vehicle/car.txt` |
-| `__vehicle/boat__` | `placeholders/vehicle/boat.txt` |
-| `__vehicle/plane__` | `placeholders/vehicle/plane.txt` |
-| `__background__` | `placeholders/background.txt` |
-| `__background/cityscape__` | `placeholders/background/cityscape.txt` |
-| `__background/landscape__` | `placeholders/background/landscape.txt` |
-| `__background/spacescape__` | `placeholders/background/spacescape.txt` |
+| Camera | `__view__`, `__focus__`, `__pose__` |
+| Event | `__situation__` |
+| Time / weather | `__time__`, `__weather__` |
+| Look | `__artstyle__`, `__artist__`, `__photostyle__` |
+| Franchise look | `__game__` |
 
-### Clothes
+## Composition patterns
 
-`clothes.txt` keeps **separates** (torso + pants), **full-body**, and **swimwear** on different lines so layers never stack. Head and torso are themselves nested groups (`hat` / `glasses` / `piercings`, `shirt` / `jacket`).
+Parents pull in children; pin a child when you want a family fixed.
 
-Child lists under `placeholders/clothes/`:
-
-- `head/` — `hat`, `glasses`, `piercings` (composed by `head.txt`)
-- `torso/` — `shirt`, `jacket` (composed by `torso.txt`)
-- plus `scarf`, `fullbody`, `swimwear`, `pants`, `shoes`, `accessories`, `jewelry`
-
-### Face
-
-`face.txt` mixes structure with optional feature groups (`__eyes__`, `__nose__`, `__lips__`, `__ears__`) so prompts stay light when you omit layers. Each feature group nests size / shape / color / adjective lists the same way hair does.
-
-### Vehicle
-
-`vehicle.txt` picks **one** type per expansion so categories never stack. Child lists under `placeholders/vehicle/`:
-
-- `car`, `truck`, `motorcycle`, `bicycle`
-- `boat`, `plane`, `helicopter`, `train`, `spacecraft`
-
-Use `__vehicle__` for any conveyance, or pin a family (`__vehicle/boat__`, `__vehicle/car__`, …). Keep separate from `__situation__` activities that already imply a ride.
-
-### Background
-
-`background.txt` picks **one** vista type per expansion so categories never stack. Child lists under `placeholders/background/`:
-
-- `cityscape`, `landscape`, `seascape`, `skyscape`
-- `spacescape`, `underwater`, `ruins`
-
-Use `__background__` for scenery *behind* a subject, or pin a family (`__background/spacescape__`, …).
-
-### Background vs setting vs location vs room
-
-| Token | Use for |
-|---|---|
-| `__background__` | Scenic vista / backdrop behind the subject |
-| `__setting__` | Outdoor / environment place the subject is *in* |
-| `__location__` | Stereotypical movie / animation set pieces |
-| `__room__` | Dwelling interiors (type + optional size / mood / place) |
-
-Prefer one place family per prompt so they do not fight — e.g. `__background__` *or* `__setting__`, not both stacked with conflicting scenery.
-
-### Time vs weather
-
-`__time__` is time of day / lighting cue; `__weather__` is atmosphere (sky, precipitation, fog, storms). Keep them separate so dawn fog and midnight rain can combine freely.
-
-### View, focus, pose, situation
-
-`__view__` covers angle and composition; `__focus__` covers how much of the figure is in frame; `__pose__` covers how the body is held; `__situation__` covers what is happening — keep them separate so they do not fight.
+- `__hair__` → length + color + style
+- `__face__` → structure ± eyes / nose / lips / ears
+- `__body__` → frame ± legs / stomach / chest / arms / hips / … (pin `__stomach__`, `__legs__`, …)
+- `__clothes__` → separates **or** fullbody **or** swimwear (never stacked)
+- `__location__` → outdoor **or** scene **or** background **or** city **or** a dwelling room
+- `__character/heroine__` → game / movie / comics / animation → franchise list
+- `__vehicle__` / `__background__` → one type per expand
 
 ## File format (short)
 
-- One replacement per line (words, phrases, or full sentences)
-- Blank lines and lines starting with `#` are ignored
-- Supported extensions: `.txt`, `.text`, `.list`
-- A list entry may itself contain placeholders; they expand recursively
+- One replacement per line; blank lines and `#` comments ignored
+- Extensions: `.txt`, `.text`, `.list`
+- Lines may contain further placeholders (recursive expand)
 
-Full rules: [syntax.md](syntax.md). Authoring guidance for distinctiveness: [../AGENTS.md](../AGENTS.md).
+Full rules: [syntax.md](syntax.md). Authoring: [../AGENTS.md](../AGENTS.md).

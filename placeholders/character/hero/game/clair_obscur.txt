@@ -1,0 +1,5 @@
+# Hero — clair obscur (__character/hero/game/clair_obscur__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Gustave of Clair Obscur with mechanical arm, expedition coat, and determined look
+Verso of Clair Obscur with white hair, expedition gear, and dual swords

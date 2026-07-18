@@ -1,0 +1,8 @@
+# Heroines — __character/heroine__ (short: __heroine__)
+# Known protagonists; picks one media family then franchise
+# One exemplar per visual family only
+
+__character/heroine/game__
+__character/heroine/movie__
+__character/heroine/comics__
+__character/heroine/animation__

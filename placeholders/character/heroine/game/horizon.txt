@@ -1,0 +1,4 @@
+# Heroine — horizon (__character/heroine/game/horizon__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Aloy of Horizon Zero Dawn in Nora tribal armor with Focus earpiece and spear

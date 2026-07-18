@@ -1,0 +1,4 @@
+# Heroine — cowboy bebop (__character/heroine/animation/cowboy_bebop__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Faye Valentine in yellow coat with red hair and cigarette

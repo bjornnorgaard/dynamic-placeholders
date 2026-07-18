@@ -33,7 +33,9 @@ _USAGE_GUIDE_HTML = """
     <li>File name (without extension) = token name:
       <code>pose.txt</code> → <code>__pose__</code></li>
     <li>Subfolders use <code>/</code>:
-      <code>hair/color.txt</code> → <code>__hair/color__</code></li>
+      <code>face/eyes.txt</code> → <code>__face/eyes__</code></li>
+    <li>Unique short names also work:
+      <code>__eyes__</code> finds <code>face/eyes.txt</code> when it is the only match.</li>
     <li>One candidate per line; blank lines and <code>#</code> comments are ignored.</li>
     <li>Edits apply on the next generation — no WebUI restart.</li>
   </ul>
@@ -41,8 +43,8 @@ _USAGE_GUIDE_HTML = """
   <h4>Composition</h4>
   <p>
     A list line may itself contain placeholders. Those expand recursively, so a
-    parent like <code>__hair__</code> can pull in
-    <code>__hair/length__</code>, <code>__hair/color__</code>, and
+    parent like <code>__hair__</code> can pull in shared
+    <code>__length__</code>, <code>__hair/color__</code>, and
     <code>__hair/style__</code>. Use the parent alone, or any child token directly.
   </p>
 

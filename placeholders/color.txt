@@ -1,0 +1,26 @@
+# Shared base colors — use as __color__ in prompts
+# Reusable palette for hair, eyes, clothes accents, props, etc.
+# Domain lists (hair/color, face/eyes/color, …) compose this plus local-only shades
+# One entry per clear hue family — near-synonyms pruned
+# Style: short color name, no leading a/an/the
+
+black
+white
+grey
+silver
+gold
+brown
+tan
+beige
+red
+crimson
+orange
+yellow
+green
+teal
+blue
+navy
+purple
+violet
+pink
+magenta

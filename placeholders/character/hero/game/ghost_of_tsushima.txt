@@ -1,0 +1,4 @@
+# Hero — ghost of tsushima (__character/hero/game/ghost_of_tsushima__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Jin Sakai in samurai armor with Ghost half-mask

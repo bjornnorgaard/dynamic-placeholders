@@ -1,8 +1,8 @@
 # Composable hair: expand this once to pull in several nested placeholders.
-# Each nested token is resolved from its own list file under hair/.
+# Length uses shared __length__; color and style live under hair/.
 # One phrasing per arrangement — synonym wrappers pruned.
 
-__hair/length__ __hair/color__ __hair/style__ hair
-__hair/length__ __hair/color__ hair, __hair/style__
-__hair/color__ __hair/style__, __hair/length__
-__hair/length__ __hair/color__ hair with __hair/style__
+__length__ __hair/color__ __hair/style__ hair
+__length__ __hair/color__ hair, __hair/style__
+__hair/color__ __hair/style__, __length__
+__length__ __hair/color__ hair with __hair/style__

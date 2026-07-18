@@ -1,0 +1,4 @@
+# Heroine — last of us (__character/heroine/game/last_of_us__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Ellie from The Last of Us with backpack, bow, and scarred determined face

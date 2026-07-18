@@ -1,0 +1,9 @@
+# Heroine — ff8 (__character/heroine/game/ff8__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Rinoa Heartilly of Final Fantasy in black dress with angel wing accents and Griever necklace
+Quistis Trepe of Final Fantasy with glasses, blue SeeD uniform, and whip
+Selphie Tilmitt of Final Fantasy with short brown hair, yellow jacket, and nunchaku
+Edea Kramer of Final Fantasy as sorceress in elaborate horned black-and-white gown
+Ultimecia of Final Fantasy with time-witch gown, winged headdress, and junction magic
+Fujin of Final Fantasy with eyepatch, wind magic, and tight-lipped stare

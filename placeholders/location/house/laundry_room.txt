@@ -1,0 +1,5 @@
+# House laundry room — __location/house/laundry_room__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+laundry room with washer, dryer, and folded baskets

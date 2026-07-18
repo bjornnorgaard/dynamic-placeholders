@@ -1,0 +1,4 @@
+# Heroine — nier (__character/heroine/game/nier__)
+# One exemplar per visual family; short, no leading a/an/the
+
+2B from NieR Automata with white hair, black blindfold, and frilled combat dress

@@ -1,0 +1,4 @@
+# Heroine — mulan (__character/heroine/animation/mulan__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Mulan of Disney in Chinese armor with sword and army helmet

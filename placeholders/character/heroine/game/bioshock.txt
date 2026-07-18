@@ -1,0 +1,4 @@
+# Heroine — bioshock (__character/heroine/game/bioshock__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Elizabeth of BioShock Infinite in blue dress with cameo choker and tear-opening powers

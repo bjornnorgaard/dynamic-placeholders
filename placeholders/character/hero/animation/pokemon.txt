@@ -1,0 +1,4 @@
+# Hero — pokemon (__character/hero/animation/pokemon__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Ash Ketchum in baseball cap with Poké Ball and backpack

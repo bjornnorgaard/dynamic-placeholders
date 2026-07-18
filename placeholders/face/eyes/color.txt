@@ -1,0 +1,16 @@
+# Eye color — referenced via __face/eyes/color__ (short: __eyes/color__)
+# Composes shared __color__ plus eye-only naturals and fantasy cues
+
+__color__
+hazel
+ice-blue
+deep blue
+emerald green
+amber
+golden
+warm brown
+dark brown
+charcoal
+steel grey
+heterochromatic blue and brown
+milky white

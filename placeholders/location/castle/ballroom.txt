@@ -1,0 +1,7 @@
+# Castle ballroom — __location/castle/ballroom__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+grand ballroom with crystal chandeliers and polished marble floor
+candlelit ballroom with gilt mirrors and velvet drapes
+empty ballroom with dusty floor and moonlight through tall windows

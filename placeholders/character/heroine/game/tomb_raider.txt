@@ -1,0 +1,4 @@
+# Heroine — tomb raider (__character/heroine/game/tomb_raider__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Lara Croft in tank top with dual pistols and long braid

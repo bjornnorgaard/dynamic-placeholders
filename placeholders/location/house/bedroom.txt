@@ -1,0 +1,8 @@
+# House bedroom — __location/house/bedroom__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+cozy bedroom with rumpled bedding and morning light through curtains
+attic bedroom with slanted ceiling and dormer window
+nursery with crib, mobile, and pastel walls
+cluttered teenage bedroom with posters and fairy lights

@@ -1,0 +1,4 @@
+# Heroine — brave (__character/heroine/animation/brave__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Merida of Brave with wild red curls, green dress, and longbow

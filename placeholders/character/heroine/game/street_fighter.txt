@@ -1,0 +1,4 @@
+# Heroine — street fighter (__character/heroine/game/street_fighter__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Chun-Li in blue qipao with spiked bracelets and bun hair

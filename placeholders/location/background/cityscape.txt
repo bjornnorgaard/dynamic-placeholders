@@ -1,0 +1,18 @@
+# Cityscape backdrops — use as __location/background/cityscape__ (also via __background__)
+# Urban skylines and street vistas behind a subject — not named cities (__city__)
+# or places to stand in (__outdoor__ / __location__)
+# One entry per visual family — skyline silhouette and lighting must differ
+# Style: short, no leading a/an/the — lead with the vista noun, then signature look
+
+neon megacity skyline with rain-slick streets and holographic signs
+glass skyscraper skyline under clear blue daylight
+medieval walled town with timber roofs and stone towers
+industrial cityscape with smokestacks and brick warehouses
+coastal harbor cityscape with cranes, docks, and waterfront towers
+rooftop skyline at dusk with warm window lights
+cyberpunk alley canyon with stacked neon signs and cables
+desert oasis cityscape with sandstone towers and sun-bleached walls
+snowy winter cityscape with frosted rooftops and chimney smoke
+futuristic arcology skyline with stacked terraces and skybridges
+tiny hillside village with terracotta roofs and narrow lanes
+ruins of a modern skyline overgrown with vines and silence

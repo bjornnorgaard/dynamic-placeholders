@@ -1,0 +1,6 @@
+# Cabin interiors — __location/cabin__ (short: __cabin__)
+# Picks one room so interiors never stack
+
+__location/cabin/hearth_room__
+__location/cabin/loft_bedroom__
+__location/cabin/cookstove_kitchen__

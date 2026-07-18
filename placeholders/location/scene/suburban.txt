@@ -1,0 +1,9 @@
+# Movie / animation set pieces — __location/scene/suburban__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+suburban front porch with screen door and hanging plants
+backyard with wooden fence, lawn, and a swing set
+neighborhood cul-de-sac under streetlights at dusk
+trailer park lot with gravel and laundry lines
+motel courtyard with neon vacancy sign and parked cars

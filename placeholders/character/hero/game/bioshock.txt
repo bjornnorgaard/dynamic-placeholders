@@ -1,0 +1,5 @@
+# Hero — bioshock (__character/hero/game/bioshock__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Booker DeWitt of BioShock Infinite with stubbled face, suspenders, and sky-hook
+Jack of BioShock with chained sweater, wrench, and plasmid glow

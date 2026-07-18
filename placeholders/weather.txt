@@ -1,7 +1,7 @@
 # Weather — use as __weather__ in prompts
 # Phrases meant for atmospheric / conditions slots (e.g. "in __weather__", "under __weather__",
 # "__weather__ outdoors", "a scene in __weather__")
-# Atmosphere and sky conditions only — keep separate from __time__ (time of day) and __setting__ (place)
+# Atmosphere and sky conditions only — keep separate from __time__ (time of day) and __outdoor__ (place)
 # One entry per visual family — sky texture, precipitation, and palette must differ; near-duplicate
 # rain/snow intensity clones and slight fog variants are omitted
 # Style: short, no leading a/an/the — lead with the weather noun, then signature look

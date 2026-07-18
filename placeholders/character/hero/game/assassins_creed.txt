@@ -1,0 +1,4 @@
+# Hero — assassins creed (__character/hero/game/assassins_creed__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Ezio Auditore in Assassin white robes with hood and hidden blade

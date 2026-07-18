@@ -1,0 +1,7 @@
+# Hero — fallout (__character/hero/game/fallout__)
+# One exemplar per visual family; short, no leading a/an/the
+
+The Ghoul of Fallout with rotting cowboy face, duster, and revolver
+Maximus of Fallout in T-60 power armor with Brotherhood of Steel knighthood
+Nick Valentine of Fallout as synth detective in trench coat with cigarette
+Boone of Fallout New Vegas with 1st Recon beret, sniper rifle, and sunglasses

@@ -1,0 +1,4 @@
+# Hero — terminator (__character/hero/movie/terminator__)
+# One exemplar per visual family; short, no leading a/an/the
+
+T-800 Terminator in leather jacket with red cybernetic eye

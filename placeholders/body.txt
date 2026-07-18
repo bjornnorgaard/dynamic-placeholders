@@ -1,37 +1,30 @@
-# Body builds & physiques — use as __body__ in prompts
-# Phrases meant to sit after "with a/an" or describe the subject (e.g. "with a __body__",
-# "__body__ character", "portrait of someone with a __body__")
-# One exemplar per silhouette family; near-duplicates pruned so each line changes
-# overall proportions, mass, or muscle vs soft tissue — not just wording
-# Style: short, no leading a/an/the — lead with the build cue
+# Composable body — use as __body__ in prompts
+# Overall frame plus optional part cues (legs, stomach, chest, arms, hips, …)
+# Parts are optional layers — omit some for lighter prompts
+# Head anatomy stays under __face__; clothes/head owns headwear short-path
+# Phrases fit "with a __body__", "__body__ character", etc.
+# One phrasing per unique part set — synonym wrappers pruned
 
-# --- Small & delicate ---
-petite frame
-slender build
-wiry build
-gaunt frame
+# --- Full stack: frame + core parts ---
+__body/frame__ with __body/legs__, __body/stomach__, __body/chest__, and __body/arms__
+__body/frame__, __body/legs__, __body/stomach__, __body/chest__, __body/arms__
 
-# --- Tall & elongated ---
-lanky build
+# --- Frame + lower emphasis ---
+__body/frame__ with __body/legs__ and __body/hips__
+__body/frame__ with __body/legs__ and __body/stomach__
+__body/frame__ with __body/legs__
 
-# --- Average baseline ---
-average medium build
+# --- Frame + upper emphasis ---
+__body/frame__ with __body/chest__, __body/shoulders__, and __body/arms__
+__body/frame__ with __body/chest__ and __body/arms__
+__body/frame__ with __body/stomach__ and __body/chest__
 
-# --- Fit & athletic ---
-athletic build
-lean muscular physique
+# --- Frame alone or with one part ---
+__body/frame__
+__body/frame__ with __body/stomach__
+__body/frame__ with __body/shoulders__
 
-# --- Strong & muscular ---
-muscular build
-heavily muscled bodybuilder physique
-stocky build
-broad-shouldered frame
-barrel-chested torso
-
-# --- Curved & shaped ---
-curvy hourglass figure
-pear-shaped figure
-
-# --- Soft & heavy ---
-soft plump body
-heavyset build
+# --- Parts without full frame (lighter prompts) ---
+__body/legs__ and __body/stomach__
+__body/chest__ and __body/arms__
+__body/legs__, __body/hips__, and __body/feet__

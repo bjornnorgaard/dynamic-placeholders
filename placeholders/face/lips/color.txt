@@ -1,0 +1,14 @@
+# Lip color — referenced via __face/lips/color__ (short: __lips/color__)
+# Cosmetic shades first; shared __color__ mixed in for vivid looks
+
+natural pink
+rose
+coral
+nude
+peach
+deep rose
+berry
+deep red
+wine
+__color__
+pale

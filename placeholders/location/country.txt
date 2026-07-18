@@ -1,0 +1,45 @@
+# Countries / national looks — use as __location/country__ (short: __country__) in prompts
+# Phrases meant to stand in for the subject’s national or cultural identity
+# (e.g. "portrait of __location/country__", "__location/country__ with a __expression__",
+# "__profession__, __location/country__", "__race__ from a __location/country__ look")
+# One entry per visual family only — if two nationalities would likely render
+# interchangeable faces, dress, or silhouettes in Stable Diffusion, keep the sharper one
+# Style: short, to the point, no leading a/an/the — lead with the demonym, then signature look
+
+# --- East Asia ---
+Japanese in silk kimono with wide obi, straight black hair, and pale East Asian features
+Korean in bright hanbok with jeogori jacket and high waist ribbon sash
+Chinese in silk qipao with mandarin collar and side frog buttons
+Mongolian in long deel robe with sash belt and fur-trimmed hat
+
+# --- Southeast Asia ---
+Thai in shimmering sabai sash dress with gold jewelry and warm Southeast Asian features
+Vietnamese in flowing ao dai tunic over pants with high collar and side slits
+
+# --- South Asia ---
+Indian in draped sari with bindi, gold bangles, and warm South Asian features
+
+# --- Middle East & North Africa ---
+Saudi in white thawb with red-checkered ghutra and black agal
+Moroccan in hooded djellaba with babouche slippers and Maghrebi features
+Persian in embroidered tunic with patterned scarf and dark arched brows
+
+# --- Africa ---
+Nigerian in bold ankara print with towering gele headwrap
+Ethiopian in white netela shawl with embroidered borders and Habesha features
+Kenyan in red Maasai shuka wrap with heavy beaded collar and jewelry
+
+# --- Europe ---
+Scottish in tartan kilt with sporran, ghillie brogues, and pale Celtic features
+Russian in kosovorotka shirt with sash and fur ushanka
+Greek in white fustanella with embroidered vest and tsarouhia shoes
+Spanish in ruffled flamenco dress with peineta comb and flower in hair
+Swedish in folkdräkt with silver brooches, embroidered bodice, and fair Nordic features
+
+# --- Americas ---
+Mexican in embroidered blouse with rebozo shawl and warm mestizo features
+Peruvian in bright Andean poncho with patterned chullo earflap hat
+Brazilian in feathered samba carnival costume with warm Latin features
+
+# --- Pacific ---
+Maori in woven flax cloak with ta moko facial tattoos and Polynesian features

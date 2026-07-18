@@ -1,0 +1,4 @@
+# Hero — god of war (__character/hero/game/god_of_war__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Kratos with ash-white skin, red tattoos, and Spartan blades

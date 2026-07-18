@@ -1,0 +1,9 @@
+# Movie / animation set pieces — __location/scene/urban__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+busy downtown crosswalk with taxis and glass towers
+narrow back alley with dumpsters, fire escapes, and graffiti
+boardwalk pier with carnival lights and ocean beyond
+construction site with scaffolding, cranes, and dirt piles
+abandoned lot overgrown with weeds and chain-link fence

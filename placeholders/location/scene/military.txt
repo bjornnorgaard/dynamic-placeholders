@@ -1,0 +1,9 @@
+# Movie / animation set pieces — __location/scene/military__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+war trench with sandbags, mud, and barbed wire
+aircraft carrier flight deck with jets and ocean spray
+secret underground bunker with maps and blinking servers
+helicopter interior with open side door over a city
+bank vault with thick steel door and stacked cash crates

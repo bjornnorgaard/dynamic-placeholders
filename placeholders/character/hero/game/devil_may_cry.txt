@@ -1,0 +1,4 @@
+# Hero — devil may cry (__character/hero/game/devil_may_cry__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Dante in long red coat with white hair and Rebellion sword

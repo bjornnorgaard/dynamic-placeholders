@@ -1,0 +1,5 @@
+# Mansion gala hall — __location/mansion/gala_hall__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+mansion ballroom with parquet floor, orchestra balcony, and gold leaf

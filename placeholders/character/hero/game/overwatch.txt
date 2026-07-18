@@ -1,0 +1,6 @@
+# Hero — overwatch (__character/hero/game/overwatch__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Genji of Overwatch in green cyborg ninja armor with dragon blade
+Reaper of Overwatch in black trench coat with skull mask and dual shotguns
+Reinhardt of Overwatch in bulky crusader armor with rocket hammer and barrier

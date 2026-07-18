@@ -1,0 +1,4 @@
+# Heroine — frozen (__character/heroine/animation/frozen__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Elsa of Frozen in ice-blue gown with platinum braid and frost magic

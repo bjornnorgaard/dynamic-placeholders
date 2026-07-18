@@ -1,7 +1,0 @@
-# Room adjectives group: size and/or mood refinements.
-# Referenced via __room/adjective__ from room.txt
-# Size alone and mood alone stay available; combined lines are the richer stack
-
-__room/size__
-__room/mood__
-__room/size__ __room/mood__

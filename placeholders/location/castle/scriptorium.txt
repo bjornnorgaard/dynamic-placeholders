@@ -1,0 +1,5 @@
+# Castle scriptorium — __location/castle/scriptorium__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+castle library with spiral stairs, tall shelves, and ladder rails

@@ -1,0 +1,9 @@
+# Composable nose under face/ — short __nose__ resolves here when unique.
+# Many lines omit adjectives so ordinary noses stay common.
+
+__face/nose/shape__ nose
+__face/nose/size__ __face/nose/shape__ nose
+__face/nose/size__ nose
+__face/nose/size__ __face/nose/shape__ nose, __face/nose/adjective__
+__face/nose/shape__ nose with __face/nose/adjective__
+__face/nose/size__ nose, __face/nose/adjective__

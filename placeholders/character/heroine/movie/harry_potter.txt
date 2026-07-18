@@ -1,0 +1,4 @@
+# Heroine — harry potter (__character/heroine/movie/harry_potter__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Hermione Granger with bushy hair, wand, and Hogwarts robes

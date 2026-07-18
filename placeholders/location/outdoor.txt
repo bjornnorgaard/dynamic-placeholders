@@ -1,0 +1,79 @@
+# Outdoor / biome places — __location/outdoor__ (short: __outdoor__)
+# Environments the subject is in — not movie set pieces (__location/scene__) or dwelling rooms
+# One entry per visual family; near-duplicates pruned
+# Style: short, no leading a/an/the — lead with the main place noun
+
+outer space among stars and nebulae
+moon surface barren under black sky
+planet alien with twin suns and strange rock formations
+space station corridor with portholes looking out at Earth
+gas giant rings seen from a nearby moon
+asteroid field drifting through starlight
+
+# --- Sky & above the clouds ---
+sea of clouds at golden hour
+sky stormy filled with dark thunderheads
+aurora borealis over a frozen landscape
+rainbow after rain against clearing skies
+
+# --- Forests & woodland ---
+redwood grove ancient with towering trunks
+pine forest misty at dawn
+forest autumn with fallen leaves and warm light
+woods dark fairy-tale with twisted branches
+bamboo grove with filtered green light
+rainforest tropical with hanging vines and dense canopy
+
+# --- Meadows, fields & open land ---
+meadow of wildflowers under clear sky
+wheat field golden in late summer
+lavender field stretching to the horizon
+moor misty with low heather and gray skies
+
+# --- Mountains & high places ---
+mountain peak snowy above the clouds
+volcanic crater with smoking vents
+canyon sheer with layered red rock walls
+
+# --- Deserts & arid ---
+desert sandy with wind-sculpted dunes
+salt flat dry shimmering with heat haze
+oasis with palm trees around a still pool
+badlands of eroded earth pillars
+
+# --- Water & coast ---
+shoreline rocky with crashing waves
+beach sandy quiet at low tide
+coral reef underwater with shafts of light
+harbor foggy with wooden docks and still water
+waterfall plunging into a misty pool
+lake frozen under a pale winter sky
+mangrove swamp with tangled roots in dark water
+river gorge with whitewater between stone walls
+
+# --- Underground & caves ---
+cavern underground with glowing crystals
+mine tunnels narrow with wooden supports
+lava tubes with glowing cracks in the rock
+catacomb of carved stone corridors
+bunker deep beneath the earth
+
+# --- Urban & built ---
+city street rainy at night with neon reflections
+cobblestone alley quiet lined with old brick
+rooftop overlooking a dense skyline at dusk
+warehouse abandoned industrial with broken windows
+subway platform lit by flickering fluorescent lights
+library hall grand with tall shelves and soft lamps
+cathedral nave with stained glass and stone pillars
+marketplace crowded under colorful awnings
+megacity futuristic of glass towers and skybridges
+ruins of an ancient stone city overgrown with vines
+
+# --- Fantasy & surreal ---
+floating island drifting above the clouds
+crystal palace of translucent spires
+garden enchanted glowing softly at night
+landscape dreamlike of impossible geometry
+mirror lake reflecting a second inverted world
+throne room carved from living wood and light

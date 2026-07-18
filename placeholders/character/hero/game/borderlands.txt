@@ -1,0 +1,7 @@
+# Hero — borderlands (__character/hero/game/borderlands__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Handsome Jack of Borderlands with yellow mask scar, Hyperion suit, and ego grin
+Krieg of Borderlands with psycho mask, buzz axe, and scarred muscle
+Brick of Borderlands with bald head, explosive punch fists, and tiny jacket
+Zer0 of Borderlands in black sniper suit with holographic face and sword

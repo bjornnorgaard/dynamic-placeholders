@@ -1,8 +1,0 @@
-# Hair length options — referenced from hair.txt via __hair/length__
-# Ordered short → long. Length-only phrasing (no cut names) so it composes cleanly with style.
-
-cropped
-short
-shoulder-length
-long
-very long

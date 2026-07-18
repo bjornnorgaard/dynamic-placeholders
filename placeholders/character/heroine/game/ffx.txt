@@ -1,0 +1,7 @@
+# Heroine — ffx (__character/heroine/game/ffx__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Yuna of Final Fantasy with summoner staff, Yevon dress, and aeon summoning pose
+Lulu of Final Fantasy with platinum hair, gothic black dress, and moogle doll
+Rikku of Final Fantasy with blonde hair, green Al Bhed eyes, and thief gear
+Yunalesca of Final Fantasy with ancient summoner robes and ethereal unsent form

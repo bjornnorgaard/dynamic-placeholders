@@ -1,0 +1,13 @@
+# Hero movie — __character/hero/movie__
+# Picks one franchise list
+
+__character/hero/movie/indiana_jones__
+__character/hero/movie/matrix__
+__character/hero/movie/john_wick__
+__character/hero/movie/james_bond__
+__character/hero/movie/star_wars__
+__character/hero/movie/lotr__
+__character/hero/movie/harry_potter__
+__character/hero/movie/mad_max__
+__character/hero/movie/terminator__
+__character/hero/movie/rocky__

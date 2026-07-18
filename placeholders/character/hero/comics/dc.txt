@@ -1,0 +1,5 @@
+# Hero — dc (__character/hero/comics/dc__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Batman in black cowl, cape, and bat-emblazoned chest
+Superman in blue suit with red cape and S shield

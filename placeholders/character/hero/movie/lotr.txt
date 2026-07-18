@@ -1,0 +1,5 @@
+# Hero — lotr (__character/hero/movie/lotr__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Aragorn in ranger cloak with Anduril and weathered stubble
+Frodo Baggins small hobbit with curly hair and the One Ring

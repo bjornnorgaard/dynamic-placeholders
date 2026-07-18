@@ -1,0 +1,9 @@
+# Composable ears under face/ — short __ears__ resolves here when unique.
+# Many lines omit adjectives so ordinary ears stay common.
+
+__face/ears/shape__ ears
+__face/ears/size__ __face/ears/shape__ ears
+__face/ears/size__ ears
+__face/ears/size__ __face/ears/shape__ ears, __face/ears/adjective__
+__face/ears/shape__ ears with __face/ears/adjective__
+__face/ears/size__ ears, __face/ears/adjective__

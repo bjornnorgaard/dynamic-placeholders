@@ -4,18 +4,21 @@ A [Stable Diffusion WebUI Forge - Neo](https://github.com/Haoming02/sd-webui-for
 
 **Only tested with Forge Neo.** It may work on other Automatic1111-compatible frontends, but that is unsupported.
 
-Write lists under `placeholders/`, then use `__name__` in a prompt. At generation time each token is replaced with a random line from the matching file. Nested tokens inside those lines expand recursively, so one high-level placeholder can compose hair, clothes, setting, and more from smaller lists.
+Write lists under `placeholders/`, then use `__name__` in a prompt. At generation time each token is replaced with a random line from the matching file. Nested tokens inside those lines expand recursively, so one high-level placeholder can compose hair, clothes, location, and more from smaller lists.
 
 ```
-__focus__, __view__, __artstyle__ of a __race__ __profession__, __country__, with a __expression__, __makeup__, __face__, __hair__, __clothes__, in a __setting__ in __city__ at __time__
+__focus__, __view__, __artstyle__ of a __race__ __profession__, __country__, with a __expression__, __makeup__, __face__, __hair__, __clothes__, in a __location__ at __time__
 ```
+
+Browse `placeholders/` for every shipped token. Docs give an overview of families, not a full catalog.
 
 ## Features
 
 - Dedicated `placeholders/` folder for list files
 - One random line per token — no combinatorial explosion
 - List lines are phrases and sentences, not only single words
-- Nested composition (`__hair__`, `__clothes__`, `__face__`, `__room__`, …)
+- Nested composition and short-path lookup (`__eyes__` → `face/eyes.txt` when unique)
+- Shared primitives (`__color__`, `__size__`, `__length__`) reused across domains
 - Shipped lists tuned for **visual distinctiveness** in image models
 
 ## Install
@@ -38,22 +41,22 @@ No extra Python packages are required.
 2. Use a prompt with tokens, for example:
 
    ```
-   portrait of __profession__ with __hair__, __clothes__, in a __setting__
+   portrait of __profession__ with __hair__, __clothes__, in a __location__
    ```
 
 3. Edit the shipped lists under `placeholders/`, or add new `.txt` files. Changes are picked up on the next generation (mtime-based cache — no restart).
 
 4. In the prompt box, type `__` to autocomplete placeholder names (arrow keys / Enter or Tab to insert `__name__`).
 
-Composition is built in: `__hair__` expands into length / color / style; `__clothes__` into separates or full-body outfits; `__face__` into structure plus features; `__room__` into type with optional size / mood / place. Details: [docs/syntax.md](docs/syntax.md).
+Composition is built in: `__hair__` expands into length / color / style; `__clothes__` into separates or full-body outfits; `__face__` into structure plus features; `__location__` into outdoor, scene, background, city, or a dwelling room. Details: [docs/syntax.md](docs/syntax.md).
 
 ## Documentation
 
 | Doc | Contents |
 |---|---|
-| [docs/syntax.md](docs/syntax.md) | Token syntax, list file format, expansion & composition rules |
-| [docs/placeholders.md](docs/placeholders.md) | Shipped tokens, nested paths, how composition groups fit together |
-| [docs/settings.md](docs/settings.md) | Accordion controls, Settings page, directories, autocomplete |
+| [docs/syntax.md](docs/syntax.md) | Token syntax, short-path lookup, expansion & composition rules |
+| [docs/placeholders.md](docs/placeholders.md) | Namespace map and composition families (not a full catalog) |
+| [docs/settings.md](docs/settings.md) | Accordion controls, Settings page, logging, autocomplete |
 | [docs/examples.md](docs/examples.md) | Ready-to-paste prompts (focused demos and kitchen-sink showcases) |
 
 For authors editing shipped lists: [AGENTS.md](AGENTS.md) (visual distinctiveness rules).

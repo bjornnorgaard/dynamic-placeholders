@@ -1,0 +1,6 @@
+# Nose size — referenced via __face/nose/size__ (short: __nose/size__)
+# Composes shared __size__ plus nose-only cues
+
+__size__
+delicate
+broad

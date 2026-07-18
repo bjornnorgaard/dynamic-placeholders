@@ -1,0 +1,4 @@
+# Hero — street fighter (__character/hero/game/street_fighter__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Ryu in white karate gi with red headband and bare feet

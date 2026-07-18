@@ -1,0 +1,11 @@
+# Shared length scale — use as __length__ in prompts
+# Generic length for hair, hemlines, capes, and similar
+# Domain lists may compose this plus local-only terms
+# Ordered short → long
+# Style: short, no leading a/an/the
+
+cropped
+short
+medium
+long
+very long

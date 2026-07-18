@@ -1,0 +1,4 @@
+# Hero — mad max (__character/hero/movie/mad_max__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Mad Max in leather jacket with shotgun and desert grit

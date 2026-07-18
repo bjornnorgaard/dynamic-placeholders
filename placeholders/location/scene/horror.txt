@@ -1,0 +1,9 @@
+# Movie / animation set pieces — __location/scene/horror__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+haunted mansion foyer with dusty chandelier and cobwebs
+foggy graveyard with crooked headstones and iron fence
+abandoned asylum ward with peeling paint and empty beds
+dark basement with a single bare bulb and concrete stairs
+creepy carnival funhouse with warped mirrors and red lights

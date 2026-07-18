@@ -1,0 +1,10 @@
+# Mansion interiors — __location/mansion__ (short: __mansion__)
+# Picks one room so interiors never stack
+
+__location/mansion/gallery__
+__location/mansion/billiard_room__
+__location/mansion/conservatory__
+__location/mansion/library__
+__location/mansion/gala_hall__
+__location/mansion/oak_study__
+__location/mansion/foyer__

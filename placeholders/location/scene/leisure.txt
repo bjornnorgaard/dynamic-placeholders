@@ -1,0 +1,10 @@
+# Movie / animation set pieces — __location/scene/leisure__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+movie theater auditorium with red seats and glowing screen
+arcade with flashing cabinets and carpet patterns
+amusement park midway with rides, lights, and popcorn carts
+circus tent interior with sawdust ring and hanging trapeze
+bowling alley lanes under neon and polished wood
+swimming pool deck with lounge chairs and chlorinated blue water

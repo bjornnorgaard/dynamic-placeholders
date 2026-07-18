@@ -1,0 +1,6 @@
+# Castle dungeon — __location/castle/dungeon__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+dungeon with iron bars, straw, and dripping stone
+torchlit dungeon corridor with chains and wet floors

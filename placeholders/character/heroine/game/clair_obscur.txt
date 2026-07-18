@@ -1,0 +1,6 @@
+# Heroine — clair obscur (__character/heroine/game/clair_obscur__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Maelle of Clair Obscur with copper hair, fencing rapier, and white expedition blouse
+Lune of Clair Obscur with black hair in an elegant bun, elemental mage glyphs, and staff
+Sciel of Clair Obscur with wavy blond hair, combat scythe, and fortune-teller cards

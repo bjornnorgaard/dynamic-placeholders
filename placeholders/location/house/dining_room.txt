@@ -1,0 +1,6 @@
+# House dining room — __location/house/dining_room__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+dining room with set table and chandelier
+breakfast nook with bay window and vinyl benches

@@ -1,0 +1,22 @@
+# Landscape backdrops — use as __location/background/landscape__ (also via __background__)
+# Scenic land vistas across seasons and biomes — not a place to stand in (__outdoor__)
+# One entry per visual family — terrain, season, and palette must differ
+# Style: short, no leading a/an/the — lead with the landscape noun, then signature look
+
+# --- Seasons ---
+spring meadow landscape with wildflowers and soft green hills
+summer prairie landscape under a blazing blue sky
+autumn forest landscape with red-gold canopy and fallen leaves
+winter mountain landscape with snow peaks and bare trees
+
+# --- Biomes & terrain ---
+desert dune landscape with wind-sculpted ridges and heat shimmer
+tropical jungle landscape with layered canopy and mist
+arctic tundra landscape with frozen ground and low pale sun
+volcanic landscape with glowing lava veins and ash-gray sky
+rolling farmland landscape with patchwork fields and hedgerows
+canyon landscape with layered red rock walls and deep shadows
+misty highland landscape with heather moors and distant ridges
+bamboo valley landscape with filtered green light and steep slopes
+savanna landscape with golden grass and solitary acacia trees
+lavender field landscape stretching purple to the horizon

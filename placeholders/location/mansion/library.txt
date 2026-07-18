@@ -1,0 +1,5 @@
+# Mansion library — __location/mansion/library__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+mansion library with rolling ladder, fireplace, and leather chairs

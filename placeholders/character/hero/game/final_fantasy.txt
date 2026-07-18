@@ -1,0 +1,4 @@
+# Hero — final fantasy (__character/hero/game/final_fantasy__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Cloud Strife with spiky blond hair and enormous Buster Sword

@@ -1,0 +1,6 @@
+# Character umbrella — use as __character__ in prompts
+# Picks a hero or heroine composer (media → franchise → character)
+# Pin directly with __hero__, __heroine__, or __character/heroine/game/ff7__
+
+__character/hero__
+__character/heroine__

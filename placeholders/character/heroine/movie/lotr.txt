@@ -1,0 +1,4 @@
+# Heroine — lotr (__character/heroine/movie/lotr__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Eowyn of The Lord of the Rings in Rohan armor with sword and flowing blond hair

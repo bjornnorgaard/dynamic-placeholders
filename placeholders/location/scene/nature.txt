@@ -1,0 +1,10 @@
+# Movie / animation set pieces — __location/scene/nature__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+campsite with tent, cooler, and fire ring in the clearing
+lakeside dock with wooden planks and a tied canoe
+cliff overlook with a wooden railing above a valley
+snowy ski lodge porch with mountains behind
+desert highway roadside with a lone billboard and heat haze
+jungle clearing with a rope bridge over a muddy stream

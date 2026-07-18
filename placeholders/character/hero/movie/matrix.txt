@@ -1,0 +1,4 @@
+# Hero — matrix (__character/hero/movie/matrix__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Neo in long black coat with sunglasses and Matrix green tint

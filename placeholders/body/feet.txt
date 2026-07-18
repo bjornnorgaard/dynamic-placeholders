@@ -1,0 +1,9 @@
+# Foot size & shape — __body/feet__ (short: __feet__)
+# Bare anatomy cues; not footwear (__clothes/feet/shoes__)
+# Style: short, no leading a/an/the
+
+large wide feet
+small dainty feet
+long narrow feet
+broad flat feet
+high-arched feet

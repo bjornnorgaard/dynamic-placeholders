@@ -1,0 +1,5 @@
+# Hero — witcher (__character/hero/game/witcher__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Geralt of Rivia with white hair, witcher medallion, and twin swords
+Jaskier of The Witcher with colorful doublet, lute, and charming grin

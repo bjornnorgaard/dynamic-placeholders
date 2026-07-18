@@ -1,0 +1,8 @@
+# Lip size — referenced via __face/lips/size__ (short: __lips/size__)
+# Composes shared __size__ plus lip-only cues
+
+__size__
+thin
+full
+plump
+bee-stung

@@ -1,0 +1,5 @@
+# Hero — star wars (__character/hero/movie/star_wars__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Luke Skywalker in Jedi robes with blue lightsaber
+Han Solo in black vest, white shirt, and blaster holster

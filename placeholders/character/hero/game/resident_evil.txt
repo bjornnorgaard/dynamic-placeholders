@@ -1,0 +1,5 @@
+# Hero — resident evil (__character/hero/game/resident_evil__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Leon Kennedy in tactical vest with handgun and police badge
+Chris Redfield of Resident Evil in BSAA gear with biceps and handgun

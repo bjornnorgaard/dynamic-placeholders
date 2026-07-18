@@ -1,0 +1,6 @@
+# Castle tower chamber — __location/castle/tower_chamber__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+tower chamber with narrow windows and a spiral stair door
+wizard tower chamber with star charts and floating books

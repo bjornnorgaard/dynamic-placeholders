@@ -1,0 +1,10 @@
+# Movie / animation set pieces — __location/scene/transit__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+train compartment with luggage racks and countryside flashing past
+subway car packed with poles and rattling windows
+airport terminal with departure boards and rolling suitcases
+bus station waiting room with plastic seats and timetable screens
+gas station forecourt under buzzing canopy lights at night
+parking garage concrete levels with yellow lines and echo

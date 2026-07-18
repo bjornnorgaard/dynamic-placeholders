@@ -118,7 +118,17 @@ class PlaceholderLibrary:
         return sorted(names)
 
     def resolve_file(self, name: str) -> Path | None:
-        """Locate the list file for a placeholder name, if it exists."""
+        """
+        Locate the list file for a placeholder name, if it exists.
+
+        Resolution order:
+        1. Exact relative path under a root (``eyes`` → ``eyes.txt``).
+        2. Unique short-path match: a file whose relative name equals the
+           token or ends with ``/{token}`` (``eyes`` → ``face/eyes.txt``,
+           ``castle/ballroom`` → ``location/castle/ballroom.txt``).
+
+        Ambiguous short-path matches (0 or 2+) return ``None`` — never guess.
+        """
         name = normalize_placeholder_name(name)
         if not name or ".." in name.split("/"):
             return None
@@ -129,6 +139,40 @@ class PlaceholderLibrary:
                 candidate = base.with_suffix(ext)
                 if candidate.is_file():
                     return candidate
+
+        return self._resolve_short_path(name)
+
+    def _resolve_short_path(self, name: str) -> Path | None:
+        """Return the unique file whose relative stem equals or ends with name."""
+        matches: list[Path] = []
+        suffix = f"/{name}"
+        for root in self.roots:
+            if not root.is_dir():
+                continue
+            for path in root.rglob("*"):
+                if not path.is_file():
+                    continue
+                if path.suffix.lower() not in TEXT_EXTENSIONS:
+                    continue
+                try:
+                    relative = path.relative_to(root)
+                except ValueError:
+                    continue
+                stem = normalize_placeholder_name(str(relative.with_suffix("")))
+                if not stem:
+                    continue
+                if stem == name or stem.endswith(suffix):
+                    matches.append(path)
+
+        if len(matches) == 1:
+            return matches[0]
+        if len(matches) > 1:
+            logger.warning(
+                "Ambiguous short-path placeholder %r matches %d files; "
+                "use a fuller path",
+                name,
+                len(matches),
+            )
         return None
 
     def lookup(self, name: str) -> PlaceholderLookup:

@@ -1,0 +1,5 @@
+# Mansion gallery — __location/mansion/gallery__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+portrait gallery with oil paintings in gilt frames and runner carpet

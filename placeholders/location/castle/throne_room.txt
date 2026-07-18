@@ -1,0 +1,6 @@
+# Castle throne room — __location/castle/throne_room__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+throne room with raised dais, banners, and stone pillars
+torchlit throne room with iron crown motif and cold stone

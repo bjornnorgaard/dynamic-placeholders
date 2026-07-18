@@ -1,0 +1,11 @@
+# Composable lips under face/ — short __lips__ resolves here when unique.
+# Many lines omit adjectives so ordinary lips stay common.
+# One phrasing per arrangement — synonym wrappers pruned.
+
+__face/lips/color__ lips
+__face/lips/size__ __face/lips/color__ lips
+__face/lips/color__ __face/lips/shape__ lips
+__face/lips/size__ __face/lips/color__ __face/lips/shape__ lips
+__face/lips/size__ __face/lips/color__ __face/lips/shape__ lips, __face/lips/adjective__
+__face/lips/size__ __face/lips/color__ lips with __face/lips/adjective__
+__face/lips/color__ lips, __face/lips/adjective__

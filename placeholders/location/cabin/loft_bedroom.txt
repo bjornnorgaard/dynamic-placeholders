@@ -1,0 +1,5 @@
+# Cabin loft bedroom — __location/cabin/loft_bedroom__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+cabin loft bedroom with quilted beds and exposed log walls

@@ -1,112 +1,15 @@
-# Scene location — use as __location__ in prompts
-# Stereotypical movie and animation places for scene slots (e.g. "in a __location__",
-# "set in a __location__", "a scene at a __location__", "standing in a __location__")
-# Film/animation tropes only — not biomes (__setting__) or dwelling rooms (__room__)
-# One entry per visual family; if two would render the same set piece, keep the sharper one
-# Style: short, to the point, no leading a/an/the — lead with the place noun
+# Location umbrella — use as __location__ in prompts
+# Picks ONE place family per expand so outdoor biomes, set pieces, vistas,
+# cities, and dwelling rooms never stack against each other
+# Pin a child for a family: __location/outdoor__, __castle/ballroom__, __city__, …
+# Short unique leaves resolve via short-path (__ballroom__, __outdoor__, …)
 
-# --- Everyday & suburban ---
-suburban front porch with screen door and hanging plants
-backyard with wooden fence, lawn, and a swing set
-neighborhood cul-de-sac under streetlights at dusk
-trailer park lot with gravel and laundry lines
-motel courtyard with neon vacancy sign and parked cars
-
-# --- Schools & institutions ---
-high school hallway lined with lockers and fluorescent lights
-classroom with chalkboard, desks, and afternoon sun through blinds
-university lecture hall with tiered seats and a projector screen
-courthouse steps with classical columns and wide stairs
-
-# --- Food & hospitality ---
-diner booth with checkered floor, chrome stools, and neon clock
-coffee shop interior with espresso machine and chalkboard menu
-fast-food counter under harsh fluorescent lighting
-fancy restaurant with white tablecloths and candlelight
-hotel lobby with marble floors, chandelier, and revolving door
-bar counter sticky with bottles glowing on backlit shelves
-nightclub dance floor under colored strobes and fog
-
-# --- Work & public interiors ---
-office cubicle farm under gray fluorescent panels
-hospital corridor with gurneys and blinking monitors
-police station booking desk with fluorescent buzz and holding cells
-fire station bay with polished engines and hanging gear
-newsroom with cluttered desks, screens, and ringing phones
-recording studio booth behind thick glass and foam panels
-convenience store aisle under harsh overnight lights
-
-# --- Transit & travel ---
-train compartment with luggage racks and countryside flashing past
-subway car packed with poles and rattling windows
-airport terminal with departure boards and rolling suitcases
-bus station waiting room with plastic seats and timetable screens
-gas station forecourt under buzzing canopy lights at night
-parking garage concrete levels with yellow lines and echo
-
-# --- Streets & urban outdoors ---
-busy downtown crosswalk with taxis and glass towers
-narrow back alley with dumpsters, fire escapes, and graffiti
-boardwalk pier with carnival lights and ocean beyond
-construction site with scaffolding, cranes, and dirt piles
-abandoned lot overgrown with weeds and chain-link fence
-
-# --- Nature as scene locations ---
-campsite with tent, cooler, and fire ring in the clearing
-lakeside dock with wooden planks and a tied canoe
-cliff overlook with a wooden railing above a valley
-snowy ski lodge porch with mountains behind
-desert highway roadside with a lone billboard and heat haze
-jungle clearing with a rope bridge over a muddy stream
-
-# --- Sports & spectacle ---
-football stadium field under floodlights and roaring stands
-boxing ring under a single harsh spotlight
-baseball diamond with dugout and dusty infield
-racing track pit lane with cars and crew in fire suits
-rodeo arena with dirt floor, gates, and wooden bleachers
-
-# --- Entertainment & leisure ---
-movie theater auditorium with red seats and glowing screen
-arcade with flashing cabinets and carpet patterns
-amusement park midway with rides, lights, and popcorn carts
-circus tent interior with sawdust ring and hanging trapeze
-bowling alley lanes under neon and polished wood
-swimming pool deck with lounge chairs and chlorinated blue water
-
-# --- Fantasy & adventure ---
-castle courtyard with banners, cobblestones, and stone walls
-dragon's lair cave piled with gold and bones
-wizard's tower chamber with floating books and star charts
-pirate ship deck with mast, ropes, and black flags
-medieval village square with market stalls and a well
-fairy-tale cottage with thatched roof and crooked chimney
-underground dwarven forge with glowing anvils and molten metal
-
-# --- Sci-fi & future ---
-spaceship bridge with holographic consoles and viewport stars
-cryo bay with frosted glass pods in a cold blue glow
-alien marketplace with floating stalls and strange goods
-mecha hangar with giant robots on maintenance scaffolds
-orbital elevator platform looking down on a curved Earth
-
-# --- Horror & thriller ---
-haunted mansion foyer with dusty chandelier and cobwebs
-foggy graveyard with crooked headstones and iron fence
-abandoned asylum ward with peeling paint and empty beds
-dark basement with a single bare bulb and concrete stairs
-creepy carnival funhouse with warped mirrors and red lights
-# --- Period & historical ---
-Wild West saloon with swinging doors, piano, and dusty boards
-Victorian parlor with heavy drapes, wallpaper, and gas lamps
-ancient Roman forum with columns and marble plazas
-samurai dojo with tatami mats, wooden swords, and paper screens
-1920s speakeasy with jazz band, velvet booths, and smoky air
-Egyptian tomb chamber with hieroglyphs and torchlight
-
-# --- Military & action ---
-war trench with sandbags, mud, and barbed wire
-aircraft carrier flight deck with jets and ocean spray
-secret underground bunker with maps and blinking servers
-helicopter interior with open side door over a city
-bank vault with thick steel door and stacked cash crates
+__location/outdoor__
+__location/scene__
+__location/background__
+__location/city__
+__location/country__
+__location/house__
+__location/castle__
+__location/mansion__
+__location/cabin__

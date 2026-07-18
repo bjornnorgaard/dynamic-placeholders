@@ -1,0 +1,4 @@
+# Hero — doom (__character/hero/game/doom__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Doom Slayer in bulky green Praetor armor with shotgun

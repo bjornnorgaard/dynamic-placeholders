@@ -1,0 +1,13 @@
+# Heroine animation — __character/heroine/animation__
+# Picks one franchise list
+
+__character/heroine/animation/sailor_moon__
+__character/heroine/animation/attack_on_titan__
+__character/heroine/animation/one_piece__
+__character/heroine/animation/mononoke__
+__character/heroine/animation/frozen__
+__character/heroine/animation/brave__
+__character/heroine/animation/mulan__
+__character/heroine/animation/moana__
+__character/heroine/animation/arcane__
+__character/heroine/animation/cowboy_bebop__

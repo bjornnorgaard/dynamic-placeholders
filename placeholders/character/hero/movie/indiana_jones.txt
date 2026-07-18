@@ -1,0 +1,4 @@
+# Hero — indiana jones (__character/hero/movie/indiana_jones__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Indiana Jones in fedora, leather jacket, and coiled whip

@@ -1,0 +1,12 @@
+# Composable eyes under face/ — short __eyes__ resolves here when unique.
+# Nested size, color, shape, and optional adjectives under face/eyes/.
+# Many lines omit adjectives so ordinary eyes stay common; specialty effects are opt-in.
+# One phrasing per arrangement — synonym wrappers pruned.
+
+__face/eyes/color__ eyes
+__face/eyes/size__ __face/eyes/color__ eyes
+__face/eyes/color__ __face/eyes/shape__ eyes
+__face/eyes/size__ __face/eyes/color__ __face/eyes/shape__ eyes
+__face/eyes/size__ __face/eyes/color__ __face/eyes/shape__ eyes, __face/eyes/adjective__
+__face/eyes/size__ __face/eyes/color__ __face/eyes/shape__ eyes with __face/eyes/adjective__
+__face/eyes/color__ eyes, __face/eyes/adjective__

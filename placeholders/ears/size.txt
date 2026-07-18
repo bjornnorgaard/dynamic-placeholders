@@ -1,7 +1,0 @@
-# Ear size options — referenced via __ears/size__
-# Ordered small → large. Includes medium for ordinary ears.
-
-small
-medium
-large
-prominent

@@ -1,0 +1,11 @@
+# Movie / animation set pieces — __location/scene/hospitality__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+diner booth with checkered floor, chrome stools, and neon clock
+coffee shop interior with espresso machine and chalkboard menu
+fast-food counter under harsh fluorescent lighting
+fancy restaurant with white tablecloths and candlelight
+hotel lobby with marble floors, chandelier, and revolving door
+bar counter sticky with bottles glowing on backlit shelves
+nightclub dance floor under colored strobes and fog

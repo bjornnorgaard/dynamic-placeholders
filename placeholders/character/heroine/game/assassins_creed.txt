@@ -1,0 +1,4 @@
+# Heroine — assassins creed (__character/heroine/game/assassins_creed__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Kassandra of Assassin's Creed Odyssey in Spartan armor with spear

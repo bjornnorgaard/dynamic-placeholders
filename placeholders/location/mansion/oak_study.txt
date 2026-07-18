@@ -1,0 +1,5 @@
+# Mansion oak study — __location/mansion/oak_study__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+oak-paneled study with globe, desk, and whiskey decanter

@@ -1,0 +1,9 @@
+# Heroine — borderlands (__character/heroine/game/borderlands__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Lilith of Borderlands with red hair, siren tattoos, and wings of fire
+Maya of Borderlands with blue siren tattoos, purple hair, and phase-lock orbs
+Tiny Tina of Borderlands with explosive backpack, braided hair, and manic grin
+Mad Moxxi of Borderlands in corset with heart pasties, red hair, and cigarette holder
+Gaige the Mechromancer of Borderlands with orange pigtails, goggles, and Deathtrap robot
+Amara of Borderlands with siren arm tattoos, muscular build, and ethereal fists

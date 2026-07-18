@@ -1,0 +1,17 @@
+# Scene set-piece family — __location/scene__ (short: __scene__)
+# Picks one category so suburban diners and spaceship bridges never stack
+
+__location/scene/suburban__
+__location/scene/school__
+__location/scene/hospitality__
+__location/scene/workplace__
+__location/scene/transit__
+__location/scene/urban__
+__location/scene/nature__
+__location/scene/sports__
+__location/scene/leisure__
+__location/scene/fantasy__
+__location/scene/scifi__
+__location/scene/horror__
+__location/scene/period__
+__location/scene/military__

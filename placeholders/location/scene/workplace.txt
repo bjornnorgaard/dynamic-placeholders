@@ -1,0 +1,11 @@
+# Movie / animation set pieces — __location/scene/workplace__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+office cubicle farm under gray fluorescent panels
+hospital corridor with gurneys and blinking monitors
+police station booking desk with fluorescent buzz and holding cells
+fire station bay with polished engines and hanging gear
+newsroom with cluttered desks, screens, and ringing phones
+recording studio booth behind thick glass and foam panels
+convenience store aisle under harsh overnight lights

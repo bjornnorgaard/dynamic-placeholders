@@ -1,0 +1,4 @@
+# Heroine — zelda (__character/heroine/game/zelda__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Princess Zelda in royal blue-and-gold dress with Triforce crest

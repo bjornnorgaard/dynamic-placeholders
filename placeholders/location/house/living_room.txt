@@ -1,0 +1,7 @@
+# House living room — __location/house/living_room__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+living room with sofa, coffee table, and TV glow
+sunken living room with shag carpet and mid-century chairs
+fireplace living room with mantel photos and soft lamps

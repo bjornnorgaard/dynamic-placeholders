@@ -1,0 +1,9 @@
+# Movie / animation set pieces — __location/scene/sports__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+football stadium field under floodlights and roaring stands
+boxing ring under a single harsh spotlight
+baseball diamond with dugout and dusty infield
+racing track pit lane with cars and crew in fire suits
+rodeo arena with dirt floor, gates, and wooden bleachers

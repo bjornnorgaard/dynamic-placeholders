@@ -1,0 +1,6 @@
+# Heroine — starcraft (__character/heroine/game/starcraft__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Sarah Kerrigan Queen of Blades with zerg wings, bone blades, and green glowing eyes
+Nova Terra of StarCraft in ghost stealth suit with white hair and sniper rifle
+Mira Han of StarCraft with mercenary armor, cocky grin, and dual pistols

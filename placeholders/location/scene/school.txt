@@ -1,0 +1,8 @@
+# Movie / animation set pieces — __location/scene/school__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+high school hallway lined with lockers and fluorescent lights
+classroom with chalkboard, desks, and afternoon sun through blinds
+university lecture hall with tiered seats and a projector screen
+courthouse steps with classical columns and wide stairs

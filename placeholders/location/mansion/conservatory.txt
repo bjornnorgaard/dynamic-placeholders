@@ -1,0 +1,5 @@
+# Mansion conservatory — __location/mansion/conservatory__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+glass conservatory filled with tropical plants and wrought-iron furniture

@@ -1,0 +1,5 @@
+# Mansion billiard room — __location/mansion/billiard_room__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+billiard room with green felt table, cue rack, and leather chairs

@@ -1,0 +1,4 @@
+# Hero — red dead (__character/hero/game/red_dead__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Arthur Morgan in cowboy hat, gun belt, and weathered duster

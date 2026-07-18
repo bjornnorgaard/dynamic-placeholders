@@ -1,0 +1,4 @@
+# Heroine — portal (__character/heroine/game/portal__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Chell from Portal in orange jumpsuit with Portal Gun and long ponytail

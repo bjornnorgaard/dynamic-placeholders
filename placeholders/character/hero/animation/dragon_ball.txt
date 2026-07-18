@@ -1,0 +1,4 @@
+# Hero — dragon ball (__character/hero/animation/dragon_ball__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Goku in orange gi with spiky black hair and Power Pole

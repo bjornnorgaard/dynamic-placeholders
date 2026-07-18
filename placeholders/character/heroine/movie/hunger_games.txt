@@ -1,0 +1,4 @@
+# Heroine — hunger games (__character/heroine/movie/hunger_games__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Katniss Everdeen with side braid, bow, and Mockingjay pin

@@ -1,0 +1,33 @@
+# Overall body frame / physique — __body/frame__ (short: __frame__)
+# Whole-silhouette builds; part details live under body/legs, stomach, chest, …
+# One exemplar per silhouette family; near-duplicates pruned
+# Style: short, no leading a/an/the — lead with the build cue
+
+# --- Small & delicate ---
+petite frame
+slender build
+wiry build
+gaunt frame
+
+# --- Tall & elongated ---
+lanky build
+
+# --- Average baseline ---
+average medium build
+
+# --- Fit & athletic ---
+athletic build
+lean muscular physique
+
+# --- Strong & muscular ---
+muscular build
+heavily muscled bodybuilder physique
+stocky build
+
+# --- Curved & shaped ---
+curvy hourglass figure
+pear-shaped figure
+
+# --- Soft & heavy ---
+soft plump body
+heavyset build

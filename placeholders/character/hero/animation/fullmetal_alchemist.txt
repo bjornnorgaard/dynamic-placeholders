@@ -1,0 +1,4 @@
+# Hero — fullmetal alchemist (__character/hero/animation/fullmetal_alchemist__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Edward Elric in red coat with automail arm and blond braid

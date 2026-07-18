@@ -1,0 +1,4 @@
+# Hero — james bond (__character/hero/movie/james_bond__)
+# One exemplar per visual family; short, no leading a/an/the
+
+James Bond in tuxedo with wristwatch and suppressed pistol

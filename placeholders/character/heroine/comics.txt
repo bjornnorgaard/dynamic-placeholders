@@ -1,0 +1,7 @@
+# Heroine comics — __character/heroine/comics__
+# Picks one franchise list
+
+__character/heroine/comics/xmen__
+__character/heroine/comics/marvel__
+__character/heroine/comics/she_ra__
+__character/heroine/comics/xena__

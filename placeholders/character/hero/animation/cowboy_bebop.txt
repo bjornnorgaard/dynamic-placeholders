@@ -1,0 +1,4 @@
+# Hero — cowboy bebop (__character/hero/animation/cowboy_bebop__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Spike Spiegel in blue suit with cigarette and casual lean

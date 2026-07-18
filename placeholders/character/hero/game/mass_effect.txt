@@ -1,0 +1,6 @@
+# Hero — mass effect (__character/hero/game/mass_effect__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Garrus Vakarian of Mass Effect with turian fringe, archangel visor, and sniper rifle
+Urdnot Wrex of Mass Effect with massive krogan hump, scars, and shotgun
+Thane Krios of Mass Effect with dark drell skin, assassin coat, and biotics

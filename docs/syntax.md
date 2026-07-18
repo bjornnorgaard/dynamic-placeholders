@@ -20,21 +20,30 @@ The wrap string is configurable in **Settings → Dynamic Placeholders**. If you
 
 Given placeholders root `R`:
 
-| Token | Resolved file (first match wins) |
+| Step | Behavior |
 |---|---|
-| `__name__` | `R/name.txt`, `R/name.text`, or `R/name.list` |
-| `__a/b__` | `R/a/b.txt` (etc.) |
+| 1. Exact path | `__name__` → `R/name.txt` (also `.text` / `.list`); `__a/b__` → `R/a/b.txt` |
+| 2. Short-path | If exact misses, find a **unique** file whose relative name equals the token or ends with `/{token}` |
 
-Example:
+Examples:
+
+- `__eyes__` → `face/eyes.txt` when that is the only `eyes` list
+- `__ballroom__` → `location/castle/ballroom.txt` when unique
+- `__castle/ballroom__` → `location/castle/ballroom.txt` via suffix match
+
+If two or more files match a short-path (e.g. `house/kitchen.txt` and `castle/kitchen.txt` for `__kitchen__`), the token is left unresolved — use a fuller path (`__castle/kitchen__` or `__location/castle/kitchen__`). Exact paths always win over deeper short-path candidates.
+
+Example tree:
 
 ```
 placeholders/
   pose.txt
-  furniture.txt
-  lighting.txt
-  lighting/
-    color.txt
-  scene.txt
+  color.txt
+  face/
+    eyes.txt
+  location/
+    castle/
+      ballroom.txt
 ```
 
 ## List file format
@@ -71,34 +80,11 @@ Placeholders are fully composable. Put `__child__` tokens inside a parent list f
 `placeholders/hair.txt`:
 
 ```
-__hair/length__ __hair/color__ __hair/style__ hair
-__hair/color__ __hair/style__, __hair/length__
-messy __hair/length__ __hair/color__ hair in a __hair/style__
+__length__ __hair/color__ __hair/style__ hair
+__length__ __hair/color__ hair, __hair/style__
 ```
 
-`placeholders/hair/length.txt`:
-
-```
-short
-long
-shoulder-length
-```
-
-`placeholders/hair/color.txt`:
-
-```
-blonde
-brunette
-auburn
-```
-
-`placeholders/hair/style.txt`:
-
-```
-ponytail
-loose waves
-messy bun
-```
+Shared `__length__` and `__color__` live at the placeholders root; `hair/color.txt` composes `__color__` plus hair-only shades. `hair/style.txt` holds cuts and arrangements.
 
 Prompt:
 
@@ -106,32 +92,19 @@ Prompt:
 portrait of a woman with __hair__
 ```
 
-Possible results:
-
-```
-portrait of a woman with long auburn ponytail hair
-portrait of a woman with brunette loose waves, short
-portrait of a woman with messy shoulder-length blonde hair in a messy bun
-```
-
 You can nest as deep as you need (outfit → top → color, and so on). Depth is capped by **Maximum nested replacement depth** in Settings.
 
 ### Clothes composition example
 
-`placeholders/clothes.txt` keeps **separates** (torso + pants), **full-body**, and **swimwear** on different lines so layers never stack. Head and torso are themselves composable groups:
+`placeholders/clothes.txt` keeps **separates** (torso + legs), **full-body**, and **swimwear** on different lines so layers never stack. Head and torso are themselves composable groups:
 
 ```
-wearing __clothes/head__, __clothes/torso__, __clothes/pants__, and __clothes/shoes__
-wearing __clothes/fullbody__ with __clothes/shoes__ and __clothes/accessories__
-wearing __clothes/swimwear__ and __clothes/shoes__
+wearing __clothes/head__, __clothes/torso__, __clothes/legs/pants__, and __clothes/feet/shoes__
+wearing __clothes/fullbody__ with __clothes/feet/shoes__ and __clothes/accessories__
+wearing __clothes/swimwear__ and __clothes/feet/shoes__
 ```
 
-Child lists live under `placeholders/clothes/`:
-
-- `head/` — `hat`, `glasses`, `piercings` (composed by `head.txt`)
-- `torso/` — `shirt`, `jacket` (composed by `torso.txt`)
-- plus `scarf`, `fullbody`, `swimwear`, `pants`, `shoes`, `accessories`, `jewelry`
-
+Child lists live under `placeholders/clothes/` by body zone (`head/`, `torso/`, `legs/`, `feet/`, plus `fullbody`, `swimwear`, …).
 ## Minimal examples
 
 Prompt:

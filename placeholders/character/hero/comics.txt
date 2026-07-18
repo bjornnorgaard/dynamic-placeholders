@@ -1,0 +1,5 @@
+# Hero comics — __character/hero/comics__
+# Picks one franchise list
+
+__character/hero/comics/dc__
+__character/hero/comics/marvel__

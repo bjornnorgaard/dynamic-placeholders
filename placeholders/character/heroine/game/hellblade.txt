@@ -1,0 +1,4 @@
+# Heroine — hellblade (__character/heroine/game/hellblade__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Senua of Hellblade with Celtic war paint, braided hair, and sword

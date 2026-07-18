@@ -1,0 +1,4 @@
+# Heroine — xmen (__character/heroine/comics/xmen__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Storm of the X-Men with white hair, cape, and crackling lightning

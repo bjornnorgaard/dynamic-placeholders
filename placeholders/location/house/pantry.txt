@@ -1,0 +1,5 @@
+# House pantry — __location/house/pantry__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+walk-in pantry lined with jars and labeled tins

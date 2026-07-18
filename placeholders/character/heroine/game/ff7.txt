@@ -1,0 +1,9 @@
+# Heroine — ff7 (__character/heroine/game/ff7__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Tifa Lockhart in black tank top with suspenders and leather gloves
+Aerith Gainsborough of Final Fantasy in pink dress with jacket and flower staff
+Yuffie Kisaragi of Final Fantasy in green ninja outfit with large shuriken
+Jessie Rasberry of Final Fantasy in Avalanche turtleneck with Midgar grit
+Elena of Final Fantasy in Turks suit with blonde hair and pistol
+Scarlet of Final Fantasy in red Shinra dress with arrogant poise

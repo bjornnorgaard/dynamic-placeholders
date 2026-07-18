@@ -1,0 +1,11 @@
+# Hero — marvel (__character/hero/comics/marvel__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Spider-Man in red-and-blue webbed suit with large white eyes
+Iron Man in red-and-gold armor with glowing arc reactor
+Captain America with star shield, blue suit, and winged mask
+Wolverine with adamantium claws, sideburns, and yellow costume
+Deadpool in red-and-black suit with dual katanas
+Thor in Asgardian armor with red cape and hammer Mjolnir
+Black Panther in black vibranium suit with pointed ears
+The Hulk enormous green muscle with torn purple pants

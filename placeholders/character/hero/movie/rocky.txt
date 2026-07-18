@@ -1,0 +1,4 @@
+# Hero — rocky (__character/hero/movie/rocky__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Rocky Balboa in boxing gloves with bruised face and robe

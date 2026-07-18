@@ -1,0 +1,4 @@
+# Heroine — bayonetta (__character/heroine/game/bayonetta__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Bayonetta in black catsuit with guns-as-heels and long hair

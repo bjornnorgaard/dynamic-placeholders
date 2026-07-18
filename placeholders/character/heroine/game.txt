@@ -1,0 +1,31 @@
+# Heroine game — __character/heroine/game__
+# Picks one franchise list
+
+__character/heroine/game/tomb_raider__
+__character/heroine/game/metroid__
+__character/heroine/game/horizon__
+__character/heroine/game/last_of_us__
+__character/heroine/game/bayonetta__
+__character/heroine/game/nier__
+__character/heroine/game/witcher__
+__character/heroine/game/resident_evil__
+__character/heroine/game/street_fighter__
+__character/heroine/game/ff7__
+__character/heroine/game/ff8__
+__character/heroine/game/ffx__
+__character/heroine/game/ffx2__
+__character/heroine/game/zelda__
+__character/heroine/game/overwatch__
+__character/heroine/game/starcraft__
+__character/heroine/game/red_alert__
+__character/heroine/game/baldurs_gate__
+__character/heroine/game/mass_effect__
+__character/heroine/game/metal_gear__
+__character/heroine/game/clair_obscur__
+__character/heroine/game/bioshock__
+__character/heroine/game/borderlands__
+__character/heroine/game/fallout__
+__character/heroine/game/portal__
+__character/heroine/game/assassins_creed__
+__character/heroine/game/hellblade__
+__character/heroine/game/bloodborne__

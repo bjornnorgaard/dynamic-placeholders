@@ -1,0 +1,4 @@
+# Hero — crash bandicoot (__character/hero/game/crash_bandicoot__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Crash Bandicoot orange with jeans and gloves

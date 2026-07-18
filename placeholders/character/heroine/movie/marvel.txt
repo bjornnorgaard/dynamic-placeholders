@@ -1,0 +1,5 @@
+# Heroine — marvel (__character/heroine/movie/marvel__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Black Widow Natasha Romanoff of Marvel in black tactical catsuit with widow's bite gauntlets
+Captain Marvel Carol Danvers of Marvel in red-and-blue suit with glowing fists

@@ -1,0 +1,29 @@
+# Hero game — __character/hero/game__
+# Picks one franchise list
+
+__character/hero/game/mario__
+__character/hero/game/zelda__
+__character/hero/game/halo__
+__character/hero/game/metal_gear__
+__character/hero/game/god_of_war__
+__character/hero/game/final_fantasy__
+__character/hero/game/witcher__
+__character/hero/game/devil_may_cry__
+__character/hero/game/doom__
+__character/hero/game/half_life__
+__character/hero/game/assassins_creed__
+__character/hero/game/ghost_of_tsushima__
+__character/hero/game/red_dead__
+__character/hero/game/resident_evil__
+__character/hero/game/overwatch__
+__character/hero/game/starcraft__
+__character/hero/game/baldurs_gate__
+__character/hero/game/mass_effect__
+__character/hero/game/clair_obscur__
+__character/hero/game/bioshock__
+__character/hero/game/borderlands__
+__character/hero/game/fallout__
+__character/hero/game/street_fighter__
+__character/hero/game/mortal_kombat__
+__character/hero/game/sonic_the_hedgehog__
+__character/hero/game/crash_bandicoot__

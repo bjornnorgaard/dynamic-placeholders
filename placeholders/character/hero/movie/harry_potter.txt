@@ -1,0 +1,4 @@
+# Hero — harry potter (__character/hero/movie/harry_potter__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Harry Potter with round glasses, lightning scar, and wand

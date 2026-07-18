@@ -1,0 +1,11 @@
+# Shared size scale — use as __size__ in prompts
+# Generic scale for features, props, and rooms that need a simple size cue
+# Domain lists compose this plus local-only terms (beady, doe-eyed, cavernous, …)
+# Ordered small → large
+# Style: short, no leading a/an/the
+
+tiny
+small
+medium
+large
+huge

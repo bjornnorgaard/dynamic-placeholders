@@ -1,0 +1,6 @@
+# Heroine — overwatch (__character/heroine/game/overwatch__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Tracer from Overwatch with orange goggles, chronal accelerator, and twin pistols
+D.Va of Overwatch in pink mech pilot suit with headset and bunny emblem
+Widowmaker of Overwatch in purple bodysuit with sniper rifle and glowing yellow eyes

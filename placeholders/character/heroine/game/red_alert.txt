@@ -1,0 +1,4 @@
+# Heroine — red alert (__character/heroine/game/red_alert__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Tanya of Command & Conquer Red Alert in combat fatigues with dual pistols and blonde hair

@@ -1,0 +1,4 @@
+# Hero — john wick (__character/hero/movie/john_wick__)
+# One exemplar per visual family; short, no leading a/an/the
+
+John Wick in black suit with gun-fu stance and pencil beard

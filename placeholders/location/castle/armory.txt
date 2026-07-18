@@ -1,0 +1,5 @@
+# Castle armory — __location/castle/armory__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+armory lined with racks of swords, shields, and armor stands

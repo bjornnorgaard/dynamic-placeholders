@@ -1,0 +1,8 @@
+# House kitchen — __location/house/kitchen__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+sunlit kitchen with wooden counters and hanging copper pans
+cramped galley kitchen with cramped counters and buzzing fridge
+farmhouse kitchen with cast-iron stove and checked curtains
+modern kitchen with marble island and pendant lights

@@ -1,0 +1,15 @@
+# Skyscape backdrops — use as __location/background/skyscape__ (also via __background__)
+# Sky-dominant vistas — keep separate from __weather__ (conditions) and __time__ (hour cue)
+# One entry per visual family — cloud form, color, and phenomenon must differ
+# Style: short, no leading a/an/the — lead with the skyscape noun, then signature look
+
+golden sunset skyscape with long cloud streaks and warm glow
+storm skyscape with dark thunderheads and shafts of light
+aurora skyscape with green curtains over a starry night
+cotton-cloud skyscape above a bright blue midday sky
+blood-red dusk skyscape with silhouetted cloud banks
+starry night skyscape with milky band and crisp constellations
+rainbow skyscape after rain against clearing clouds
+volcanic ash skyscape with orange sun through gray haze
+moonlit cloud skyscape with silver-edged storm banks
+double-sun alien skyscape with twin discs over strange clouds

@@ -1,0 +1,10 @@
+# Movie / animation set pieces — __location/scene/period__
+# Stereotypical scene places; one entry per visual family
+# Style: short, no leading a/an/the — lead with the place noun
+
+Wild West saloon with swinging doors, piano, and dusty boards
+Victorian parlor with heavy drapes, wallpaper, and gas lamps
+ancient Roman forum with columns and marble plazas
+samurai dojo with tatami mats, wooden swords, and paper screens
+1920s speakeasy with jazz band, velvet booths, and smoky air
+Egyptian tomb chamber with hieroglyphs and torchlight

@@ -1,0 +1,4 @@
+# Hero — half life (__character/hero/game/half_life__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Gordon Freeman in orange HEV suit with crowbar and glasses

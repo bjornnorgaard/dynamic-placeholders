@@ -1,0 +1,4 @@
+# Hero — naruto (__character/hero/animation/naruto__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Naruto in orange jacket with forehead protector and whisker marks

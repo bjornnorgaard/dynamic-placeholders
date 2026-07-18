@@ -75,6 +75,49 @@ class LibraryTests(unittest.TestCase):
         self.assertTrue(ok.ok)
         self.assertEqual(ok.values, ["jumping", "sitting", "standing"])
 
+    def test_short_path_unique_basename(self):
+        face = self.root / "face"
+        face.mkdir()
+        (face / "eyes.txt").write_text("blue eyes\n", encoding="utf-8")
+        self.assertEqual(
+            self.library.resolve_file("eyes"),
+            face / "eyes.txt",
+        )
+        self.assertEqual(self.library.get_values("eyes"), ["blue eyes"])
+
+    def test_short_path_unique_multi_segment_suffix(self):
+        castle = self.root / "location" / "castle"
+        castle.mkdir(parents=True)
+        (castle / "ballroom.txt").write_text("grand ballroom\n", encoding="utf-8")
+        self.assertEqual(
+            self.library.resolve_file("castle/ballroom"),
+            castle / "ballroom.txt",
+        )
+        self.assertEqual(
+            self.library.resolve_file("ballroom"),
+            castle / "ballroom.txt",
+        )
+
+    def test_exact_path_wins_over_deeper_short_path(self):
+        (self.root / "eyes.txt").write_text("root-eyes\n", encoding="utf-8")
+        face = self.root / "face"
+        face.mkdir()
+        (face / "eyes.txt").write_text("nested-eyes\n", encoding="utf-8")
+        self.assertEqual(self.library.resolve_file("eyes"), self.root / "eyes.txt")
+        self.assertEqual(self.library.get_values("eyes"), ["root-eyes"])
+
+    def test_ambiguous_short_path_is_missing(self):
+        (self.root / "house").mkdir()
+        (self.root / "castle").mkdir()
+        (self.root / "house" / "kitchen.txt").write_text("house kitchen\n", encoding="utf-8")
+        (self.root / "castle" / "kitchen.txt").write_text("castle kitchen\n", encoding="utf-8")
+        self.assertIsNone(self.library.resolve_file("kitchen"))
+        self.assertEqual(self.library.lookup("kitchen").status, "missing")
+
+    def test_dotdot_rejected(self):
+        self.assertIsNone(self.library.resolve_file("../pose"))
+        self.assertIsNone(self.library.resolve_file("foo/../pose"))
+
 
 class ResolverTests(unittest.TestCase):
     def setUp(self) -> None:
@@ -179,19 +222,19 @@ class ResolverTests(unittest.TestCase):
     def test_composable_hair_expands_all_nested_tokens(self):
         """A parent list line can compose multiple child placeholders."""
         (self.root / "hair.txt").write_text(
-            "__hair/length__ __hair/color__ __hair/style__ hair\n",
+            "__length__ __hair/color__ __hair/style__ hair\n",
             encoding="utf-8",
         )
+        (self.root / "length.txt").write_text("short\nlong\n", encoding="utf-8")
         hair_dir = self.root / "hair"
         hair_dir.mkdir()
-        (hair_dir / "length.txt").write_text("short\nlong\n", encoding="utf-8")
         (hair_dir / "color.txt").write_text("blonde\nbrunette\n", encoding="utf-8")
         (hair_dir / "style.txt").write_text("ponytail\nloose waves\n", encoding="utf-8")
 
         result = self.resolver.expand("portrait of a woman with __hair__", seed=0)
 
         self.assertNotIn("__hair__", result)
-        self.assertNotIn("__hair/length__", result)
+        self.assertNotIn("__length__", result)
         self.assertNotIn("__hair/color__", result)
         self.assertNotIn("__hair/style__", result)
         self.assertTrue(result.startswith("portrait of a woman with "))
@@ -234,25 +277,23 @@ class ResolverTests(unittest.TestCase):
     def test_bundled_samples_exist(self):
         samples = EXTENSION_ROOT / "placeholders"
         self.assertTrue((samples / "hair.txt").is_file())
-        self.assertTrue((samples / "hair" / "length.txt").is_file())
+        self.assertTrue((samples / "length.txt").is_file())
+        self.assertTrue((samples / "color.txt").is_file())
+        self.assertTrue((samples / "size.txt").is_file())
         self.assertTrue((samples / "hair" / "color.txt").is_file())
         self.assertTrue((samples / "hair" / "style.txt").is_file())
         self.assertTrue((samples / "clothes.txt").is_file())
         self.assertTrue((samples / "clothes" / "head.txt").is_file())
         self.assertTrue((samples / "clothes" / "torso.txt").is_file())
-        for layer in (
-            "scarf",
-            "fullbody",
-            "pants",
-            "shoes",
-            "accessories",
-            "jewelry",
-        ):
+        self.assertTrue((samples / "clothes" / "legs" / "pants.txt").is_file())
+        self.assertTrue((samples / "clothes" / "feet" / "shoes.txt").is_file())
+        for layer in ("scarf", "fullbody", "accessories", "jewelry", "swimwear"):
             self.assertTrue((samples / "clothes" / f"{layer}.txt").is_file())
         for layer in ("hat", "glasses", "piercings"):
             self.assertTrue((samples / "clothes" / "head" / f"{layer}.txt").is_file())
         for layer in ("shirt", "jacket"):
             self.assertTrue((samples / "clothes" / "torso" / f"{layer}.txt").is_file())
+        self.assertTrue((samples / "face" / "eyes.txt").is_file())
         lib = PlaceholderLibrary(samples)
 
         # Bundled composable hair fully resolves nested tokens.
@@ -271,14 +312,19 @@ class ResolverTests(unittest.TestCase):
         self.assertNotIn("__", clothed)
         self.assertTrue(clothed.startswith("a person "))
 
+        # Short-path reaches nested face features.
+        eyes = PlaceholderResolver(lib).expand("__eyes__", seed=3)
+        self.assertNotIn("__", eyes)
+
     def test_bundled_hair_composition_variants(self):
         samples = EXTENSION_ROOT / "placeholders"
         resolver = PlaceholderResolver(PlaceholderLibrary(samples))
         for seed in range(12):
             result = resolver.expand("__hair__", seed=seed)
-            self.assertNotIn("__hair/length__", result)
+            self.assertNotIn("__length__", result)
             self.assertNotIn("__hair/color__", result)
             self.assertNotIn("__hair/style__", result)
+            self.assertNotIn("__color__", result)
             self.assertNotIn("__hair__", result)
 
     def test_bundled_clothes_composition_variants(self):
@@ -289,7 +335,7 @@ class ResolverTests(unittest.TestCase):
             self.assertNotIn("__clothes/", result)
             self.assertNotIn("__clothes__", result)
 
-        # Separates vs fullbody stay mutually exclusive in composition lines.
+        # Separates vs fullbody vs swimwear stay mutually exclusive.
         lines = [
             line.strip()
             for line in (samples / "clothes.txt").read_text(encoding="utf-8").splitlines()
@@ -298,17 +344,20 @@ class ResolverTests(unittest.TestCase):
         separates = [
             line
             for line in lines
-            if "__clothes/torso__" in line or "__clothes/pants__" in line
+            if "__clothes/torso__" in line or "__clothes/legs/pants__" in line
         ]
         fullbody = [line for line in lines if "__clothes/fullbody__" in line]
+        swimwear = [line for line in lines if "__clothes/swimwear__" in line]
         self.assertGreaterEqual(len(separates), 12)
         self.assertGreaterEqual(len(fullbody), 12)
-        self.assertEqual(len(lines), len(separates) + len(fullbody))
+        self.assertGreaterEqual(len(swimwear), 6)
+        self.assertEqual(len(lines), len(separates) + len(fullbody) + len(swimwear))
 
         for line in lines:
             has_fullbody = "__clothes/fullbody__" in line
+            has_swimwear = "__clothes/swimwear__" in line
             has_torso = "__clothes/torso__" in line
-            has_pants = "__clothes/pants__" in line
+            has_pants = "__clothes/legs/pants__" in line
             self.assertFalse(
                 has_fullbody and has_torso,
                 f"composition mixes fullbody with torso: {line!r}",
@@ -316,6 +365,10 @@ class ResolverTests(unittest.TestCase):
             self.assertFalse(
                 has_fullbody and has_pants,
                 f"composition mixes fullbody with pants: {line!r}",
+            )
+            self.assertFalse(
+                has_swimwear and (has_torso or has_pants or has_fullbody),
+                f"composition mixes swimwear with other body layers: {line!r}",
             )
             # Separates always keep torso + pants together.
             if has_torso or has_pants:

@@ -1,0 +1,5 @@
+# Mansion foyer — __location/mansion/foyer__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+mansion foyer with grand staircase, marble floor, and chandelier

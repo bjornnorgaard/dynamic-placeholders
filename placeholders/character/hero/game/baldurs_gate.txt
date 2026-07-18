@@ -1,0 +1,6 @@
+# Hero — baldurs gate (__character/hero/game/baldurs_gate__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Astarion of Baldur's Gate with white curls, vampire fangs, and embroidered coat
+Gale of Baldur's Gate with brown hair, wizard robes, and Netherese orb glow
+Wyll of Baldur's Gate with stone eye, infernal pact blade, and noble coat

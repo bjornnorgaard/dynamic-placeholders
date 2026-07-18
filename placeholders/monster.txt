@@ -1,6 +1,6 @@
 # Monsters — use as __monster__ in prompts
 # Phrases meant to stand in for the creature (e.g. "a __monster__", "portrait of a __monster__",
-# "__monster__ in a __setting__", "__artstyle__ of __monster__")
+# "__monster__ in a __outdoor__", "__artstyle__ of __monster__")
 # Horror and pop-culture monsters from film, books, and games — not ordinary animals or
 # simple fantasy beasts (those belong in __animal__); one entry per visual family only —
 # if two would likely render interchangeable silhouettes, keep the sharper one

@@ -1,0 +1,13 @@
+# Castle interiors — __location/castle__ (short: __castle__)
+# Picks one room so interiors never stack
+
+__location/castle/ballroom__
+__location/castle/throne_room__
+__location/castle/great_hall__
+__location/castle/dungeon__
+__location/castle/armory__
+__location/castle/chapel__
+__location/castle/tower_chamber__
+__location/castle/wine_cellar__
+__location/castle/scullery__
+__location/castle/scriptorium__

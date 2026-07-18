@@ -1,0 +1,4 @@
+# Hero — mario (__character/hero/game/mario__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Mario in red hat, blue overalls, and thick mustache

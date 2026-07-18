@@ -1,0 +1,4 @@
+# Heroine — metroid (__character/heroine/game/metroid__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Samus Aran in orange Power Suit with arm cannon and helmet

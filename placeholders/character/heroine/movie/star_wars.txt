@@ -1,0 +1,5 @@
+# Heroine — star wars (__character/heroine/movie/star_wars__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Leia Organa in white gown with side buns and blaster
+Rey of Star Wars in scavenger wraps with staff and blue lightsaber

@@ -1,0 +1,6 @@
+# Castle great hall — __location/castle/great_hall__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+great hall with long banquet tables and roaring hearth
+vaulted great hall with tapestries and hanging banners

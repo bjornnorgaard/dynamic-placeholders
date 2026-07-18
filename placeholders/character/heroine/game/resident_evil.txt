@@ -1,0 +1,6 @@
+# Heroine — resident evil (__character/heroine/game/resident_evil__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Jill Valentine in STARS beret with shoulder holster and handgun
+Ada Wong in red cheongsam dress with handgun
+Claire Redfield in red leather jacket with shoulder holster and determined stare

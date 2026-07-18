@@ -1,0 +1,5 @@
+# House workshop — __location/house/workshop__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+garage workshop with pegboard tools and workbench sawdust

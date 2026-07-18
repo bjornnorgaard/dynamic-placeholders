@@ -1,0 +1,8 @@
+# Heroine — metal gear (__character/heroine/game/metal_gear__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Quiet of Metal Gear Solid in bikini sniper gear with sheer face veil and rifle
+The Boss of Metal Gear Solid in white sneaking suit with CQC stance and blond braid
+Sniper Wolf of Metal Gear Solid in wolf-pattern ghillie with sniper rifle and wolf companions
+EVA of Metal Gear Solid in Chinese dress with motorcycle and pink lipstick
+Meryl Silverburgh of Metal Gear Solid in military fatigues with bandana and SOCOM pistol

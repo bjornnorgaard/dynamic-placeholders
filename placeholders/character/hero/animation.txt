@@ -1,0 +1,11 @@
+# Hero animation — __character/hero/animation__
+# Picks one franchise list
+
+__character/hero/animation/dragon_ball__
+__character/hero/animation/naruto__
+__character/hero/animation/one_piece__
+__character/hero/animation/fullmetal_alchemist__
+__character/hero/animation/cowboy_bebop__
+__character/hero/animation/pokemon__
+__character/hero/animation/transformers__
+__character/hero/animation/masters_of_the_universe__

@@ -1,0 +1,4 @@
+# Heroine — attack on titan (__character/heroine/animation/attack_on_titan__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Mikasa Ackerman in Survey Corps cape with red scarf and blades

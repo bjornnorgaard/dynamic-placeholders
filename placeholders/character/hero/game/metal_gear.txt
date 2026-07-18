@@ -1,0 +1,6 @@
+# Hero — metal gear (__character/hero/game/metal_gear__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Solid Snake in sneaking suit with headband and stubble
+Raiden of Metal Gear Solid in cyborg ninja body with high-frequency blade
+Big Boss of Metal Gear Solid with eyepatch, beard, and sneaking suit

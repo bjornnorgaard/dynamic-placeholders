@@ -1,0 +1,5 @@
+# Hero — starcraft (__character/hero/game/starcraft__)
+# One exemplar per visual family; short, no leading a/an/the
+
+Jim Raynor of StarCraft in dusty armor with revolver and rebel charm
+Tychus Findlay of StarCraft in marine armor with cigar and minigun

@@ -1,0 +1,5 @@
+# Castle wine cellar — __location/castle/wine_cellar__
+# Distinctive interior variants; one look per line
+# Style: short, no leading a/an/the
+
+castle wine cellar with barrel rows and cobwebbed arches
