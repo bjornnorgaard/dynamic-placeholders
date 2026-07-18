@@ -29,6 +29,7 @@ You can use a parent alone (`__hair__`) and let composition pull in children, or
 | `__city__` | Visually distinct city / place names |
 | `__country__` | National / cultural subject looks (demonym + signature dress) |
 | `__artstyle__` | Non-photorealistic mediums (anime, painting, comic, craft, …) |
+| `__artist__` | Named animators / cartoonists / illustrators (creator look + signature cues) |
 | `__photostyle__` | Photorealistic photography looks (cinematic, film stock, optics, …) |
 | `__view__` | Viewpoint, facing & composition (dutch angle, profile, …) |
 | `__focus__` | Character crop / body focus (upper body, full body, …) |

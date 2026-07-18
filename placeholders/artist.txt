@@ -1,0 +1,42 @@
+# Artists — use as __artist__ in prompts
+# Phrases meant for creator / style slots (e.g. "by __artist__", "in the style of __artist__",
+# "__artist__ illustration", "drawn by __artist__")
+# Animation, cartoon, manga, and internet-popular illustrators — not fine-art painters,
+# photographers, or bare medium names (those belong in __artstyle__); one entry per visual
+# family only — if two would likely render interchangeable looks, keep the sharper one
+# Style: short, no leading a/an/the — lead with the artist name, then signature look
+
+# --- Anime film ---
+Hayao Miyazaki with soft Ghibli whimsy, lush nature, and hand-painted skies
+Makoto Shinkai with hyper-detailed clouds, lens flares, and glowing city light
+Satoshi Kon with surreal urban morphing and psychological dream cuts
+
+# --- Manga & anime design ---
+Akira Toriyama with chunky shonen proportions, bold shapes, and simple clean lines
+Eiichiro Oda with stretchy rubbery designs, wild hats, and busy pirate flair
+Kentaro Miura with dense dark hatching, gothic armor, and brutal detail
+Katsuhiro Otomo with hyper-detailed cyberpunk machines and urban wreckage
+Naoko Takeuchi with sparkling magical-girl frills, big eyes, and ribbon accents
+CLAMP with elegant long limbs, ornate costumes, and delicate linework
+Hirohiko Araki with fashion-forward muscular poses and dramatic JoJo silhouettes
+Junji Ito with spiraling horror eyes, grotesque flesh, and eerie stillness
+
+# --- Western animation ---
+Walt Disney with classic fairy-tale animation, soft cheeks, and ink-and-paint charm
+Bruce Timm with sharp angular DC heroes and limited-palette comic clarity
+Genndy Tartakovsky with bold minimal shapes, thick blacks, and graphic action
+Pendleton Ward with simple geometric Adventure Time shapes and candy colors
+Craig McCracken with thick-outline cute cartoons and candy-bright flats
+Matt Groening with yellow skin, overbite smiles, and flat sitcom cartoon shapes
+Don Bluth with dark fairy-tale animation, expressive animals, and lush backgrounds
+Chuck Jones with Looney Tunes squash-and-stretch and theatrical cartoon timing
+
+# --- Comics & bande dessinée ---
+Moebius with clean ligne claire sci-fi deserts and flowing organic forms
+Jamie Hewlett with graffiti-punk cartoon grit and bold graphic characters
+
+# --- Internet-popular illustrators ---
+Ilya Kuvshinov with soft pastel anime faces, freckles, and dreamy pink light
+Artgerm with polished semi-realistic comic heroines and glossy rendering
+Loish with warm stylized characters, soft shapes, and painterly digital color
+Rossdraws with vibrant saturated characters and energetic digital brushwork

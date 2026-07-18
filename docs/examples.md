@@ -76,6 +76,14 @@ __artstyle__ of a __profession__ wielding a __weapon__, __expression__, __pose__
 __artstyle__ scene inspired by __game__, __view__, in a __setting__ at __time__
 ```
 
+### Named artist look
+
+`__artist__` is a named animator, cartoonist, or internet-popular illustrator. Use for “by X” / “in the style of X” cues; prefer it instead of stacking with `__artstyle__` so medium and creator do not fight.
+
+```
+by __artist__, __focus__, __view__ of a __profession__ with __expression__, __hair__, __clothes__, __pose__
+```
+
 ### Outdoor scene
 
 Environment-first: setting, city, and time drive the backdrop.

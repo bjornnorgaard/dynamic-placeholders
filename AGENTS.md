@@ -42,6 +42,7 @@ Do not dump lookalikes across adjacent tokens. Prefer the sharper home for the e
 |---|---|---|
 | `__monster__` | Horror / pop-culture icons with dread | Simple beasts (`__animal__`), RPG types like vampire (`__race__`), plain human slashers |
 | `__game__` | Breakthrough franchise looks | Near-clone genres and niche titles |
+| `__artist__` | Named animators / cartoonists / internet illustrators | Bare mediums (`__artstyle__`), oil painters, photographers |
 | `__makeup__` | Full-face cosmetic looks | Bare lip color (`__lips__`), expression blush |
 
 When a list is meant for named cultural icons (monsters, games, heroes), prefer **broadly familiar** exemplars over niche completeness. One short signature cue after the name is enough — do not pad with landmark laundry lists.
