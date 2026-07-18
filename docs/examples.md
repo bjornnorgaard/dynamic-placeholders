@@ -115,6 +115,10 @@ close-up portrait, __eyes/color__ eyes, __hair/color__ __hair/style__ hair, wear
 ```
 
 ```
+full body at the beach, wearing __clothes/swimwear__, __pose__, __time__
+```
+
+```
 full body, standing in a __room/mood__ __room/type__, soft __time__ light
 ```
 

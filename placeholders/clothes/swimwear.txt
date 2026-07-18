@@ -1,0 +1,41 @@
+# Swimwear — referenced from clothes.txt via __clothes/swimwear__
+# Beach / pool / water-sport attire. Composition lines that use this omit torso,
+# pants, and fullbody so nothing stacks over the suit.
+# One silhouette or signature look per family — near-duplicate cuts, prints,
+# and micro-variants omitted. Media names only when the garment itself is iconic.
+
+# --- Classic silhouettes ---
+one-piece swimsuit
+bikini
+high-waisted retro swimsuit
+tankini
+skirted swimsuit
+cutout monokini
+sling swimsuit
+
+# --- Trunks, race, and surf bottoms ---
+swim trunks
+boardshorts
+competitive swim brief
+jammers
+
+# --- Water sport & competition ---
+rash guard and swim shorts
+shorty wetsuit
+wetsuit
+triathlon swimskin
+scuba dry suit
+life vest over swimsuit
+water polo swimsuit with ear-guard cap
+sequined synchronized swimming costume
+
+# --- Period & cultural ---
+burkini
+Victorian striped bathing costume
+Japanese school swimsuit
+ama pearl diver white swimsuit
+
+# --- Iconic media garments ---
+Baywatch red lifeguard swimsuit
+Princess Leia metal bikini
+mermaid seashell bikini

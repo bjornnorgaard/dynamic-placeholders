@@ -47,18 +47,19 @@ You can use a parent alone (`__hair__`) and let composition pull in children, or
 | `__clothes/torso__` | `placeholders/clothes/torso.txt` |
 | `__clothes/torso/shirt__` | `placeholders/clothes/torso/shirt.txt` |
 | `__clothes/fullbody__` | `placeholders/clothes/fullbody.txt` |
+| `__clothes/swimwear__` | `placeholders/clothes/swimwear.txt` |
 | `__room__` | `placeholders/room.txt` |
 | `__room/type__` | `placeholders/room/type.txt` |
 
 ### Clothes
 
-`clothes.txt` keeps **separates** (torso + pants) and **full-body** outfits on different lines so layers never stack. Head and torso are themselves nested groups (`hat` / `glasses` / `piercings`, `shirt` / `jacket`).
+`clothes.txt` keeps **separates** (torso + pants), **full-body**, and **swimwear** on different lines so layers never stack. Head and torso are themselves nested groups (`hat` / `glasses` / `piercings`, `shirt` / `jacket`).
 
 Child lists under `placeholders/clothes/`:
 
 - `head/` — `hat`, `glasses`, `piercings` (composed by `head.txt`)
 - `torso/` — `shirt`, `jacket` (composed by `torso.txt`)
-- plus `scarf`, `fullbody`, `pants`, `shoes`, `accessories`, `jewelry`
+- plus `scarf`, `fullbody`, `swimwear`, `pants`, `shoes`, `accessories`, `jewelry`
 
 ### Face
 

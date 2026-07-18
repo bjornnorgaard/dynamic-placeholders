@@ -118,18 +118,19 @@ You can nest as deep as you need (outfit → top → color, and so on). Depth is
 
 ### Clothes composition example
 
-`placeholders/clothes.txt` keeps **separates** (torso + pants) and **full-body** outfits on different lines so layers never stack. Head and torso are themselves composable groups:
+`placeholders/clothes.txt` keeps **separates** (torso + pants), **full-body**, and **swimwear** on different lines so layers never stack. Head and torso are themselves composable groups:
 
 ```
 wearing __clothes/head__, __clothes/torso__, __clothes/pants__, and __clothes/shoes__
 wearing __clothes/fullbody__ with __clothes/shoes__ and __clothes/accessories__
+wearing __clothes/swimwear__ and __clothes/shoes__
 ```
 
 Child lists live under `placeholders/clothes/`:
 
 - `head/` — `hat`, `glasses`, `piercings` (composed by `head.txt`)
 - `torso/` — `shirt`, `jacket` (composed by `torso.txt`)
-- plus `scarf`, `fullbody`, `pants`, `shoes`, `accessories`, `jewelry`
+- plus `scarf`, `fullbody`, `swimwear`, `pants`, `shoes`, `accessories`, `jewelry`
 
 ## Minimal examples
 

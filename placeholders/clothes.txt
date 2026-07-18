@@ -3,7 +3,9 @@
 # Mutual exclusions (never combine on the same line):
 #   - fullbody  ↔  torso
 #   - fullbody  ↔  pants
-# Optional layers (head, scarf, shoes, accessories, jewelry) may appear on either path.
+#   - swimwear  ↔  torso / pants / fullbody
+# Optional layers (head, scarf, shoes, accessories, jewelry) may appear on
+# separates and fullbody; swimwear skips scarf (awkward with beachwear).
 # Head/torso themselves expand into further combinations via their group files.
 # One phrasing per unique layer set — synonym prefixes pruned.
 
@@ -42,3 +44,15 @@ wearing __clothes/fullbody__ and __clothes/shoes__
 wearing __clothes/fullbody__ with __clothes/accessories__
 wearing __clothes/fullbody__ with __clothes/jewelry__
 wearing __clothes/fullbody__
+
+# --- Swimwear: no torso, no pants, no fullbody ---
+wearing __clothes/head__, __clothes/swimwear__, __clothes/shoes__, __clothes/accessories__, and __clothes/jewelry__
+wearing __clothes/head__, __clothes/swimwear__, __clothes/shoes__, and __clothes/accessories__
+wearing __clothes/head__, __clothes/swimwear__, and __clothes/shoes__
+wearing __clothes/head__, __clothes/swimwear__, and __clothes/accessories__
+wearing __clothes/head__, __clothes/swimwear__, and __clothes/jewelry__
+wearing __clothes/swimwear__ with __clothes/shoes__ and __clothes/accessories__
+wearing __clothes/swimwear__ and __clothes/shoes__
+wearing __clothes/swimwear__ with __clothes/accessories__
+wearing __clothes/swimwear__ with __clothes/jewelry__
+wearing __clothes/swimwear__
