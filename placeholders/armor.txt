@@ -1,0 +1,31 @@
+# Armor types — use as __armor__ in prompts
+# Phrases meant for protective gear slots (e.g. "wearing __armor__", "knight in __armor__",
+# "__race__ warrior in __armor__", "__artstyle__ of a soldier in __armor__")
+# One entry per visual family only — material and silhouette must differ; near-duplicate
+# plate variants, mail synonyms, and slight leather variants are omitted
+# Style: short, no leading a/an/the — lead with the armor noun, then signature look
+# Keep separate from __clothes__ (everyday attire) and named costume heroes (__hero__ / __heroine__)
+
+# --- Historical metal ---
+full plate armor with mirror-polished articulated steel plates
+chainmail hauberk with dense interlocking iron rings
+scale armor with overlapping metal fish scales
+Roman segmentata with horizontal laminated iron bands
+bronze muscle cuirass with sculpted classical torso relief
+
+# --- Soft & organic ---
+studded leather armor with boiled hide and metal rivets
+quilted gambeson with thick padded fabric ridges
+bone armor with lashed ribs, skulls, and yellowed joints
+chitin armor with glossy insect-shell plates and mandibles
+
+# --- Cultural laminate ---
+samurai armor with lacquered lamellar scales and silk cords
+
+# --- Modern & sci-fi ---
+ballistic plate carrier with ceramic inserts and MOLLE webbing
+power armor with bulky servo joints and glowing chest core
+
+# --- Fantasy materials ---
+crystal armor with translucent faceted plates and inner light
+dragonhide armor with thick iridescent scales and claw buckles

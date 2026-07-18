@@ -52,6 +52,14 @@ __photostyle__ of __heroine__ __pose__, __view__, in a __location__
 __artstyle__ of a __race__ warrior, __country__, with __expression__, __face__, __hair__, __clothes__, __pose__
 ```
 
+### Warrior in armor
+
+`__armor__` is a protective-gear look; use instead of `__clothes__` when you want battle kit, not everyday attire.
+
+```
+__artstyle__ of a __race__ warrior in __armor__, __expression__, __pose__, in a __setting__
+```
+
 ### Scene — game aesthetic
 
 `__game__` is a pop-culture franchise look; use it for style / world cues, not as a subject job.
