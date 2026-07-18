@@ -136,6 +136,18 @@ __artstyle__ of a __heroine__ standing before a __location/background/cityscape_
 __photostyle__ of a __profession__ __pose__ in a __outdoor__ in __weather__ at __time__, __view__
 ```
 
+### Lighting
+
+`__lighting__` is illumination only — photo setups, cinema atmosphere, and cartoon/anime shading cues. Pair with `__view__` / `__photostyle__` / `__artstyle__`; keep separate from `__time__` and `__weather__`.
+
+```
+__photostyle__ portrait of a __profession__ with __expression__, __pose__, __lighting__, __view__
+```
+
+```
+__artstyle__ of a __race__ with __expression__, __hair__, __clothes__, __pose__, __lighting__, in a __outdoor__ at __time__
+```
+
 ### Situation-driven scene
 
 `__situation__` supplies the activity; pair with pose/location only when you want extra control.

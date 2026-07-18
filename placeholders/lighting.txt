@@ -1,0 +1,57 @@
+# Lighting — use as __lighting__ in prompts
+# Phrases for illumination quality, direction, and technique
+# (e.g. "__lighting__", "with __lighting__", "lit by __lighting__", ", __lighting__")
+# Shared language of photography, cinema, cartoon, anime, and drawing
+# Light setup only — keep separate from __time__ (when), __weather__ (sky), __view__ (framing),
+# __photostyle__ (capture look), and eye catchlights (__face/eyes__)
+# One exemplar per visual family; near-duplicates pruned so each line changes the light
+# Style: short, no leading a/an/the — lead with the lighting cue
+
+# --- Classic portrait setups ---
+Rembrandt lighting with triangle cheek highlight
+butterfly lighting with shadow under the nose
+split lighting with one side in deep shadow
+three-point lighting with key, fill, and rim
+softbox studio light with soft wraparound
+hard direct flash with sharp specular punch
+
+# --- Direction & shape ---
+strong backlight with glowing edges
+rim light outlining the silhouette
+side light carving deep form shadows
+top-down overhead light with eye sockets in shade
+underlighting from below with uncanny upward shadows
+spotlight with bright pool and dark falloff
+
+# --- Contrast & key ---
+high-key bright even lighting
+low-key dramatic shadows
+chiaroscuro with deep contrast and lit planes
+flat even lighting with almost no shadows
+
+# --- Natural & practical sources ---
+dappled light through leaves
+caustic light patterns through water
+candlelight with warm flicker
+firelight with orange dancing glow
+moonlight with cool blue wash
+fluorescent light with harsh greenish cast
+neon glow with saturated colored spill
+practical lamp pools of warm interior light
+
+# --- Cinema & atmosphere ---
+cinematic lighting with motivated contrast
+volumetric god rays through haze
+lens flare with blooming highlights
+stage lighting with theatrical color gels
+disco beams with colored shafts
+
+# --- Cartoon, anime & drawing ---
+cel-shaded lighting with hard shadow shapes
+anime soft gradient shading on the face
+exaggerated cartoon rim light
+comic-book dramatic ink shadows
+manga screentone shadow banding
+airbrushed anime bloom glow
+hatching shadow shading with crosshatch darks
+sparkling anime highlight flares

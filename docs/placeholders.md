@@ -71,6 +71,7 @@ Prefer one place family per prompt so outdoor, scene, background, and rooms do n
 | Family | Tokens |
 |---|---|
 | Camera | `__view__`, `__focus__`, `__pose__` |
+| Light | `__lighting__` (photo / cinema / cartoon / anime illumination — not time or weather) |
 | Event | `__situation__` |
 | Time / weather | `__time__`, `__weather__` |
 | Look | `__artstyle__`, `__artist__`, `__photostyle__` |
