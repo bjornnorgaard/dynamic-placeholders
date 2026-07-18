@@ -212,6 +212,14 @@ blurry, watermark, lowres
 
 ## Kitchen-sink showcases
 
+### One-token smoke test — `__random__`
+
+`__random__` picks a full prompt recipe that already nests other families in coherent combinations (portrait, hero, warrior, creature, vehicle, weather, …). Paste it alone to exercise the library without hand-building a kitchen-sink line.
+
+```
+__random__
+```
+
 These pack as many shipped top-level tokens as practical into one line. Expect long expansions — that is the point: one template, many nested lists.
 
 ### Character sheet — art style (most subject tokens)

@@ -1,0 +1,50 @@
+# Random prompt recipes — use as __random__ (or alone in the prompt box)
+# Each line is one coherent full-prompt template that nests other placeholders.
+# Collectively the lines exercise every shipped family; individually they respect
+# mutual exclusions (one style look, one subject type, one place family, clothes
+# XOR armor, animal XOR monster, etc.). Parents pull children (hair → length/color,
+# face → features, clothes → zones, location → outdoor/scene/room/…).
+# Do not nest __random__ inside itself.
+
+# --- Photoreal people ---
+__photostyle__, __focus__, __view__ of a __profession__ with __skin__, __expression__, __face__, __hair__, __clothes__, __pose__, in a __location__ at __time__
+__photostyle__, __focus__, __view__ of a __profession__, __country__, with __expression__, __makeup__, __face__, __hair__, __clothes__, __pose__, in a __outdoor__ at __time__
+__photostyle__ of a __profession__ __situation__, __expression__, __hair__, __clothes__, __view__
+
+# --- Stylized / artist / franchise looks ---
+__artstyle__, __focus__, __view__ of a __race__ __profession__, __country__, with __expression__, __makeup__, __face__, __hair__, __body__, __clothes__, __pose__, in a __outdoor__ at __time__
+by __artist__, __focus__, __view__ of a __profession__ with __expression__, __face__, __hair__, __clothes__, __pose__, in a __location__
+__artstyle__ scene inspired by __game__, __view__, __pose__, in a __location__ at __time__
+
+# --- Named heroes (costume already carried — no clothes/armor stack) ---
+__artstyle__ portrait of __character__, __expression__, __pose__, in a __location__ at __time__, __view__
+__photostyle__ of __character__ __pose__, __view__, in a __location__ at __time__
+
+# --- Warriors & gear ---
+__artstyle__ of a __race__ warrior in __armor__, wielding a __weapon__, __expression__, __pose__, in a __location__ at __time__, __view__
+__artstyle__ of a __profession__ wielding a __weapon__, __expression__, __hair__, __clothes__, __pose__, in a __location__, __view__
+
+# --- Creatures ---
+__artstyle__ of a __animal__ beside a __profession__, __pose__, in a __location__ at __time__, __view__
+__artstyle__ of a __monster__ looming in a __location__ at __time__, __view__
+
+# --- Vehicle / conveyance ---
+__photostyle__ of a __profession__ beside a __vehicle__, __pose__, in a __location__ at __time__, __view__
+__artstyle__ of a __vehicle__ at __time__, __weather__, __view__
+
+# --- Weather & outdoor atmosphere (pin outdoor so weather fits) ---
+__photostyle__ of a __profession__ __pose__ in a __outdoor__ in __weather__ at __time__, __expression__, __clothes__, __view__
+__artstyle__ of a __race__ with __expression__, __hair__, __clothes__, __pose__, against a __background__ at __time__, __weather__, __view__
+
+# --- Place families under-hit by the outdoor pins above (one family each) ---
+__photostyle__, __focus__, __view__ of a __profession__ with __expression__, __hair__, __clothes__, __pose__, in a __house__ at __time__
+__artstyle__ of a __race__ __profession__ in __armor__, __pose__, in a __castle__ at __time__, __view__
+__artstyle__ of __character__ __pose__ in a __scene__ at __time__, __view__
+__photostyle__ of a __profession__ __pose__, __clothes__, in __city__ at __time__, __view__
+
+# --- Close-up features (face leaves without a full clothes/location stack) ---
+__photostyle__, __focus__ close-up, __eyes__, __lips__, __skin__, __hair__, __expression__, __view__
+
+# --- Body / swim / beach ---
+__artstyle__ of a __race__ with __body__, __expression__, __hair__, __pose__, wearing __clothes/swimwear__, in a __outdoor__ at __time__, __view__
+__photostyle__, __focus__ of a __profession__ with __body__, __skin__, __face__, __hair__, __clothes__, __pose__, in a __location__

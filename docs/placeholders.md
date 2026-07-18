@@ -76,6 +76,12 @@ Prefer one place family per prompt so outdoor, scene, background, and rooms do n
 | Look | `__artstyle__`, `__artist__`, `__photostyle__` |
 | Franchise look | `__game__` |
 
+### Catch-all
+
+| Token | Role |
+|---|---|
+| `__random__` | Full-prompt recipes that nest other families in coherent combos (one style, one subject, one place, clothes XOR armor, …). Use alone to smoke-test the library. |
+
 ## Composition patterns
 
 Parents pull in children; pin a child when you want a family fixed.
@@ -87,6 +93,7 @@ Parents pull in children; pin a child when you want a family fixed.
 - `__location__` → outdoor **or** scene **or** background **or** city **or** a dwelling room
 - `__character/heroine__` → game / movie / comics / animation → franchise list
 - `__vehicle__` / `__background__` → one type per expand
+- `__random__` → one full prompt recipe per expand (parents inside still nest)
 
 ## File format (short)
 
