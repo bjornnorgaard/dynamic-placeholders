@@ -101,7 +101,7 @@ Do not dump lookalikes across adjacent tokens. Prefer the sharper home for the e
 | `__prop__` | Held / furniture / small objects | Weapons (`__weapon__`), worn bags/gloves (`__clothes__`) |
 | `__magic__` | Elemental power and spell visuals | Lighting setups (`__lighting__`), weather (`__weather__`) |
 | `__era__` | Period costume / culture looks | Clock time of day (`__time__`), place set pieces (`__scene__/period`) |
-| `__atmosphere__` | Scene emotional tone | Facial expression (`__expression__`), lighting technique, weather |
+| `__atmosphere__` | Scene emotional tone via visual descriptors | Facial expression (`__expression__`), lighting technique, weather |
 | `__expression__` | Face emotion / expression | Scene mood (`__atmosphere__`) |
 | `__hands__` | Hand anatomy / look | Gestures (`__pose/gesture__`), gloves (`__gloves__`) |
 | `__location/outdoor__` | Biomes / environments | Movie set pieces (`location/scene`), dwelling rooms |

@@ -85,7 +85,7 @@ Prefer one place family per prompt so outdoor, scene, background, and rooms do n
 | Light | `__lighting__` (photo / cinema / cartoon / anime illumination — not time or weather) |
 | Event | `__situation__` |
 | Time / weather / era | `__time__`, `__weather__`, `__era__` |
-| Mood | `__atmosphere__` (scene feeling — not facial expression or lighting technique) |
+| Mood | `__atmosphere__` (scene feeling via visual descriptors — not facial expression or lighting technique) |
 | Magic | `__magic__` → element or effect (one family per expand) |
 | Look | `__artstyle__`, `__artist__`, `__photostyle__` |
 | Franchise look | `__game__` |

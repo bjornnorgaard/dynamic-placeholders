@@ -1,31 +1,32 @@
 # Atmosphere / scene mood — use as __atmosphere__ in prompts
-# Overall emotional tone of the scene — not facial expression (__expression__),
+# Overall emotional tone of the scene, described by visual descriptors
+# the model can render — not facial expression (__expression__),
 # lighting technique (__lighting__), or weather (__weather__)
 # (e.g. "__atmosphere__", "with an __atmosphere__", "__atmosphere__ scene")
-# One entry per distinct emotional tone; near-synonyms pruned
-# Style: short, no leading a/an/the — lead with the mood cue
+# One entry per distinct mood look; near-synonyms pruned
+# Style: short, no leading a/an/the — lead with the mood cue, then signature visuals
 
-eerie still dread
-cozy inviting warmth
-triumphant grandeur
-oppressive crushing weight
-melancholic quiet
-chaotic frenzy
-serene calm
-tense suspense
-ominous foreboding
-whimsical playfulness
-romantic intimacy
-lonely isolation
-nostalgic faded glow
-creeping horror dread
-awe-struck wonder
-desolate bleakness
-vibrant lively energy
-solemn reverence
-bittersweet sorrow-joy
-uncanny wrongness
-empowering heroic spirit
-decadent lavish excess
-secretive intrigue
-hopeful optimism
+eerie stillness with empty space and muted desaturated colors
+cozy lived-in clutter with soft warm tones and intimate scale
+triumphant open grandeur with sweeping space and golden radiance
+oppressive cramped weight with low crowding forms and heavy darks
+melancholic quiet with faded muted palette and sparse empty chairs
+chaotic visual frenzy with overlapping clutter and restless motion
+serene calm with open undisturbed space and soft gentle gradients
+tense held-breath stillness with tight sharp edges and rigid silence
+ominous looming darkness with heavy shapes crowding the frame
+whimsical playfulness with bright quirky colors and tilted energy
+romantic intimacy with soft rose-gold haze and close warm space
+lonely isolation with vast empty expanse and a tiny solitary figure
+nostalgic faded glow with soft sepia wash and soft-focus memory haze
+creeping horror with sickly green tint and wrong shadowed corners
+awe-struck wonder with towering scale dwarfing tiny figures
+desolate bleakness with barren empty ground and cold gray wash
+vibrant lively energy with saturated colors and busy motion
+solemn reverence with still ceremonial space and muted gold dignity
+bittersweet sorrow-joy with soft golden haze over empty quiet space
+uncanny wrongness with off-kilter angles and sterile slightly wrong forms
+empowering heroic spirit with bold upright scale and strong contrast
+decadent lavish excess with ornate golds, rich velvets, and overflowing luxury
+secretive intrigue with half-hidden shadowed corners and whispered closeness
+hopeful optimism with clear open air and soft bright lifting space
